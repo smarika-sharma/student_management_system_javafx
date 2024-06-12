@@ -37,4 +37,11 @@
     -fx-border-width: 0 0 1 0; /* Bottom border only */
     -fx-font-size: 12px;
 }
+.signup_btn{
+    -fx-background-color: transparent; /* Remove background */
+    -fx-border: none; /* Remove border */
+    -fx-text-fill: #000000; /* Set text color to black */
+    -fx-cursor: hand; /* Change cursor to hand when hovering over the button */
+    -fx-padding: -1;
+}
 
