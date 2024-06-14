@@ -9,49 +9,49 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@login.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Controller">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Controller">
   <left>
     <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
   </left>
   <center>
-    <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@login.css" BorderPane.alignment="CENTER">
+    <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@loginAndSignup.css" BorderPane.alignment="CENTER">
       <children>
-        <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@login.css">
+        <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@loginAndSignup.css">
           <HBox.margin>
             <Insets bottom="55.0" left="80.0" top="55.0" />
           </HBox.margin>
           <children>
-            <Label id="loginTitle" styleClass="loginTitle" stylesheets="@login.css" text="LOGIN">
+            <Label id="loginTitle" styleClass="loginTitle" stylesheets="@loginAndSignup.css" text="LOGIN">
               <font>
                 <Font size="30.0" />
               </font>
               <VBox.margin>
                 <Insets bottom="-10.0" />
               </VBox.margin></Label>
-            <Label id="welcomeText" styleClass="welcomeText" stylesheets="@login.css" text="Welcome back! Please login to your account." />
-            <Label id="label" stylesheets="@login.css" text="Username">
+            <Label id="welcomeText" styleClass="welcomeText" stylesheets="@loginAndSignup.css" text="Welcome back! Please login to your account." />
+            <Label id="label" stylesheets="@loginAndSignup.css" text="Username">
               <VBox.margin>
                 <Insets bottom="5.0" right="120.0" top="40.0" />
               </VBox.margin>
               <font>
                 <Font size="14.0" />
               </font></Label>
-            <TextField id="username-field" maxWidth="215.0" prefHeight="26.0" prefWidth="150.0" styleClass="username-field" stylesheets="@login.css">
+            <TextField id="username-field" maxWidth="215.0" prefHeight="26.0" prefWidth="150.0" styleClass="username-field" stylesheets="@loginAndSignup.css">
               <VBox.margin>
                 <Insets bottom="15.0" left="15.0" right="15.0" />
               </VBox.margin></TextField>
-            <Label id="label" stylesheets="@login.css" text="Password">
+            <Label id="label" stylesheets="@loginAndSignup.css" text="Password">
               <VBox.margin>
                 <Insets bottom="5.0" right="120.0" top="8.0" />
               </VBox.margin>
               <font>
                 <Font size="14.0" />
               </font></Label>
-            <TextField id="password-field" maxWidth="215.0" styleClass="password-field" stylesheets="@login.css">
+            <TextField id="password-field" maxWidth="215.0" styleClass="password-field" stylesheets="@loginAndSignup.css">
               <VBox.margin>
                 <Insets bottom="10.0" left="15.0" right="15.0" />
               </VBox.margin></TextField>
-            <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@login.css" text="LOGIN" textAlignment="CENTER">
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@loginAndSignup.css" text="LOGIN" textAlignment="CENTER">
               <VBox.margin>
                 <Insets bottom="-5.0" top="30.0" />
               </VBox.margin>

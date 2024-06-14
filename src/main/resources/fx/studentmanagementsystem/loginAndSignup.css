@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
 .borderPane {
-    -fx-background-image: url("login-interface.png"); /* background image for borderPane. */
+    -fx-background-image: url("images/login-interface.png"); /* background image for borderPane. */
     -fx-background-size: cover;
 
 }
@@ -43,5 +43,15 @@
     -fx-text-fill: #000000; /* Set text color to black */
     -fx-cursor: hand; /* Change cursor to hand when hovering over the button */
     -fx-padding: -1;
+}
+
+.chooseUser-userOptions-container{
+    -fx-background-color: rgba(212, 213, 227, 0.26);
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 3, 5);
+    -fx-background-radius: 20;
+}
+
+.chooseUser-userOptions-container:hover{
+    -fx-background-color: rgba(129, 134, 211, 0.23);
 }
 
