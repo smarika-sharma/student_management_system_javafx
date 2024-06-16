@@ -12,7 +12,7 @@
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.3), 25, 0, 5, 8);
 }
 
-.loginTitle{
+.loginSignupTitle{
     -fx-font-family: 'Inknut Antiqua', serif;
     -fx-font-weight: bold;
 }
@@ -30,12 +30,17 @@
     -fx-background-color: rgba(77, 81, 148, 0.78);
 }
 
-.username-field, .password-field {
+.text-field {
     -fx-background-color: transparent;
     -fx-background-radius: 0;
     -fx-border-color: black;
     -fx-border-width: 0 0 1 0; /* Bottom border only */
     -fx-font-size: 12px;
+}
+.dropdown{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0; /* Bottom border only */
 }
 .signup_btn{
     -fx-background-color: transparent; /* Remove background */

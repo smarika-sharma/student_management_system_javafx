@@ -122,12 +122,12 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="394.0">
+                        <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="394.0">
                             <VBox.margin>
-                                <Insets top="15.0" />
+                                <Insets top="20.0" />
                             </VBox.margin>
                             <children>
-                        <ImageView fitHeight="19.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="15.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/back.png" />
                            </image>
@@ -135,11 +135,11 @@
                               <Insets left="35.0" right="125.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Circle fill="#787cbe" radius="4.0" stroke="#787cbe" strokeType="INSIDE">
+                        <Circle fill="#787cbe" radius="3.0" stroke="#787cbe" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin></Circle>
-                        <Circle fill="#b3bbd9" radius="4.0" stroke="#b3bbd9" strokeType="INSIDE">
+                        <Circle fill="#b3bbd9" radius="3.0" stroke="#b3bbd9" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
