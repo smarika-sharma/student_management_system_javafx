@@ -13,12 +13,12 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Signupcontoller">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Signupcontoller">
     <left>
         <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
     </left>
     <center>
-        <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@../../Style/loginAndSignup.css" BorderPane.alignment="CENTER">
+        <HBox prefHeight="500.0" prefWidth="580.0" styleClass="loginButton-to-redirect-to-login" stylesheets="@../../Style/loginAndSignup.css" BorderPane.alignment="CENTER">
             <children>
                 <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@../../Style/loginAndSignup.css">
                     <HBox.margin>
@@ -143,19 +143,23 @@
                      </children>
                   </HBox>
                   <Label fx:id="Error_label" styleClass="Error_label" text="Error:" />
-                        <Button fx:id="signup_button" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#signup_btn_clicked" prefHeight="30.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@../../Style/loginAndSignup.css" text="Sign Up" textAlignment="CENTER">
+                        <Button fx:id="signup_button" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#signup_btn_clicked" prefHeight="30.0" prefWidth="120.0" styleClass="loginButton" stylesheets="@../../Style/loginAndSignup.css" text="Sign Up" textAlignment="CENTER">
                             <VBox.margin>
-                                <Insets bottom="20.0" top="25.0" />
+                                <Insets bottom="5.0" top="15.0" />
                             </VBox.margin>
                             <font>
                                 <Font size="14.0" />
                             </font></Button>
-                  <Label styleClass="haveanacc" text="Already have an account">
-                     <padding>
-                        <Insets top="-10.0" />
-                     </padding>
-                  </Label>
-                  <Button fx:id="signuppage_loginbtn" mnemonicParsing="false" onAction="#signuppageloginbtn" text="Login" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Already have an account?" />
+                        <Button fx:id="signuppage_loginbtn" mnemonicParsing="false" onAction="#signuppageloginbtn" style="-fx-border-color: none; -fx-background-color: white;" styleClass="redirect-to-login-or-signup" stylesheets="@../../Style/loginAndSignup.css" text="Login">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="394.0">
                      <children>
                         <ImageView fx:id="backto_chooseuser" fitHeight="15.0" fitWidth="120.0" onMouseClicked="#backToChooseUser" pickOnBounds="true" preserveRatio="true">
@@ -178,8 +182,11 @@
                         </Circle>
                      </children>
                      <VBox.margin>
-                        <Insets bottom="20.0" />
+                        <Insets bottom="20.0" top="10.0" />
                      </VBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
                     </children>
                     <padding>

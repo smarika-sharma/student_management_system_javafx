@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.ChooseUserController">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.ChooseUserController">
     <left>
         <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
     </left>
@@ -122,19 +122,11 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="394.0">
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="394.0">
                             <VBox.margin>
                                 <Insets top="20.0" />
                             </VBox.margin>
                             <children>
-                        <ImageView fitHeight="15.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/back.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="35.0" right="125.0" />
-                           </HBox.margin>
-                        </ImageView>
                         <Circle fill="#787cbe" radius="3.0" stroke="#787cbe" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets right="10.0" />

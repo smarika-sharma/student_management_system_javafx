@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.LoginController">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.LoginController">
     <left>
         <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
     </left>
@@ -62,22 +62,27 @@
                             <font>
                                 <Font size="14.0" />
                             </font></Button>
-                        <HBox prefHeight="20.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
                             <VBox.margin>
                                 <Insets top="15.0" />
                             </VBox.margin>
                             <children>
-                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="243.0" text="Don't have an account?" textAlignment="CENTER">
+                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="15.0" prefWidth="131.0" text="Don't have an account?" textAlignment="CENTER">
                                     <HBox.margin>
                                         <Insets />
                                     </HBox.margin>
                                 </Label>
-                                <Button fx:id="loginpage_signupbtn" mnemonicParsing="false" onAction="#loginpagesignupbtn" styleClass="signup_btn" text="Sign Up">
+                                <Button fx:id="loginpage_signupbtn" mnemonicParsing="false" onAction="#loginpagesignupbtn" styleClass="redirect-to-login-or-signup" text="Sign Up">
                                     <HBox.margin>
-                                        <Insets left="10.0" />
+                                        <Insets left="5.0" />
                                     </HBox.margin></Button>
                             </children>
                         </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
                     </children>
                     <padding>
                         <Insets top="25.0" />

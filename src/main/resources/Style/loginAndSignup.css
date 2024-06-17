@@ -69,3 +69,12 @@
 .loginerrorlabel{
     -fx-text-fill: red;
 }
+.redirect-to-login-or-signup{
+    -fx-text-fill: #585ca0;
+    -fx-font-weight: bold;
+    -fx-border-color: none;
+    -fx-background-color: white;
+}
+.redirect-to-login-or-signup:hover{
+    -fx-text-fill: rgba(77, 81, 148, 0.78);
+}
