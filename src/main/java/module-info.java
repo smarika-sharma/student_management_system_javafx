@@ -10,9 +10,13 @@ module fx.studentmanagementsystem {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
+    requires annotations;
 
     opens fx.studentmanagementsystem to javafx.fxml;
     exports fx.studentmanagementsystem;
     exports fx.studentmanagementsystem.controller;
     opens fx.studentmanagementsystem.controller to javafx.fxml;
+    exports fx.studentmanagementsystem.controller.Student;
+    opens fx.studentmanagementsystem.controller.Student to javafx.fxml;
 }

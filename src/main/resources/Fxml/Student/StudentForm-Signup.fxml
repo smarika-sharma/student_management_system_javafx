@@ -13,26 +13,26 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.signupcontoller">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Signupcontoller">
     <left>
         <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
     </left>
     <center>
-        <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@loginAndSignup.css" BorderPane.alignment="CENTER">
+        <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@../../Style/loginAndSignup.css" BorderPane.alignment="CENTER">
             <children>
-                <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@loginAndSignup.css">
+                <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@../../Style/loginAndSignup.css">
                     <HBox.margin>
                         <Insets bottom="55.0" left="80.0" top="50.0" />
                     </HBox.margin>
                     <children>
-                        <Label id="loginTitle" styleClass="loginSignupTitle" stylesheets="@loginAndSignup.css" text="SIGN UP">
+                        <Label id="loginTitle" styleClass="loginSignupTitle" stylesheets="@../../Style/loginAndSignup.css" text="SIGN UP">
                             <font>
                                 <Font size="30.0" />
                             </font>
                             <VBox.margin>
                                 <Insets top="-5.0" />
                             </VBox.margin></Label>
-                        <Label id="welcomeText" styleClass="welcomeText" stylesheets="@loginAndSignup.css" text="Please sign up to continue.">
+                        <Label id="welcomeText" styleClass="welcomeText" stylesheets="@../../Style/loginAndSignup.css" text="Please sign up to continue.">
                      <VBox.margin>
                         <Insets top="-15.0" />
                      </VBox.margin></Label>
@@ -45,7 +45,7 @@
                            <HBox.margin>
                               <Insets left="23.0" />
                            </HBox.margin></Label>
-                        <TextField prefWidth="90.0">
+                        <TextField fx:id="student_firstname" prefWidth="90.0">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></TextField>
@@ -53,7 +53,7 @@
                            <HBox.margin>
                               <Insets left="28.0" />
                            </HBox.margin></Label>
-                        <TextField prefWidth="90.0">
+                        <TextField fx:id="student_lastname" prefWidth="90.0">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></TextField>
@@ -61,11 +61,11 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="gender" prefHeight="15.0" prefWidth="61.0" stylesheets="@loginAndSignup.css" text="Gender">
+                        <Label fx:id="gender" prefHeight="15.0" prefWidth="61.0" stylesheets="@../../Style/loginAndSignup.css" text="Gender">
                            <HBox.margin>
                               <Insets left="23.0" />
                            </HBox.margin></Label>
-                        <ChoiceBox fx:id="chooseGender" prefHeight="23.0" prefWidth="90.0" styleClass="dropdown" stylesheets="@loginAndSignup.css">
+                        <ChoiceBox fx:id="chooseGender" prefHeight="23.0" prefWidth="90.0" styleClass="dropdown" stylesheets="@../../Style/loginAndSignup.css">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></ChoiceBox>
@@ -73,7 +73,7 @@
                            <HBox.margin>
                               <Insets left="28.0" />
                            </HBox.margin></Label>
-                        <ChoiceBox fx:id="chooseFaculty" prefWidth="90.0" styleClass="dropdown" stylesheets="@loginAndSignup.css">
+                        <ChoiceBox fx:id="chooseFaculty" prefWidth="90.0" styleClass="dropdown" stylesheets="@../../Style/loginAndSignup.css">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></ChoiceBox>
@@ -91,7 +91,7 @@
                            <HBox.margin>
                               <Insets left="23.0" />
                            </HBox.margin></Label>
-                        <TextField prefHeight="24.0" prefWidth="147.0">
+                        <TextField fx:id="student_email_field" prefHeight="24.0" prefWidth="147.0">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></TextField>
@@ -106,7 +106,7 @@
                            <HBox.margin>
                               <Insets left="23.0" />
                            </HBox.margin></Label>
-                        <TextField>
+                        <TextField fx:id="student_phonenumber">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></TextField>
@@ -121,13 +121,13 @@
                            <HBox.margin>
                               <Insets left="23.0" />
                            </HBox.margin></Label>
-                        <TextField>
+                        <TextField fx:id="student_pass_field">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></TextField>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="error_label">
                      <VBox.margin>
                         <Insets top="8.0" />
                      </VBox.margin>
@@ -136,24 +136,31 @@
                            <HBox.margin>
                               <Insets left="23.0" />
                            </HBox.margin></Label>
-                        <TextField>
+                        <TextField fx:id="student_confirmpass_field">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin></TextField>
                      </children>
                   </HBox>
-                        <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@loginAndSignup.css" text="Sign Up" textAlignment="CENTER">
+                  <Label fx:id="Error_label" styleClass="Error_label" text="Error:" />
+                        <Button fx:id="signup_button" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#signup_btn_clicked" prefHeight="30.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@../../Style/loginAndSignup.css" text="Sign Up" textAlignment="CENTER">
                             <VBox.margin>
                                 <Insets bottom="20.0" top="25.0" />
                             </VBox.margin>
                             <font>
                                 <Font size="14.0" />
                             </font></Button>
+                  <Label styleClass="haveanacc" text="Already have an account">
+                     <padding>
+                        <Insets top="-10.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="signuppage_loginbtn" mnemonicParsing="false" onAction="#signuppageloginbtn" text="Login" />
                   <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="394.0">
                      <children>
-                        <ImageView fitHeight="15.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="backto_chooseuser" fitHeight="15.0" fitWidth="120.0" onMouseClicked="#backToChooseUser" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/back.png" />
+                              <Image url="@../../images/back.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="35.0" right="135.0" />

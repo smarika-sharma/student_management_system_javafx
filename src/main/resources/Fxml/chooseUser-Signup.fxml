@@ -10,21 +10,21 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Controller">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.ChooseUserController">
     <left>
         <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
     </left>
     <center>
-        <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@loginAndSignup.css" BorderPane.alignment="CENTER">
+        <HBox prefHeight="500.0" prefWidth="580.0" stylesheets="@../Style/loginAndSignup.css" BorderPane.alignment="CENTER">
             <children>
-                <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@loginAndSignup.css">
+                <VBox alignment="TOP_CENTER" prefHeight="369.0" prefWidth="394.0" style="-fx-font-family: Arial;" styleClass="container" stylesheets="@../Style/loginAndSignup.css">
                     <HBox.margin>
                         <Insets bottom="55.0" left="80.0" top="55.0" />
                     </HBox.margin>
                     <children>
                   <HBox alignment="CENTER" prefHeight="120.0" prefWidth="150.0">
                      <children>
-                        <VBox alignment="TOP_CENTER" prefHeight="137.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@loginAndSignup.css">
+                        <VBox alignment="TOP_CENTER" prefHeight="137.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@../Style/loginAndSignup.css">
                            <HBox.margin>
                               <Insets right="15.0" />
                            </HBox.margin>
@@ -34,7 +34,7 @@
                                     <Insets bottom="10.0" top="10.0" />
                                  </VBox.margin>
                                  <image>
-                                    <Image url="@images/teacher.png" />
+                                    <Image url="@../images/teacher.png" />
                                  </image>
                               </ImageView>
                               <Label contentDisplay="CENTER" prefHeight="0.0" prefWidth="83.0" text="I am a Teacher">
@@ -46,17 +46,17 @@
                                  </font></Label>
                            </children>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@loginAndSignup.css">
+                        <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@../Style/loginAndSignup.css">
                            <HBox.margin>
                               <Insets left="15.0" />
                            </HBox.margin>
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="student_signup" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <VBox.margin>
                                     <Insets bottom="10.0" top="10.0" />
                                  </VBox.margin>
                                  <image>
-                                    <Image url="@images/student.png" />
+                                    <Image url="@../images/student.png" />
                                  </image>
                               </ImageView>
                               <Label text="I am a student">
@@ -75,11 +75,11 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="120.0" prefWidth="394.0">
                      <children>
-                        <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@loginAndSignup.css">
+                        <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@../Style/loginAndSignup.css">
                            <children>
                               <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/admission_officer.png" />
+                                    <Image url="@../images/admission_officer.png" />
                                  </image>
                                  <VBox.margin>
                                     <Insets bottom="10.0" top="10.0" />
@@ -96,14 +96,14 @@
                            <HBox.margin>
                               <Insets right="15.0" />
                            </HBox.margin></VBox>
-                        <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@loginAndSignup.css">
+                        <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@../Style/loginAndSignup.css">
                            <children>
                               <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <VBox.margin>
                                     <Insets bottom="10.0" top="10.0" />
                                  </VBox.margin>
                                  <image>
-                                    <Image url="@images/librarian.png" />
+                                    <Image url="@../images/librarian.png" />
                                  </image>
                               </ImageView>
                               <Label text="I am a librarian">
@@ -129,7 +129,7 @@
                             <children>
                         <ImageView fitHeight="15.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/back.png" />
+                              <Image url="@../images/back.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="35.0" right="125.0" />
