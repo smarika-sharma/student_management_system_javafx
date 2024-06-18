@@ -1,0 +1,32 @@
+/*font import*/
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+.menu{
+    -fx-background-color: #6E73B8;
+    -fx-background-radius: 0 30 0 30;
+}
+.top{
+    -fx-background-color: #6E73B8;
+    -fx-background-radius: 20 5 20 5;
+}
+.title{
+    -fx-font-family: 'Inknut Antiqua', serif;
+    -fx-font-weight: bold;
+}
+.calendar-container{
+    -fx-background-color: rgba(110, 115, 184, 0.45);
+}
+
+.logo-bg{
+    -fx-background-color: rgba(255, 255, 255, 0.38);
+    -fx-background-radius: 20 20 20 20;
+}
+.menu-button{
+    -fx-border-color: none;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: rgba(88, 92, 160, 0.81);
+}
+.menu-button:hover{
+    -fx-border-color: none;
+    -fx-background-color: rgba(77, 81, 148, 0.2);
+}
