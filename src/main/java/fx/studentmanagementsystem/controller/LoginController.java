@@ -1,16 +1,11 @@
 package fx.studentmanagementsystem.controller;
 
-import fx.studentmanagementsystem.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import org.jetbrains.annotations.NotNull;
-
+import static fx.studentmanagementsystem.Uses.changeScene;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -18,21 +13,17 @@ import java.io.IOException;
 
 public class LoginController {
     @FXML
-    public TextField studentlogin_email_field;
+    private TextField studentlogin_email_field;
     @FXML
-    public TextField studentlogin_pass_field;
+    private TextField studentlogin_pass_field;
     @FXML
-    public Label loginerror_label;
-    Scene scene;
+    private Label loginerror_label;
 
 
     @FXML
-    public void loginpagesignupbtn(@NotNull ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Fxml/Student/StudentForm-Signup.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.show();
+    protected void loginpagesignupbtn(@NotNull ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/StudentForm-Signup.fxml","AcademiaFX");
+
     }
     @FXML
     public void initialize() {
@@ -62,15 +53,9 @@ public class LoginController {
         if (loginSuccessful) {
             loginerror_label.setText(" login successful");
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Fxml/Student/StudentDashboard.fxml"));
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                scene = new Scene(fxmlLoader.load());
-                stage.setScene(scene);
-                stage.setMinHeight(720);
-                stage.setMinWidth(1280);
-                //stage.setFullScreen(true);
-                stage.show();
+                changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
             } catch (IOException e) {
+                //System.out.println("Error logging in" + e.getMessage());
                 e.printStackTrace();
             }
         }else {

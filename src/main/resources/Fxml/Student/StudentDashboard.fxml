@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentMenuController">
    <left>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +31,7 @@
                         <Insets left="20.0" right="20.0" top="30.0" />
                      </VBox.margin>
                   </VBox>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Dashboard">
+                  <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Dashboard">
                      <VBox.margin>
                         <Insets top="80.0" />
                      </VBox.margin>
@@ -39,7 +39,7 @@
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Question Form">
+                  <Button fx:id="QuestionForm" mnemonicParsing="false" onAction="#questionformclicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Question Form">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
@@ -47,7 +47,7 @@
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Problem form">
+                  <Button fx:id="ProblemForm" mnemonicParsing="false" onAction="#problemformclicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Problem form">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
@@ -55,7 +55,7 @@
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Sugession form">
+                  <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Sugession form">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>

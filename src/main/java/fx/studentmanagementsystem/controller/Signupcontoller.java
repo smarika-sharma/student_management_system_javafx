@@ -1,26 +1,27 @@
 package fx.studentmanagementsystem.controller;
 
-import fx.studentmanagementsystem.HelloApplication;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
+
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
+
 import javafx.util.Duration;
 
-import java.awt.event.MouseEvent;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.changeSceneMouse;
 
 public class Signupcontoller implements Initializable {
 
@@ -61,7 +62,6 @@ public class Signupcontoller implements Initializable {
         if (!isInputValid()) {
             return;
         }
-
         if (!isPasswordMatching()) {
             Error_label.setText("Password and confirm password do not match");
         } else {
@@ -75,9 +75,7 @@ public class Signupcontoller implements Initializable {
         pause.setOnFinished(e -> {
             // Load login page after successful signup
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Fxml/login.fxml")); // replace with your login page path
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(fxmlLoader.load()));
+                changeScene(event,"/Fxml/login.fxml","AcademiaFX");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -116,16 +114,11 @@ public class Signupcontoller implements Initializable {
         }
     }
 
-    Stage stage;
-    Scene scene;
+
     @FXML
     public void backToChooseUser(javafx.scene.input.MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Fxml/chooseUser-Signup.fxml"));
-            stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(fxmlLoader.load());
-            stage.setScene(scene);
-            stage.show();
+            changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -133,11 +126,7 @@ public class Signupcontoller implements Initializable {
 
     public void signuppageloginbtn(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Fxml/login.fxml"));
-            stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(fxmlLoader.load());
-            stage.setScene(scene);
-            stage.show();
+            changeScene(event,"/Fxml/login.fxml","AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
