@@ -9,17 +9,49 @@ import java.io.IOException;
 
 public class ChooseUserController {
 
+
     @FXML
-    public ImageView student_signup;
+    private ImageView student_signup;
+    @FXML
+    private ImageView teacherLogin;
+    @FXML
+    private ImageView admissionofficerLogin;
+    @FXML
+    public ImageView librarianLogin;
+
 
     @FXML
     public void initialize() {
         student_signup.setOnMouseClicked(this::student_signup);
+        teacherLogin.setOnMouseClicked(this::teacherLogin);
+        admissionofficerLogin.setOnMouseClicked(this::admissionofficerLogin);
+        librarianLogin.setOnMouseClicked(this::librarianLogin);
     }
 
-    private void student_signup(MouseEvent event) {
+    protected void student_signup(MouseEvent event) {
         try {
             changeSceneMouse(event,"/Fxml/Student/StudentForm-Signup.fxml","AcademiaFX");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    protected void teacherLogin(MouseEvent event) {
+        try {
+            changeSceneMouse(event,"/Fxml/login.fxml","AcademiaFX");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    protected void admissionofficerLogin(MouseEvent event) {
+        try {
+            changeSceneMouse(event,"/Fxml/login.fxml","AcademiaFX");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    protected void librarianLogin(MouseEvent event) {
+        try {
+            changeSceneMouse(event, "/Fxml/login.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }

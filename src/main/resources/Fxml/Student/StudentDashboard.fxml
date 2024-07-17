@@ -94,10 +94,35 @@
                   <Insets left="80.0" right="100.0" top="60.0" />
                </VBox.margin>
             </HBox>
-            <VBox prefHeight="542.0" prefWidth="346.0" styleClass="calendar-container">
+            <VBox prefHeight="542.0" prefWidth="346.0" spacing="2.0" styleClass="calendar-container">
                <VBox.margin>
                   <Insets bottom="30.0" left="80.0" right="100.0" top="45.0" />
                </VBox.margin>
+               <children>
+                  <Label fx:id="studentIdLabel" styleClass="student-info" text="Label">
+                     <graphic>
+                        <Label styleClass="student-info" text="StudentID: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="emailLabel" styleClass="student-info" text="Label">
+                     <graphic>
+                        <Label styleClass="student-info" text="Email: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="facultyLabel" styleClass="student-info" text="Label">
+                     <graphic>
+                        <Label styleClass="student-info" text="Faculty: " />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="usernameLabel" styleClass="student-info" text="Label">
+                     <graphic>
+                        <Label styleClass="student-info" text="Username: " />
+                     </graphic>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="15.0" top="10.0" />
+               </padding>
             </VBox>
          </children>
       </VBox>

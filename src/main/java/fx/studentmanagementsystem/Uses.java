@@ -19,12 +19,13 @@ public class Uses {
         return stage;
     }
 
-    public static void changeScene(ActionEvent event, String sceneName, String title) throws IOException {
+    public static FXMLLoader changeScene(ActionEvent event, String sceneName, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(sceneName));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = getCurrentStage(event);
         stage.setTitle(title);
         stage.setScene(scene);
+        return fxmlLoader;
     }
 
     //for mouse event

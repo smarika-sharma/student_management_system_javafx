@@ -1,11 +1,17 @@
 package fx.studentmanagementsystem.controller;
 
+
+import fx.studentmanagementsystem.controller.Student.StudentMenuController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
 import org.jetbrains.annotations.NotNull;
 import static fx.studentmanagementsystem.Uses.changeScene;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -53,7 +59,11 @@ public class LoginController {
         if (loginSuccessful) {
             loginerror_label.setText(" login successful");
             try {
-                changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
+                FXMLLoader fxmlLoader= changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
+                StudentMenuController controller = fxmlLoader.getController();
+                controller.setStudentEmail(Email);
+
+
             } catch (IOException e) {
                 //System.out.println("Error logging in" + e.getMessage());
                 e.printStackTrace();

@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.ChooseUserController">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.ChooseUserController">
     <left>
         <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
     </left>
@@ -29,7 +29,7 @@
                                         <Insets right="15.0" />
                                     </HBox.margin>
                                     <children>
-                                        <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="teacherLogin" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" top="10.0" />
                                             </VBox.margin>
@@ -77,7 +77,7 @@
                             <children>
                                 <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@../Style/loginAndSignup.css">
                                     <children>
-                                        <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="admissionofficerLogin" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@../images/admission_officer.png" />
                                             </image>
@@ -98,7 +98,7 @@
                                     </HBox.margin></VBox>
                                 <VBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="150.0" styleClass="chooseUser-userOptions-container" stylesheets="@../Style/loginAndSignup.css">
                                     <children>
-                                        <ImageView fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fx:id="librarianLogin" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                             <VBox.margin>
                                                 <Insets bottom="10.0" top="10.0" />
                                             </VBox.margin>
