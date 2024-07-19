@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
         Image icon = new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/icon.png")));
         stage.getIcons().add(icon);
 
-
+        System.out.println("Neha push try");
         stage.setTitle("AcademiaFX");
         stage.setScene(scene);
         stage.setMinHeight(750);
