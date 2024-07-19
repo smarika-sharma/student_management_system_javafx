@@ -17,6 +17,14 @@
     -fx-font-weight: bold;
 }
 
+.on-page-button{
+    -fx-border-color: none;
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
 .logo-bg{
     -fx-background-color: rgba(255, 255, 255, 0.38);
     -fx-background-radius: 20 20 20 20;
