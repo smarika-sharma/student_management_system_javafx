@@ -1,39 +1,13 @@
-package fx.studentmanagementsystem.controller.Teacher;
+package fx.studentmanagementsystem.service;
 
 import fx.studentmanagementsystem.model.Student;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TeacherDashboardController {
-
-    @FXML
-    private TableView<Student> studentTableView;
-    @FXML
-    private TableColumn<Student, String> studentNameColumn;
-    @FXML
-    private TableColumn<Student, String> facultyColumn;
-    @FXML
-    private TableColumn<Student, String> emailColumn;
-
-    @FXML
-    public void initialize() {
-        studentNameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
-        facultyColumn.setCellValueFactory(new PropertyValueFactory<>("faculty"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-
-        ObservableList<Student> studentList = FXCollections.observableArrayList(loadStudentsFromDirectory());
-        studentTableView.setItems(studentList);
-    }
+public class StudentDataService {
 
     public List<Student> loadStudentsFromDirectory() {
         List<Student> students = new ArrayList<>();
@@ -56,6 +30,4 @@ public class TeacherDashboardController {
         }
         return students;
     }
-
-    // Include the loadStudentsFromDirectory method here
 }

@@ -66,11 +66,11 @@
             <Image url="@../../images/brain.png" />
          </image>
       </ImageView>
-      <TableView layoutX="355.0" layoutY="292.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
+      <TableView fx:id="studentTableView" layoutX="355.0" layoutY="292.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
         <columns>
-          <TableColumn prefWidth="254.39999389648438" text="Student Name " />
-          <TableColumn prefWidth="196.800048828125" text="Faculty " />
-            <TableColumn prefWidth="291.99993896484375" text="Email" />
+          <TableColumn fx:id="studentNameColumn" prefWidth="254.39999389648438" text="Student Name " />
+          <TableColumn fx:id="facultyColumn" prefWidth="196.800048828125" text="Faculty " />
+            <TableColumn fx:id="emailColumn" prefWidth="291.99993896484375" text="Email" />
         </columns>
       </TableView>
    </children>
