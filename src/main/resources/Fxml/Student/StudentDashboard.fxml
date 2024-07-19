@@ -99,7 +99,7 @@
                   <Insets bottom="30.0" left="80.0" right="100.0" top="45.0" />
                </VBox.margin>
                <children>
-                  <Label fx:id="studentIdLabel" prefHeight="58.0" prefWidth="282.0" styleClass="student-info" text="Label">
+                  <Label fx:id="studentIdLabel" prefHeight="58.0" prefWidth="577.0" styleClass="student-info" text="Label">
                      <graphic>
                         <Label prefHeight="57.0" prefWidth="159.0" styleClass="student-info" text="StudentID: ">
                            <font>
@@ -110,7 +110,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="emailLabel" prefHeight="63.0" prefWidth="160.0" styleClass="student-info" text="Label">
+                  <Label fx:id="emailLabel" prefHeight="63.0" prefWidth="567.0" styleClass="student-info" text="Label">
                      <graphic>
                         <Label styleClass="student-info" text="Email: ">
                            <font>
@@ -121,7 +121,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="facultyLabel" prefHeight="59.0" prefWidth="182.0" styleClass="student-info" text="Label">
+                  <Label fx:id="facultyLabel" prefHeight="59.0" prefWidth="558.0" styleClass="student-info" text="Label">
                      <graphic>
                         <Label styleClass="student-info" text="Faculty: ">
                            <font>
@@ -132,7 +132,7 @@
                         <Font size="21.0" />
                      </font>
                   </Label>
-                  <Label fx:id="usernameLabel" prefHeight="61.0" prefWidth="222.0" styleClass="student-info" text="Label">
+                  <Label fx:id="usernameLabel" prefHeight="62.0" prefWidth="694.0" styleClass="student-info" text="Label">
                      <graphic>
                         <Label styleClass="student-info" text="Username: ">
                            <font>
