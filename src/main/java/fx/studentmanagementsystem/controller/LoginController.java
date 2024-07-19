@@ -153,6 +153,5 @@ public class LoginController {
             loginerror_label.setText("Error reading credentials");
         }
 
-
     }
 }
