@@ -4,7 +4,7 @@
 .heading{
     -fx-font-family: 'Inknut Antiqua', serif;
     -fx-font-weight: bold;
-    -fx-letter-spacing: 20px; /* Adjust the spacing value as needed */
+    -fx-letter-spacing: 20px;
 }
 
 .menu{

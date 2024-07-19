@@ -12,7 +12,7 @@ module fx.studentmanagementsystem {
     requires com.almasb.fxgl.all;
     requires java.desktop;
     requires annotations;
-    requires com.opencsv;
+    requires opencsv;
 
     opens fx.studentmanagementsystem to javafx.fxml;
     exports fx.studentmanagementsystem;
@@ -21,5 +21,4 @@ module fx.studentmanagementsystem {
     exports fx.studentmanagementsystem.controller.Student;
     opens fx.studentmanagementsystem.controller.Student to javafx.fxml;
     exports fx.studentmanagementsystem.controller.Teacher to javafx.fxml;
-    exports fx.studentmanagementsystem.controller.Staff to javafx.fxml;
 }
