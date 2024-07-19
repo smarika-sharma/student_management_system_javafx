@@ -1,5 +1,5 @@
 package fx.studentmanagementsystem.controller.Staff;
 
-public class AdmissionofficerDashboardController {
+public class AdmissionOfficerDashboardController {
 
 }

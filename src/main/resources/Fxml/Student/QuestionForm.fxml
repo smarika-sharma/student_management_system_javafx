@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.QuestionFormController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.QuestionFormController">
    <left>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" minWidth="200.0" prefHeight="770.0" prefWidth="200.0" styleClass="menu" stylesheets="@../../Style/QuestionForm.css">
+            <VBox alignment="TOP_CENTER" minWidth="200.0" prefHeight="600.0" prefWidth="250.0" styleClass="menu" stylesheets="@../../Style/QuestionForm.css">
                <VBox.margin>
-                  <Insets left="50.0" />
+                  <Insets left="50.0" top="-10.0" />
                </VBox.margin>
                <children>
                   <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0" styleClass="logo-bg">
@@ -34,7 +34,7 @@
                   </VBox>
                   <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Dashboard">
                      <VBox.margin>
-                        <Insets top="80.0" />
+                        <Insets top="40.0" />
                      </VBox.margin>
                      <font>
                         <Font size="20.0" />
@@ -42,7 +42,7 @@
                   </Button>
                   <Button fx:id="QuestionForm" mnemonicParsing="false" onAction="#questionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Question Form">
                      <VBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="25.0" />
                      </VBox.margin>
                      <font>
                         <Font size="16.0" />
@@ -50,7 +50,7 @@
                   </Button>
                   <Button fx:id="ProblemForm" mnemonicParsing="false" onAction="#problemformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Problem form">
                      <VBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="25.0" />
                      </VBox.margin>
                      <font>
                         <Font size="16.0" />
@@ -58,7 +58,7 @@
                   </Button>
                   <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Suggestion form">
                      <VBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="25.0" />
                      </VBox.margin>
                      <font>
                         <Font size="16.0" />
@@ -106,6 +106,9 @@
                            </VBox.margin>
                         </Label>
                      </children>
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
                   </VBox>
                   <VBox prefHeight="127.0" prefWidth="705.0">
                      <children>
@@ -206,7 +209,7 @@
                      <children>
                         <Button mnemonicParsing="false" onAction="#handleSubmitAction" prefHeight="50.0" prefWidth="150.0" styleClass="submit-button" text="Submit">
                            <VBox.margin>
-                              <Insets left="250.0" />
+                              <Insets left="250.0" top="-50.0" />
                            </VBox.margin>
                         </Button>
                      </children>
