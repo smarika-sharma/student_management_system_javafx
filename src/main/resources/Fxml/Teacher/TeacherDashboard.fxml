@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Teacher.TeacherDashboardController">
+<AnchorPane prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Teacher.TeacherDashboardController">
    <children>
-      <VBox layoutX="44.0" layoutY="14.0" prefHeight="782.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/TeacherDashboard.css">
+      <VBox layoutX="44.0" layoutY="14.0" prefHeight="628.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/TeacherDashboard.css">
          <children>
             <VBox prefHeight="150.0" prefWidth="145.0" styleClass="logo-bg">
                <children>
@@ -66,7 +66,7 @@
             <Image url="@../../images/brain.png" />
          </image>
       </ImageView>
-      <TableView layoutX="355.0" layoutY="292.0" prefHeight="430.0" prefWidth="741.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
+      <TableView layoutX="355.0" layoutY="292.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
         <columns>
           <TableColumn prefWidth="254.39999389648438" text="Student Name " />
           <TableColumn prefWidth="196.800048828125" text="Faculty " />
