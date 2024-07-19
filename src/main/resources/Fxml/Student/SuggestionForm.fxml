@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Teacher.TeacherDashboardController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.SuggestionFormController">
    <children>
       <VBox layoutX="44.0" layoutY="14.0" prefHeight="716.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/TeacherDashboard.css">
          <children>
@@ -21,47 +21,35 @@
                         <Image url="@../../images/logo.png" />
                      </image>
                      <VBox.margin>
-                        <Insets left="50.0" top="25.0" />
+                        <Insets left="50.0" top="20.0" />
                      </VBox.margin>
                   </ImageView>
                </children>
                <VBox.margin>
                   <Insets left="20.0" right="20.0" top="40.0" />
                </VBox.margin>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
             </VBox>
-            <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Dashboard">
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Dashboard">
                <font>
                   <Font size="20.0" />
                </font>
                <VBox.margin>
-                  <Insets top="60.0" />
+                  <Insets top="40.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="QuestionForm" mnemonicParsing="false" onAction="#questionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Question Form">
-               <font>
-                  <Font size="16.0" />
-               </font>
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Question Form">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="25.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="ProblemForm" mnemonicParsing="false" onAction="#problemformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Problem form">
-               <font>
-                  <Font size="16.0" />
-               </font>
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="25.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Suggestion form">
-               <font>
-                  <Font size="16.0" />
-               </font>
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Suggestion Form">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="25.0" />
                </VBox.margin>
             </Button>
          </children>
@@ -80,18 +68,12 @@
                <font>
                   <Font size="20.0" />
                </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Label>
+            </Label> <!-- Removed unnecessary VBox.margin and Insets -->
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="719.0" text="the platform. ">
                <font>
                   <Font size="20.0" />
                </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Label>
+            </Label> <!-- Removed unnecessary VBox.margin and Insets -->
          </children>
       </VBox>
       <TextField alignment="TOP_LEFT" layoutX="376.0" layoutY="271.0" prefHeight="311.0" prefWidth="732.0" promptText="Type your suggestion here...." style="-fx-border-color: #4D5194;">
