@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
 import static fx.studentmanagementsystem.Uses.changeSceneMouse;
+import static java.lang.StringTemplate.STR;
 
 public class Signupcontoller implements Initializable {
 
@@ -143,6 +144,7 @@ public class Signupcontoller implements Initializable {
             e.printStackTrace();
         }
     }
+
     private void writestudentinfoTotxt(String firstname,String lastname,String phonenumber,String email,String faculty,String gender) throws IOException {
         //make a student info directory
         File directory = new File("Student_info");
