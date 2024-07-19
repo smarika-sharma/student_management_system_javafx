@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentMenuController">
    <left>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +31,7 @@
                         <Insets left="20.0" right="20.0" top="30.0" />
                      </VBox.margin>
                   </VBox>
-                  <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Dashboard">
+                  <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="40.0" prefWidth="280.0" styleClass="on-page-button" stylesheets="@../../Style/studentDashboard.css" text="Dashboard">
                      <VBox.margin>
                         <Insets bottom="20.0" top="80.0" />
                      </VBox.margin>
