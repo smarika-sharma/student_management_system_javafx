@@ -1,0 +1,53 @@
+/*font import*/
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+.heading{
+    -fx-font-family: 'Inknut Antiqua', serif;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 20px; /* Adjust the spacing value as needed */
+}
+
+.menu{
+    -fx-background-color: #6E73B8;
+    -fx-background-radius: 0 30 0 30;
+}
+.top{
+    -fx-background-color: #6E73B8;
+    -fx-background-radius: 20 5 20 5;
+}
+.title{
+    -fx-font-family: 'Inknut Antiqua', serif;
+    -fx-font-weight: bold;
+}
+.calendar-container{
+    -fx-background-color: rgba(110, 115, 184, 0.45);
+}
+
+.logo-bg{
+    -fx-background-color: rgba(255, 255, 255, 0.38);
+    -fx-background-radius: 20 20 20 20;
+}
+.menu-button{
+    -fx-border-color: none;
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-background-color:none;
+}
+.menu-button:hover{
+    -fx-border-color: none;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.questions {
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}
+.submit-button{
+    -fx-font-size: 15px;
+    -fx-border-color: none;
+    -fx-background-radius: 30 30 30 30;
+    -fx-background-color: #4D5194;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 3, 5);
+}
