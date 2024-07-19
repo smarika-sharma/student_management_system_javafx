@@ -12,14 +12,14 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentMenuController">
    <left>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="706.0" prefWidth="283.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" minWidth="200.0" prefHeight="600.0" prefWidth="200.0" styleClass="menu" stylesheets="@../../Style/QuestionForm.css">
+            <VBox alignment="TOP_CENTER" minWidth="200.0" prefHeight="655.0" prefWidth="255.0" styleClass="menu" stylesheets="@../../Style/QuestionForm.css">
                <VBox.margin>
-                  <Insets left="50.0" />
+                  <Insets left="30.0" />
                </VBox.margin>
                <children>
-                  <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0" styleClass="logo-bg">
+                  <VBox alignment="CENTER" prefHeight="135.0" prefWidth="170.0" styleClass="logo-bg">
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -31,7 +31,7 @@
                         <Insets left="20.0" right="20.0" top="30.0" />
                      </VBox.margin>
                   </VBox>
-                  <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="40.0" prefWidth="280.0" styleClass="on-page-button" stylesheets="@../../Style/studentDashboard.css" text="Dashboard">
+                  <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/studentDashboard.css" text="Dashboard">
                      <VBox.margin>
                         <Insets bottom="20.0" top="80.0" />
                      </VBox.margin>
@@ -39,23 +39,23 @@
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="QuestionForm" mnemonicParsing="false" onAction="#questionformclicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Question Form">
+                  <Button fx:id="QuestionForm" mnemonicParsing="false" onAction="#questionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Question Form">
                      <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets top="20.0" />
                      </VBox.margin>
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="ProblemForm" mnemonicParsing="false" onAction="#problemformclicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Problem form">
+                  <Button fx:id="ProblemForm" mnemonicParsing="false" onAction="#problemformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Problem form">
                      <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets top="20.0" />
                      </VBox.margin>
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="40.0" prefWidth="280.0" styleClass="menu-button" text="Sugession form">
+                  <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="66.0" prefWidth="234.0" styleClass="menu-button" text="Suggestion form">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
@@ -73,9 +73,9 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="top">
                <children>
-                  <Label alignment="CENTER" style="-fx-text-fill: white;" styleClass="title" text="Welcome, user!">
+                  <Label alignment="CENTER" style="-fx-text-fill: white;" styleClass="title" text="Welcome, User!">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="34.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="30.0" />
@@ -94,30 +94,54 @@
                   <Insets left="80.0" right="100.0" top="60.0" />
                </VBox.margin>
             </HBox>
-            <VBox prefHeight="367.0" prefWidth="720.0" spacing="2.0" styleClass="calendar-container">
+            <VBox prefHeight="367.0" prefWidth="720.0" spacing="2.0">
                <VBox.margin>
                   <Insets bottom="30.0" left="80.0" right="100.0" top="45.0" />
                </VBox.margin>
                <children>
-                  <Label fx:id="studentIdLabel" styleClass="student-info" text="Label">
+                  <Label fx:id="studentIdLabel" prefHeight="58.0" prefWidth="282.0" styleClass="student-info" text="Label">
                      <graphic>
-                        <Label styleClass="student-info" text="StudentID: " />
+                        <Label prefHeight="57.0" prefWidth="159.0" styleClass="student-info" text="StudentID: ">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Label>
                      </graphic>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
                   </Label>
-                  <Label fx:id="emailLabel" styleClass="student-info" text="Label">
+                  <Label fx:id="emailLabel" prefHeight="63.0" prefWidth="160.0" styleClass="student-info" text="Label">
                      <graphic>
-                        <Label styleClass="student-info" text="Email: " />
+                        <Label styleClass="student-info" text="Email: ">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Label>
                      </graphic>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
                   </Label>
-                  <Label fx:id="facultyLabel" styleClass="student-info" text="Label">
+                  <Label fx:id="facultyLabel" prefHeight="59.0" prefWidth="182.0" styleClass="student-info" text="Label">
                      <graphic>
-                        <Label styleClass="student-info" text="Faculty: " />
+                        <Label styleClass="student-info" text="Faculty: ">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Label>
                      </graphic>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
                   </Label>
-                  <Label fx:id="usernameLabel" styleClass="student-info" text="Label">
+                  <Label fx:id="usernameLabel" prefHeight="61.0" prefWidth="222.0" styleClass="student-info" text="Label">
                      <graphic>
-                        <Label styleClass="student-info" text="Username: " />
+                        <Label styleClass="student-info" text="Username: ">
+                           <font>
+                              <Font size="21.0" />
+                           </font></Label>
                      </graphic>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
                   </Label>
                </children>
                <padding>
