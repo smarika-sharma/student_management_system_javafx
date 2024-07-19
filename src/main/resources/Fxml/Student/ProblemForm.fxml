@@ -40,19 +40,20 @@
             </Button>
             <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Question Form">
                 <VBox.margin>
-                    <Insets top="25.0" />
+                    <Insets top="15.0" />
                 </VBox.margin>
             </Button>
             <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
                 <VBox.margin>
-                    <Insets top="25.0" />
+                    <Insets top="15.0" />
                 </VBox.margin>
             </Button>
             <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Suggestion Form">
                 <VBox.margin>
-                    <Insets top="25.0" />
+                    <Insets top="15.0" />
                 </VBox.margin>
             </Button>
+            <Button mnemonicParsing="false" onAction="#studentLogout" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Logout" />
         </children>
     </VBox>
     <VBox layoutX="293.0" layoutY="41.0" prefHeight="119.0" prefWidth="817.0">
@@ -105,7 +106,7 @@
                      <children>
                         <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
-                              <Insets left="50.0" right="30.0" top="20.0" />
+                              <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
                         <Label prefHeight="26.0" prefWidth="286.0" text="Infrastructure Problem">
@@ -113,12 +114,23 @@
                               <Font size="16.0" />
                            </font>
                            <HBox.margin>
-                              <Insets right="50.0" top="20.0" />
+                              <Insets right="50.0" top="12.0" />
                            </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label onMouseClicked="#navigateToInfrastructureForm" prefHeight="20.0" prefWidth="620.0" text="Any issues related to improper functioning of Internet, AC, computers and other infrastructures.   ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <ImageView fitHeight="103.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
@@ -130,7 +142,50 @@
       </HBox>
       <HBox fx:id="categories1" layoutX="296.0" layoutY="337.0" prefHeight="105.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
          <children>
-            <VBox prefHeight="106.0" prefWidth="682.0" />
+            <VBox prefHeight="106.0" prefWidth="682.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Label prefHeight="26.0" prefWidth="286.0" text="Issues Related to Counseling">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" top="12.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="53.0" prefWidth="699.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="620.0" text="Any issues related to mental health including crisis interventions, personal and emotional support, ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="620.0" text="academic counseling and others.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children></VBox>
             <ImageView fitHeight="103.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/problemFormImg2.png" />
@@ -140,8 +195,44 @@
       </HBox>
       <HBox fx:id="categories11" layoutX="297.0" layoutY="460.0" prefHeight="105.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
          <children>
-            <HBox prefHeight="106.0" prefWidth="647.0" />
-            <ImageView fitHeight="103.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" />
+            <VBox prefHeight="106.0" prefWidth="683.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="50.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Label prefHeight="26.0" prefWidth="286.0" text="Other Problems">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" top="12.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="53.0" prefWidth="699.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="620.0" text="Any issues other than the two mentioned above.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fitHeight="103.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
 </children>
