@@ -75,7 +75,6 @@
             </Label> <!-- Removed unnecessary VBox.margin and Insets -->
         </children>
     </VBox>
-      <Button layoutX="294.0" layoutY="226.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="799.0" text="Button" />
     <Button alignment="CENTER" layoutX="650.0" layoutY="583.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="122.0" styleClass="submit-button" stylesheets="@../../Style/SuggestionForm.css" text="Submit" AnchorPane.leftAnchor="650.0" AnchorPane.rightAnchor="428.4000000000001">
         <font>
             <Font size="26.0" />
@@ -98,7 +97,52 @@
             <Insets />
          </opaqueInsets>
       </HBox>
-      <Button layoutX="295.0" layoutY="350.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="799.0" text="Button" />
-      <Button layoutX="296.0" layoutY="469.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="799.0" text="Button" />
+      <HBox fx:id="categories" layoutX="296.0" layoutY="212.0" prefHeight="105.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
+         <children>
+            <VBox prefHeight="106.0" prefWidth="685.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="50.0" right="30.0" top="20.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Label prefHeight="26.0" prefWidth="286.0" text="Infrastructure Problem">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="103.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/problemFormImg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="categories1" layoutX="296.0" layoutY="337.0" prefHeight="105.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
+         <children>
+            <VBox prefHeight="106.0" prefWidth="682.0" />
+            <ImageView fitHeight="103.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/problemFormImg2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="categories11" layoutX="297.0" layoutY="460.0" prefHeight="105.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
+         <children>
+            <HBox prefHeight="106.0" prefWidth="647.0" />
+            <ImageView fitHeight="103.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
 </children>
 </AnchorPane>

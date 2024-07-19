@@ -1,27 +1,17 @@
 package fx.studentmanagementsystem.controller.Staff;
 
-import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
+import javafx.fxml.FXML;
 
-import java.util.Optional;
+import java.io.IOException;
 
-import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.*;
 
 public class LibrarianDashboardController {
 
 
-
-    // logout button
-    public void librarianLogout(ActionEvent event) {
-        if(DialogsUtil.showLogoutConfirmation()){
-            try {
-                changeScene(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+    @FXML
+    public void librarianLogout(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/loginForOtherThanStudent.fxml","Academiafx");
     }
-
 }
