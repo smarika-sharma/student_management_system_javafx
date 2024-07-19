@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.LoginController">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.LoginController">
         <left>
             <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
         </left>
@@ -94,7 +94,7 @@
                                     <Insets top="15.0" />
                                 </VBox.margin>
                                 <children>
-                                    <Button fx:id="loginpage_signupbtn" mnemonicParsing="false" onAction="#loginpagesignupbtn" styleClass="redirect-to-login-or-signup" text="Choose User">
+                                    <Button mnemonicParsing="false" onAction="#chooseuserButton" styleClass="redirect-to-login-or-signup" text="Choose User">
                                         <HBox.margin>
                                             <Insets left="5.0" />
                                         </HBox.margin>

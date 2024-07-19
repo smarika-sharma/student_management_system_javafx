@@ -154,4 +154,8 @@ public class LoginController {
         }
 
     }
+
+    public void chooseuserButton(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+    }
 }
