@@ -26,6 +26,8 @@ public class HelloApplication extends Application {
         //stage.setResizable(false);
         stage.centerOnScreen();
         stage.show();
+
+
     }
 
 }

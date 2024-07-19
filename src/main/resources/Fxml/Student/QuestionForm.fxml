@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.QuestionFormController">
    <left>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
@@ -87,7 +87,7 @@
                   <Insets left="80.0" right="100.0" top="60.0" />
                </VBox.margin>
             </HBox>
-            <VBox prefHeight="634.0" prefWidth="719.0" spacing="2.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css">
+            <VBox prefHeight="457.0" prefWidth="674.0" spacing="2.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css">
                <VBox.margin>
                   <Insets bottom="30.0" left="80.0" right="100.0" top="45.0" />
                </VBox.margin>
@@ -109,24 +109,24 @@
                   </VBox>
                   <VBox prefHeight="127.0" prefWidth="705.0">
                      <children>
-                        <Label text="Question 1">
+                        <Label fx:id="Question1Label" text="Choose one extracurricular activity.">
                            <font>
-                              <Font size="21.0" />
+                              <Font size="18.0" />
                            </font></Label>
                         <HBox prefHeight="71.0" prefWidth="705.0">
                            <children>
-                              <RadioButton mnemonicParsing="false" text="Option" />
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q1O1" mnemonicParsing="false" text="Sports" />
+                              <RadioButton fx:id="Q1O2" mnemonicParsing="false" text="Dance">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q1O3" mnemonicParsing="false" text="Music">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q1O4" mnemonicParsing="false" text="Social Service">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
@@ -140,21 +140,21 @@
                   </VBox>
                   <VBox layoutX="25.0" layoutY="89.0" prefHeight="127.0" prefWidth="705.0">
                      <children>
-                        <Label text="Question 2" />
+                        <Label fx:id="Question2Label" text="Choose a club." />
                         <HBox prefHeight="71.0" prefWidth="705.0">
                            <children>
-                              <RadioButton mnemonicParsing="false" text="Option" />
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q2O1" mnemonicParsing="false" text="Readers Club" />
+                              <RadioButton fx:id="Q2O2" mnemonicParsing="false" text="Sport Club">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q2O3" mnemonicParsing="false" text="Media Club">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q2O4" mnemonicParsing="false" text="Dance Club">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
@@ -168,21 +168,21 @@
                   </VBox>
                   <VBox layoutX="25.0" layoutY="219.0" prefHeight="127.0" prefWidth="705.0">
                      <children>
-                        <Label text="Question 3" />
+                        <Label fx:id="Question3Label" text="When do you prefer to engage in extracurricular activity?" />
                         <HBox prefHeight="71.0" prefWidth="705.0">
                            <children>
-                              <RadioButton mnemonicParsing="false" text="Option" />
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q3O1" mnemonicParsing="false" text="Before School" />
+                              <RadioButton fx:id="Q3O2" mnemonicParsing="false" text="During Breaks">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q3O3" mnemonicParsing="false" text="After School">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="Option">
+                              <RadioButton fx:id="Q3O4" mnemonicParsing="false" text="Weekends">
                                  <HBox.margin>
                                     <Insets left="50.0" />
                                  </HBox.margin>
@@ -194,12 +194,17 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <VBox prefHeight="89.0" prefWidth="705.0">
+                  <Label fx:id="ErrorSubmitting" text="Label" textFill="#eb0c0c">
+                     <font>
+                        <Font name="System Italic" size="11.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="36.0" prefWidth="657.0">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="submit-button" text="Submit">
+                        <Button mnemonicParsing="false" onAction="#handleSubmitAction" prefHeight="50.0" prefWidth="150.0" styleClass="submit-button" text="Submit">
                            <VBox.margin>
                               <Insets left="250.0" />
                            </VBox.margin>

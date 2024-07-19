@@ -1,12 +1,13 @@
 package fx.studentmanagementsystem.controller.Student;
 
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import static fx.studentmanagementsystem.Uses.changeScene;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-
+import javafx.fxml.FXMLLoader;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -32,6 +33,7 @@ public class StudentMenuController implements Initializable {
     @FXML
     private Button SugessionForm;
 
+
     public void setStudentEmail(String email) {
         this.studentEmail = email;
         // Now that we have the email, attempt to load student info
@@ -40,6 +42,10 @@ public class StudentMenuController implements Initializable {
 
 
     private void loadStudentInfo() {
+        if (studentEmail == null || studentEmail.isEmpty()) {
+            //System.err.println("Student email is null or empty.");
+            return;
+        }
         try {
             Map<String, String> student_info = StudentInfoReader.readStudentInfo(studentEmail);
             studentIdLabel.setText(student_info.get("Student ID"));
@@ -53,13 +59,28 @@ public class StudentMenuController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Removed the direct call to loadStudentInfo here to avoid null email issue
+        if (studentIdLabel != null) {
+            loadStudentInfo();
+        } else {
+            //System.out.println("studentIdLabel is null");
+            // Consider using Platform.runLater if the operation depends on fully rendered UI
+            Platform.runLater(() -> {
+                // Ensure the component is now available and then call loadStudentInfo
+                if (studentIdLabel != null) {
+                    loadStudentInfo();
+                }
+            });
+        }
+
     }
 
     @FXML
     protected void StudentDashboardClicked(ActionEvent event) {
+
         try {
-            changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
+            FXMLLoader fxmlLoader= changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
+            StudentMenuController controller = fxmlLoader.getController();
+            controller.setStudentEmail(SessionManager.getStudentEmail());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -67,12 +88,15 @@ public class StudentMenuController implements Initializable {
 
     }
     @FXML
-    public void questionformclicked(ActionEvent event) {
+    public void questionformclicked(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/QuestionForm.fxml","AcademiaFX");
 
 
     }
     @FXML
     public void problemformclicked(ActionEvent event) {
+
+
 
     }
     @FXML

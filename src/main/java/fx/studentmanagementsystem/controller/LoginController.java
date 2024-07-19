@@ -1,20 +1,25 @@
 package fx.studentmanagementsystem.controller;
 
 
+import fx.studentmanagementsystem.controller.Student.SessionManager;
 import fx.studentmanagementsystem.controller.Student.StudentMenuController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import javafx.stage.Stage;
 import org.jetbrains.annotations.NotNull;
 import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.readCSV;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 
 public class LoginController {
@@ -57,11 +62,18 @@ public class LoginController {
         }
 
         if (loginSuccessful) {
+            SessionManager.setStudentEmail(Email);
             loginerror_label.setText(" login successful");
             try {
                 FXMLLoader fxmlLoader= changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
                 StudentMenuController controller = fxmlLoader.getController();
                 controller.setStudentEmail(Email);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Get current stage
+                if (stage!=null){
+                    stage.setMaximized(true);
+                }else {
+                    //System.err.println("Stage is null");
+                }
 
 
             } catch (IOException e) {
@@ -71,6 +83,76 @@ public class LoginController {
         }else {
             loginerror_label.setText("Invalid credentials");
         }
+
+    }
+
+    public void LoginbtnTAL(ActionEvent event) {
+        String email = studentlogin_email_field.getText();
+        String password = studentlogin_pass_field.getText();
+
+        // for teacher
+
+        try {
+            List<String[]> teacherCredentials = readCSV("teacher_credentials.csv");
+            boolean loginSuccessful = false;
+            for (String[] credentials : teacherCredentials) {
+                if (credentials[0].equals(email) && credentials[1].equals(password)) {
+                    loginSuccessful = true;
+                    break;
+                }
+            }
+
+            if (loginSuccessful) {
+                changeScene(event, "/Fxml/Teacher/TeacherDashboard.fxml", "AcademiaFX");
+            } else {
+                loginerror_label.setText("Invalid credentials");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            loginerror_label.setText("Error reading credentials");
+        }
+
+        // for librarian
+        try {
+            List<String[]> librarianCredentials = readCSV("librarian_credentials.csv");
+            boolean loginSuccessful = false;
+            for (String[] credentials : librarianCredentials) {
+                if (credentials[0].equals(email) && credentials[1].equals(password)) {
+                    loginSuccessful = true;
+                    break;
+                }
+            }
+
+            if (loginSuccessful) {
+                changeScene(event, "/Fxml/Staff/LibrarianDashboard.fxml", "AcademiaFX");
+            } else {
+                loginerror_label.setText("Invalid credentials");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            loginerror_label.setText("Error reading credentials");
+        }
+        //for admission officer
+        try {
+            List<String[]> admissionOfficerCredentials = readCSV("admission_officer_credentials.csv");
+            boolean loginSuccessful = false;
+            for (String[] credentials : admissionOfficerCredentials) {
+                if (credentials[0].equals(email) && credentials[1].equals(password)) {
+                    loginSuccessful = true;
+                    break;
+                }
+            }
+
+            if (loginSuccessful) {
+                changeScene(event, "/Fxml/Staff/AdmissionOfficerDashboard.fxml", "AcademiaFX");
+            } else {
+                loginerror_label.setText("Invalid credentials");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            loginerror_label.setText("Error reading credentials");
+        }
+
 
     }
 }

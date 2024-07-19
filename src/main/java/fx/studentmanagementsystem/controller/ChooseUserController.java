@@ -37,21 +37,21 @@ public class ChooseUserController {
     }
     protected void teacherLogin(MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/login.fxml","AcademiaFX");
+            changeSceneMouse(event,"/Fxml/login2.fxml","AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
     protected void admissionofficerLogin(MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/login.fxml","AcademiaFX");
+            changeSceneMouse(event,"/Fxml/login2.fxml","AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
     protected void librarianLogin(MouseEvent event) {
         try {
-            changeSceneMouse(event, "/Fxml/login.fxml", "AcademiaFX");
+            changeSceneMouse(event, "/Fxml/login2.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
