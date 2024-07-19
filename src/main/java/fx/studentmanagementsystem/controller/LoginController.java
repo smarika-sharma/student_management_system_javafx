@@ -11,15 +11,16 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.jetbrains.annotations.NotNull;
-import static fx.studentmanagementsystem.Uses.changeScene;
-import static fx.studentmanagementsystem.Uses.readCSV;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
+
+import static fx.studentmanagementsystem.Uses.*;
 
 
 public class LoginController {
@@ -157,5 +158,13 @@ public class LoginController {
 
     public void chooseuserButton(ActionEvent event) throws IOException {
         changeScene(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+    }
+
+    public void backToChooseUser(MouseEvent event) {
+        try {
+            changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

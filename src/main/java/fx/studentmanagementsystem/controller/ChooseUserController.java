@@ -56,4 +56,12 @@ public class ChooseUserController {
             e.printStackTrace();
         }
     }
+
+    public void backToChooseUser(MouseEvent event) {
+        try {
+            changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
