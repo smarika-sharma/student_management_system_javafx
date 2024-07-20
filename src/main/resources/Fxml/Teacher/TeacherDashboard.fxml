@@ -34,7 +34,7 @@
                   <Insets />
                </opaqueInsets>
             </VBox>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="204.0" styleClass="menu-button" text="Student Details">
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="204.0" styleClass="on-page-button" stylesheets="@../../Style/TeacherDashboard.css" text="Student Details">
                <font>
                   <Font size="15.0" />
                </font>
