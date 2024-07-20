@@ -1,0 +1,10 @@
+.heading{
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 20px;
+    -fx-font-size: 25px;
+    -fx-text-fill:  #4D5194;
+}
+.left{
+    -fx-background-color: #6E73B8;
+
+}

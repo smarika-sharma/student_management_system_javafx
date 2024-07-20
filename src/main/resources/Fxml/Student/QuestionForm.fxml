@@ -74,7 +74,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css">
                <children>
-                  <Label graphicTextGap="0.0" style="-fx-text-fill: #4D5194;" styleClass="heading" stylesheets="@../../Style/QuestionForm.css" text="Question Form">
+                  <Label graphicTextGap="0.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css" text="Question Form">
                      <font>
                         <Font size="30.0" />
                      </font>

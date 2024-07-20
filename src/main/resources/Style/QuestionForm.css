@@ -5,6 +5,7 @@
     -fx-font-family: 'Inknut Antiqua', serif;
     -fx-font-weight: bold;
     -fx-letter-spacing: 20px;
+    -fx-text-fill:  #4D5194;
 }
 
 .menu{
