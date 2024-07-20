@@ -1,12 +1,5 @@
-.categories{
-    -fx-background-color: rgba(110, 115, 184, 0.36);
-    -fx-background-radius:20;
-}
-.categories:hover{
-    -fx-background-color: rgba(136, 141, 200, 0.17);
-}
-.submit-btn:hover{
-    -fx-background-color: rgba(110, 115, 184, 0.27);
+.textOfTextfield{
+    -fx-text-fill: rgba(51, 48, 48, 0.88);
 }
 .submit-button{
     -fx-font-size: 15px;
