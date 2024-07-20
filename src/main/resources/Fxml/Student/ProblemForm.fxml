@@ -43,7 +43,7 @@
                     <Insets top="15.0" />
                 </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#problemformclicked" onMouseClicked="#navigateToProblemForm" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
+            <Button mnemonicParsing="false" onAction="#problemformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
                 <VBox.margin>
                     <Insets top="15.0" />
                 </VBox.margin>
@@ -66,14 +66,6 @@
                     <Insets />
                 </VBox.margin>
             </Label> <!-- Removed unnecessary VBox.margin and Insets -->
-            <Label prefHeight="22.0" prefWidth="829.0" text="Choose a category :">
-                <font>
-                    <Font size="19.0" />
-                </font>
-               <VBox.margin>
-                  <Insets top="50.0" />
-               </VBox.margin>
-            </Label> <!-- Removed unnecessary VBox.margin and Insets -->
         </children>
     </VBox>
       <HBox alignment="CENTER" layoutX="282.0" layoutY="640.0" prefHeight="15.0" prefWidth="826.0">
@@ -89,30 +81,33 @@
             <Insets />
          </opaqueInsets>
       </HBox>
-      <HBox fx:id="categories" layoutX="296.0" layoutY="212.0" onMouseClicked="#navigateToInfrastructureForm" prefHeight="124.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
+      <HBox fx:id="categories" layoutX="296.0" layoutY="212.0" prefHeight="124.0" prefWidth="802.0" styleClass="categories" stylesheets="@../../Style/ProblemForm.css">
          <children>
             <VBox prefHeight="106.0" prefWidth="685.0">
                <children>
-                  <HBox onMouseClicked="#navigateToInfrastructureForm" prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Circle fill="DODGERBLUE" onMouseClicked="#navigateToInfrastructureForm" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                        <Circle fill="#f6f7f8" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
                            <HBox.margin>
                               <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
-                        <Label onMouseClicked="#navigateToInfrastructureForm" prefHeight="26.0" prefWidth="286.0" text="Infrastructure Problem">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
+                        <Button mnemonicParsing="false" onAction="#infrastructureproblemClicked" text="Infrastructure ">
                            <HBox.margin>
-                              <Insets right="50.0" top="12.0" />
+                              <Insets top="5.0" />
                            </HBox.margin>
-                        </Label>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                   </HBox>
-                  <HBox onMouseClicked="#navigateToInfrastructureForm" prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label onMouseClicked="#navigateToInfrastructureForm" prefHeight="20.0" prefWidth="620.0" text="Any issues related to improper functioning of Internet, AC, computers and other infrastructures.   ">
+                        <Label prefHeight="54.0" prefWidth="605.0" text="Any issues related to improper functioning of Internet, AC, computers and other infrastructures.   ">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -124,7 +119,7 @@
                   </HBox>
                </children>
             </VBox>
-            <ImageView fitHeight="103.0" fitWidth="120.0" onMouseClicked="#navigateToInfrastructureForm" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/problemFormImg.png" />
                </image>
@@ -137,19 +132,19 @@
                <children>
                   <HBox prefHeight="106.0" prefWidth="200.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                        <Circle fill="#fcfcfd" radius="6.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
-                        <Label prefHeight="26.0" prefWidth="286.0" text="Issues Related to Counseling">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
+                        <Button mnemonicParsing="false" onAction="#counselingissueClicked" text="Issues Related to Counseling">
                            <HBox.margin>
-                              <Insets right="50.0" top="12.0" />
+                              <Insets top="5.0" />
                            </HBox.margin>
-                        </Label>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -190,19 +185,19 @@
                <children>
                   <HBox prefHeight="106.0" prefWidth="676.0">
                      <children>
-                        <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                        <Circle fill="#f7f8f8" radius="6.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
-                        <Label prefHeight="26.0" prefWidth="286.0" text="Other Problems">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
+                        <Button mnemonicParsing="false" onAction="#otherproblemClicked" text="Other Problems">
                            <HBox.margin>
-                              <Insets right="50.0" top="12.0" />
+                              <Insets top="5.0" />
                            </HBox.margin>
-                        </Label>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -226,5 +221,10 @@
             <ImageView fitHeight="103.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
+      <Label layoutX="322.0" layoutY="160.0" style="-fx-font-family: Syne;" text="Choose a category:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
 </children>
 </AnchorPane>
