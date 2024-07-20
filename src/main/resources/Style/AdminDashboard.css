@@ -1,0 +1,64 @@
+/*font import*/
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+.title{
+    -fx-font-family: 'Inknut Antiqua', serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 40px;
+    -fx-text-fill:  white;
+}
+
+.menu{
+    -fx-background-color: #6E73B8;
+    -fx-background-radius: 0 30 0 30;
+}
+.top{
+    -fx-background-color: #6E73B8;
+    -fx-background-radius: 20 5 20 5;
+}
+.heading{
+    -fx-font-family: 'Inknut Antiqua', serif;
+    -fx-font-size: 20px;
+}
+.numbers{
+    -fx-font-family: 'Inknut Antiqua', serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 40px;
+}
+.logo-bg{
+    -fx-background-color: rgba(255, 255, 255, 0.38);
+    -fx-background-radius: 20 20 20 20;
+}
+.on-page-button{
+    -fx-border-color: none;
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -fx-pref-height: 65;
+    -fx-pref-width: 234;
+}
+.menu-button{
+    -fx-border-color: none;
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-background-color:none;
+    -fx-pref-height: 65;
+    -fx-pref-width: 234;
+}
+.menu-button:hover{
+    -fx-border-color: none;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+.menu-button:pressed {
+    -fx-border-color: none;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+.box {
+    -fx-padding: 20;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+    -fx-background-color: white;
+}
