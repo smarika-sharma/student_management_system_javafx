@@ -24,4 +24,6 @@ module fx.studentmanagementsystem {
     opens fx.studentmanagementsystem.controller.Teacher to javafx.fxml;
     opens fx.studentmanagementsystem.model to javafx.base;
     opens fx.studentmanagementsystem.service to javafx.base;
+    exports fx.studentmanagementsystem.controller.Staff to javafx.fxml;
+    opens fx.studentmanagementsystem.controller.Staff to javafx.fxml;
 }
