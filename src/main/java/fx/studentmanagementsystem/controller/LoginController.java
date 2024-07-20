@@ -25,6 +25,9 @@ import static fx.studentmanagementsystem.Uses.*;
 
 public class LoginController {
     @FXML
+    public TextField adminusernamefield;
+    public TextField adminpasscode;
+    @FXML
     private TextField studentlogin_email_field;
     @FXML
     private TextField studentlogin_pass_field;
@@ -165,6 +168,21 @@ public class LoginController {
             changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void adminloginButton(ActionEvent event) {
+        String username = adminusernamefield.getText();
+        String passcode = adminpasscode.getText();
+
+        if (username.equals("admin") && passcode.equals("admin")) {
+            try {
+                changeScene(event, "/Fxml/Admin/adminDashboard.fxml", "AcademiaFX");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            loginerror_label.setText("Invalid credentials");
         }
     }
 }
