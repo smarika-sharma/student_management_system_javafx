@@ -1,0 +1,6 @@
+Student ID: 03620012
+Username: Suchita Thapa
+Phone Number: 9808254775
+Email: suchita@gmail.com
+Faculty: BCS
+Gender: Female
