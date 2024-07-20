@@ -17,14 +17,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentFormController">
+<AnchorPane maxHeight="750.0" maxWidth="1200.0" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentFormController">
    <children>
-      <ImageView fitHeight="751.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="728.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/StudentFormLeft.png" />
          </image>
       </ImageView>
-      <VBox layoutX="309.0" layoutY="24.0" prefHeight="92.0" prefWidth="304.0">
+      <VBox layoutX="309.0" layoutY="24.0" prefHeight="79.0" prefWidth="304.0">
          <children>
             <Label alignment="TOP_LEFT" prefHeight="61.0" prefWidth="270.0" styleClass="heading" stylesheets="@../../Style/StudentForm.css" text="Student Form " />
             <Line endX="160.2716064453125" endY="-25.755342483520508" startX="419.81378173828125" startY="-25.75534439086914" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeWidth="5.0">
@@ -73,7 +73,7 @@
             </Line>
          </children>
       </VBox>
-      <VBox layoutX="313.0" layoutY="129.0" prefHeight="588.0" prefWidth="757.0" spacing="15.0">
+      <VBox layoutX="301.0" layoutY="104.0" prefHeight="588.0" prefWidth="750.0" spacing="15.0">
          <children>
             <HBox prefHeight="40.0" prefWidth="816.0" spacing="50.0">
                <children>
