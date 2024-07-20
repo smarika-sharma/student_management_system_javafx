@@ -1,18 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.Student.StudentFormController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentFormController">
    <children>
-      <Label layoutX="211.0" layoutY="26.0" styleClass="heading" stylesheets="@../../Style/StudentForm.css" text="Student Form " />
-      <ImageView fitHeight="400.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="751.0" fitWidth="302.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/StudentFormLeft.png" />
          </image>
       </ImageView>
+      <VBox layoutX="309.0" layoutY="24.0" prefHeight="92.0" prefWidth="304.0">
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="61.0" prefWidth="270.0" styleClass="heading" stylesheets="@../../Style/StudentForm.css" text="Student Form " />
+            <Line endX="160.2716064453125" endY="-25.755342483520508" startX="419.81378173828125" startY="-25.75534439086914" strokeLineJoin="ROUND" strokeMiterLimit="0.0" strokeWidth="5.0">
+               <fill>
+                  <RadialGradient centerX="0.48672564683762276" centerY="0.5" radius="0.31651380521441824">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                           <color>
+                              <Color red="0.22585704922676086" green="0.21933722496032715" blue="0.6105263233184814" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6816653609275818" green="0.6801949143409729" blue="0.7684210538864136" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <stroke>
+                  <RadialGradient centerX="0.5221238853657141" centerY="0.44696967529528064" focusAngle="-66.8" radius="0.5000000874930566">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                           <color>
+                              <Color red="0.3490196168422699" green="0.34117648005485535" blue="0.729411780834198" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.659649133682251" green="0.659649133682251" blue="0.75789475440979" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Line>
+         </children>
+      </VBox>
+      <VBox layoutX="313.0" layoutY="129.0" prefHeight="588.0" prefWidth="757.0" spacing="15.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="816.0" spacing="50.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Student ID: " />
+                  <TextField prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Username:" />
+                  <TextField prefHeight="39.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Password:" />
+                  <PasswordField prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="First Name:" />
+                  <TextField prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Last Name:" />
+                  <TextField prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Faculty:" />
+                  <ChoiceBox prefHeight="40.0" prefWidth="400.0" styleClass="dropdown" stylesheets="@../../Style/StudentForm.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Email Address" />
+                  <TextField prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Gender: " />
+                  <ChoiceBox prefHeight="40.0" prefWidth="400.0" styleClass="dropdown" stylesheets="@../../Style/StudentForm.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Phone Number: " />
+                  <TextField prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="766.0" spacing="50.0">
+               <children>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="138.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="50.0" top="20.0" />
+         </padding>
+      </VBox>
    </children>
 </AnchorPane>
