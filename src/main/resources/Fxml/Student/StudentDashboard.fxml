@@ -57,13 +57,13 @@
                   </Button>
                   <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="66.0" prefWidth="234.0" styleClass="menu-button" text="Suggestion form">
                      <VBox.margin>
-                        <Insets top="12.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="SugessionForm1" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="66.0" prefWidth="234.0" styleClass="menu-button" text="Logout">
+                  <Button fx:id="SugessionForm1" mnemonicParsing="false" onAction="#studentLogout" prefHeight="66.0" prefWidth="234.0" styleClass="menu-button" text="Logout">
                      <font>
                         <Font size="16.0" />
                      </font>
