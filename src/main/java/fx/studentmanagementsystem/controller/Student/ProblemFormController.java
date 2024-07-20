@@ -2,7 +2,7 @@ package fx.studentmanagementsystem.controller.Student;
 
 import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.event.ActionEvent;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
 
 
 import java.io.IOException;
@@ -21,10 +21,22 @@ public class ProblemFormController {
         changeScene(event,"/Fxml/Student/QuestionForm.fxml","AcademiaFX");
     }
 
+    @FXML
     public void problemformclicked(ActionEvent event) throws IOException {
         changeScene(event,"/Fxml/Student/ProblemForm.fxml","AcademiaFX");
     }
 
+    @FXML
+    public void counselingclicked(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/CounselingForm.fxml","AcademiaFX");  //CounselingForm
+    }
+
+    @FXML
+    public void otherproblemclicked(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/OthersForm.fxml","AcademiaFX");  //OthersForm
+    }
+
+    @FXML
     public void sugessionformclicked(ActionEvent event) throws IOException {
         changeScene(event,"/Fxml/Student/SuggestionForm.fxml","AcademiaFX");
     }
@@ -35,14 +47,10 @@ public class ProblemFormController {
         }
     }
 
+    @FXML
     public void infrastructureproblemClicked(ActionEvent event) throws IOException {
-        changeScene(event,"/Fxml/Student/infrastructureForm.fxml","AcademiaFX");
+        changeScene(event,"/Fxml/Student/InfrastructureForm.fxml","AcademiaFX");
     }
 
-    public void counselingissueClicked(ActionEvent event) {
 
-    }
-
-    public void otherproblemClicked(ActionEvent event) {
-    }
 }
