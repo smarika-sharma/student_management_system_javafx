@@ -37,8 +37,6 @@ public class AdminDashboardController {
             e.printStackTrace();
             // Handle the exception or display an error message
         }
-
-
     }
 
 
