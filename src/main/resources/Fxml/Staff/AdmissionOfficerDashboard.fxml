@@ -47,7 +47,7 @@
                   <Insets left="15.0" top="20.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="204.0" styleClass="menu-button" text="Logout">
+            <Button mnemonicParsing="false" onAction="#admissionofficerLogout" prefHeight="70.0" prefWidth="204.0" styleClass="menu-button" text="Logout">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>

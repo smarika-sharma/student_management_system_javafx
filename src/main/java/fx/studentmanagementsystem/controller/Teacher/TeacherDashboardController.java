@@ -1,18 +1,26 @@
 package fx.studentmanagementsystem.controller.Teacher;
 
+import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import fx.studentmanagementsystem.model.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
+
+import static fx.studentmanagementsystem.Uses.changeScene;
 
 public class TeacherDashboardController {
 
@@ -57,5 +65,17 @@ public class TeacherDashboardController {
         return students;
     }
 
-    // Include the loadStudentsFromDirectory method here
+    // for logout
+    public void teacherLogout(ActionEvent event) {
+        if(DialogsUtil.showLogoutConfirmation()) {
+            try {
+                changeScene(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+
 }

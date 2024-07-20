@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import java.io.FileWriter;
-import java.io.IOException;
+
 
 public class Uses {
     public static Stage getCurrentStage(ActionEvent event) {
@@ -69,6 +70,7 @@ public class Uses {
         }
         return data;
     }
+
 
 
 }
