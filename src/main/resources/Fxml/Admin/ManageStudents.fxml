@@ -44,8 +44,10 @@
           <TableColumn minWidth="0.0" prefWidth="202.933349609375" text="Name" />
             <TableColumn prefWidth="245.066650390625" text="Email" />
             <TableColumn prefWidth="116.2667236328125" text="Gender" />
-            <TableColumn prefWidth="154.93328857421875" text="Faculty" />
+            <TableColumn prefWidth="169.5999755859375" text="Faculty" />
         </columns>
       </TableView>
+      <Button layoutX="1065.0" layoutY="519.0" mnemonicParsing="false" text="Button" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="756.0" layoutY="534.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
