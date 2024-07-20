@@ -19,3 +19,14 @@
 .submit-button:pressed{
     -fx-background-color: #868bd4;
 }
+.button{
+    -fx-background-color: transparent;
+    -border-color: transparent;
+
+}
+.button:hover{
+    -fx-cursor: hand;
+}
+.circle.button:pressed{
+    -fx-background-color: #868bd4;
+}

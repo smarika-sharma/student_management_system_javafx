@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller.Student;
 
+import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -82,9 +83,21 @@ public class QuestionFormController {
         changeScene(event, "/Fxml/Student/QuestionForm.fxml", "AcademiaFX");
     }
 
-    public void problemformclicked(ActionEvent event) {
+    public void problemformclicked(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Student/ProblemForm.fxml", "AcademiaFX");
     }
 
-    public void sugessionformclicked(ActionEvent event) {
+    public void sugessionformclicked(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Student/SuggestionForm.fxml", "AcademiaFX");
+    }
+
+    public void studentLogout(ActionEvent event) {
+        if(DialogsUtil.showLogoutConfirmation()) {
+            try {
+                changeScene(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

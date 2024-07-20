@@ -71,11 +71,11 @@
             <Image url="@../../images/brain.png" />
          </image>
       </ImageView>
-      <TableView layoutX="343.0" layoutY="331.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
+      <TableView fx:id="studentTableView" layoutX="343.0" layoutY="331.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
          <columns>
-            <TableColumn prefWidth="254.39999389648438" text="Student Name " />
-            <TableColumn prefWidth="196.800048828125" text="Faculty " />
-            <TableColumn prefWidth="291.99993896484375" text="Email" />
+            <TableColumn fx:id="studentNameColumn" prefWidth="254.39999389648438" text="Student Name " />
+            <TableColumn fx:id="facultyColumn" prefWidth="196.800048828125" text="Faculty " />
+            <TableColumn fx:id="emailColumn" prefWidth="291.99993896484375" text="Email" />
          </columns>
       </TableView>
       <Label layoutX="367.0" layoutY="244.0" prefHeight="78.0" prefWidth="294.0" style="-fx-text-fill: #4D5194;" styleClass="heading" stylesheets="@../../Style/AdmissionOfficerDashboard.css" text="Student Details">
