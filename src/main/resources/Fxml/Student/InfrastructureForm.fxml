@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="688.0" prefWidth="1200.0" stylesheets="@../../Style/ProblemForm.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.InfrastructureFormController">
+<AnchorPane prefHeight="688.0" prefWidth="1200.0" stylesheets="@../../Style/ProblemForm.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.InfrastructureFormController">
 <children>
     <VBox layoutX="30.0" layoutY="16.0" prefHeight="663.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/SuggestionForm.css">
         <children>
@@ -128,7 +128,7 @@
             </HBox> <!-- Removed unnecessary VBox.margin and Insets -->
         </children>
     </VBox>
-    <HBox alignment="CENTER" layoutX="314.0" layoutY="640.0" prefHeight="15.0" prefWidth="794.0">
+    <HBox alignment="CENTER" layoutX="314.0" layoutY="640.0" prefHeight="15.0" prefWidth="751.0">
         <children>
             <Circle fill="#b3bbd9" radius="3.0" stroke="#b3bbd9" strokeType="INSIDE">
                 <HBox.margin>
@@ -159,6 +159,6 @@
             </TextField>
          </children>
       </VBox>
-      <Button layoutX="641.0" layoutY="583.0" mnemonicParsing="false" onAction="#infrastructureproblemsubmit" prefHeight="40.0" prefWidth="90.0" styleClass="submit-button" stylesheets="@../../Style/InfrastructureForm.css" text="Submit" />
+      <Button layoutX="648.0" layoutY="581.0" mnemonicParsing="false" onAction="#infrastructureproblemsubmit" prefHeight="40.0" prefWidth="90.0" styleClass="submit-button" stylesheets="@../../Style/InfrastructureForm.css" text="Submit" />
 </children>
 </AnchorPane>
