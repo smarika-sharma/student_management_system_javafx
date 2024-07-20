@@ -2,13 +2,15 @@ package fx.studentmanagementsystem.controller.Student;
 
 import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
 
 import java.io.IOException;
 
 import static fx.studentmanagementsystem.Uses.*;
 
 public class ProblemFormController {
+
 
 
     public void StudentDashboardClicked(ActionEvent event) throws IOException {
@@ -31,5 +33,16 @@ public class ProblemFormController {
         if(DialogsUtil.showLogoutConfirmation()) {
             changeScene(event, "/Fxml/login.fxml", "Academiafx");
         }
+    }
+
+    public void infrastructureproblemClicked(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/infrastructureForm.fxml","AcademiaFX");
+    }
+
+    public void counselingissueClicked(ActionEvent event) {
+
+    }
+
+    public void otherproblemClicked(ActionEvent event) {
     }
 }
