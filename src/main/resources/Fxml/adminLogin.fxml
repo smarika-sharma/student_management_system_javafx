@@ -51,7 +51,7 @@
                                 <padding>
                                     <Insets top="10.0" />
                                 </padding></Label>
-                            <TextField id="username-field" fx:id="studentlogin_email_field" maxWidth="271.0" prefHeight="26.0" prefWidth="271.0" styleClass="username-field" stylesheets="@../Style/loginAndSignup.css">
+                            <TextField id="username-field" fx:id="adminusernamefield" maxWidth="271.0" prefHeight="26.0" prefWidth="271.0" styleClass="username-field" stylesheets="@../Style/loginAndSignup.css">
                                 <VBox.margin>
                                     <Insets bottom="15.0" left="15.0" right="15.0" />
                                 </VBox.margin>
@@ -68,7 +68,7 @@
                                 <padding>
                                     <Insets top="10.0" />
                                 </padding></Label>
-                            <TextField id="password-field" fx:id="studentlogin_pass_field" maxWidth="271.0" styleClass="password-field" stylesheets="@../Style/loginAndSignup.css">
+                            <TextField id="password-field" fx:id="adminpasscode" maxWidth="271.0" styleClass="password-field" stylesheets="@../Style/loginAndSignup.css">
                                 <VBox.margin>
                                     <Insets bottom="10.0" left="15.0" right="15.0" />
                                 </VBox.margin>
@@ -79,7 +79,7 @@
                                 <padding>
                                     <Insets top="10.0" />
                                 </padding></Label>
-                            <Button fx:id="login_button" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#login_button_clicked" prefHeight="41.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@../Style/loginAndSignup.css" text="LOGIN" textAlignment="CENTER">
+                            <Button fx:id="login_button" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#adminloginButton" prefHeight="41.0" prefWidth="143.0" styleClass="loginButton" stylesheets="@../Style/loginAndSignup.css" text="LOGIN" textAlignment="CENTER">
                                 <VBox.margin>
                                     <Insets bottom="-5.0" top="30.0" />
                                 </VBox.margin>

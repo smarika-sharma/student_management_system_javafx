@@ -31,10 +31,10 @@
                   <Insets top="50.0" />
                </VBox.margin>
             </Button>
-            <Button lineSpacing="10.0" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Manage Students" />
-            <Button lineSpacing="10.0" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Manage Staff" />
-            <Button lineSpacing="10.0" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Manage Teacher" />
-            <Button lineSpacing="10.0" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Logout" />
+            <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#adminmanagestudent" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Manage Students" />
+            <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#adminmanagestaff" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Manage Staff" />
+            <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#adminmanageteacher" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Manage Teacher" />
+            <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#adminLogout" styleClass="menu-button" stylesheets="@../../Style/AdminDashboard.css" text="Logout" />
          </children>
       </VBox>
       <HBox alignment="CENTER" layoutX="344.0" layoutY="39.0" prefHeight="123.0" prefWidth="790.0" styleClass="top" stylesheets="@../../Style/AdminDashboard.css">
@@ -45,26 +45,26 @@
       <Pane layoutX="394.0" layoutY="246.0" prefHeight="190.0" prefWidth="350.0" styleClass="box" stylesheets="@../../Style/AdminDashboard.css">
          <children>
             <Label alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="36.0" layoutY="16.0" prefHeight="52.0" prefWidth="266.0" styleClass="heading" stylesheets="@../../Style/AdminDashboard.css" text="Number of Students" />
-            <Label alignment="CENTER" layoutX="2.0" layoutY="69.0" prefHeight="104.0" prefWidth="348.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" />
+            <Label fx:id="noofstudentlabel" alignment="CENTER" layoutX="2.0" layoutY="69.0" prefHeight="104.0" prefWidth="348.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" />
          </children>
       </Pane>
       <Pane layoutX="775.0" layoutY="244.0" prefHeight="190.0" prefWidth="348.0" styleClass="box" stylesheets="@../../Style/AdminDashboard.css">
          <children>
             <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="51.0" layoutY="9.0" prefHeight="52.0" prefWidth="246.0" styleClass="heading" stylesheets="@../../Style/AdminDashboard.css" text="Number of Teachers" textAlignment="CENTER" />
-            <Label alignment="CENTER" layoutX="5.0" layoutY="70.0" prefHeight="104.0" prefWidth="339.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" />
+            <Label fx:id="noofteacherlabel" alignment="CENTER" layoutX="5.0" layoutY="70.0" prefHeight="104.0" prefWidth="339.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" />
          </children>
       </Pane>
       <Pane layoutX="398.0" layoutY="471.0" prefHeight="190.0" prefWidth="348.0" styleClass="box" stylesheets="@../../Style/AdminDashboard.css">
          <children>
             <Label layoutX="56.0" layoutY="21.0" styleClass="heading" stylesheets="@../../Style/AdminDashboard.css" text="Number of Librarian" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="74.0" prefHeight="104.0" prefWidth="344.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" textAlignment="CENTER" />
+            <Label fx:id="nooflibrarian" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="74.0" prefHeight="104.0" prefWidth="344.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" textAlignment="CENTER" />
          </children>
       </Pane>
       <Pane layoutX="777.0" layoutY="472.0" prefHeight="193.0" prefWidth="348.0" styleClass="box" stylesheets="@../../Style/AdminDashboard.css">
          <children>
             <Label layoutX="50.0" layoutY="9.0" prefHeight="44.0" prefWidth="247.0" styleClass="heading" stylesheets="@../../Style/AdminDashboard.css" text="Number of Admission " />
             <Label layoutX="127.0" layoutY="39.0" prefHeight="25.0" prefWidth="91.0" styleClass="heading" stylesheets="@../../Style/AdminDashboard.css" text="Officers" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="75.0" prefHeight="74.0" prefWidth="328.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" textAlignment="CENTER" />
+            <Label fx:id="noofadmissionofficer" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="75.0" prefHeight="74.0" prefWidth="328.0" styleClass="numbers" stylesheets="@../../Style/AdminDashboard.css" text="Label" textAlignment="CENTER" />
          </children>
       </Pane>
    </children>
