@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller.Staff;
 
+import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -12,6 +13,9 @@ public class LibrarianDashboardController {
 
     @FXML
     public void librarianLogout(ActionEvent event) throws IOException {
-        changeScene(event, "/Fxml/loginForOtherThanStudent.fxml","Academiafx");
+        if(DialogsUtil.showLogoutConfirmation()){
+            changeScene(event, "/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+        }
+        //changeScene(event, "/Fxml/loginForOtherThanStudent.fxml","Academiafx");
     }
 }

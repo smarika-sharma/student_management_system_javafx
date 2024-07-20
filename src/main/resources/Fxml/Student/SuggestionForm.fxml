@@ -29,7 +29,7 @@
                   <Insets left="20.0" right="20.0" top="40.0" />
                </VBox.margin>
             </VBox>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Dashboard">
+            <Button mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Dashboard">
                <font>
                   <Font size="20.0" />
                </font>
@@ -37,22 +37,22 @@
                   <Insets top="50.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Question Form">
+            <Button mnemonicParsing="false" onAction="#questionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Question Form">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
+            <Button mnemonicParsing="false" onAction="#problemformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Suggestion Form">
+            <Button mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Suggestion Form">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Logout">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#studentLogout" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Logout">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>

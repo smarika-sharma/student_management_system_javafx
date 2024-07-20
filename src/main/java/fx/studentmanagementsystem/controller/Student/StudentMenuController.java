@@ -1,6 +1,7 @@
 package fx.studentmanagementsystem.controller.Student;
 
 
+import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import static fx.studentmanagementsystem.Uses.changeScene;
@@ -94,13 +95,21 @@ public class StudentMenuController implements Initializable {
 
     }
     @FXML
-    public void problemformclicked(ActionEvent event) {
+    public void problemformclicked(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/ProblemForm.fxml","AcademiaFX");
 
 
 
     }
     @FXML
-    public void sugessionformclicked(ActionEvent event) {
+    public void sugessionformclicked(ActionEvent event) throws IOException {
+        changeScene(event,"/Fxml/Student/SuggestionForm.fxml","AcademiaFX");
 
+    }
+    @FXML
+    public void studentLogout(ActionEvent event) throws IOException {
+        if(DialogsUtil.showLogoutConfirmation()) {
+            changeScene(event, "/Fxml/login.fxml", "Academiafx");
+        }
     }
 }

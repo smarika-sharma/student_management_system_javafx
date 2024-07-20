@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="688.0" prefWidth="1200.0" stylesheets="@../../Style/ProblemForm.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.ProblemFormController">
+<AnchorPane prefHeight="688.0" prefWidth="1200.0" stylesheets="@../../Style/ProblemForm.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.ProblemFormController">
 <children>
     <VBox layoutX="30.0" layoutY="16.0" prefHeight="663.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/SuggestionForm.css">
         <children>
@@ -30,7 +30,7 @@
                     <Insets left="20.0" right="20.0" top="40.0" />
                 </VBox.margin>
             </VBox>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Dashboard">
+            <Button mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Dashboard">
                 <font>
                     <Font size="20.0" />
                 </font>
@@ -38,17 +38,17 @@
                     <Insets top="40.0" />
                 </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Question Form">
+            <Button mnemonicParsing="false" onAction="#questionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Question Form">
                 <VBox.margin>
                     <Insets top="15.0" />
                 </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#navigateToProblemForm" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
+            <Button mnemonicParsing="false" onAction="#problemformclicked" onMouseClicked="#navigateToProblemForm" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
                 <VBox.margin>
                     <Insets top="15.0" />
                 </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Suggestion Form">
+            <Button mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Suggestion Form">
                 <VBox.margin>
                     <Insets top="15.0" />
                 </VBox.margin>

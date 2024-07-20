@@ -64,7 +64,7 @@
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#questionFormLogout" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/QuestionForm.css" text="Logout">
+                  <Button mnemonicParsing="false" onAction="#studentLogout" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/QuestionForm.css" text="Logout">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
