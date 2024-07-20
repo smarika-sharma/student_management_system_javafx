@@ -69,6 +69,17 @@ public class StudentFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         gender.getItems().addAll(genders);
         faculty.getItems().addAll(faculties);
+        backButton.setOnMouseClicked(event -> {
+            try {
+                backButton(event);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    private void backButton(MouseEvent event) throws IOException {
+        changeSceneMouse(event,"/Fxml/Admin/ManageStudents.fxml","AcademiaFX");
     }
 
     private boolean emailExists(String email) {
@@ -164,5 +175,6 @@ public class StudentFormController implements Initializable {
         }catch(FileNotFoundException e){
             e.printStackTrace();
         }
-}
+    }
+
 }

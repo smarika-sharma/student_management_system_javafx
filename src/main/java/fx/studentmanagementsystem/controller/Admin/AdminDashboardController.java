@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller.Admin;
 
+import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
@@ -8,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.changeSceneMouse;
 
 public class AdminDashboardController {
     public Label noofstudentlabel;
@@ -39,6 +41,8 @@ public class AdminDashboardController {
 
     }
 
+
+
     public void adminmanagestudent(ActionEvent event) throws IOException {
         changeScene(event, "/Fxml/Admin/ManageStudents.fxml", "Manage Students");
     }
@@ -50,5 +54,16 @@ public class AdminDashboardController {
     }
 
     public void adminLogout(ActionEvent event) {
+        if(DialogsUtil.showLogoutConfirmation()) {
+            try {
+                changeScene(event, "/Fxml/adminLogin.fxml", "AcademiaFX");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void adminhome(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Admin/AdminDashboard.fxml", "Admin Dashboard");
     }
 }
