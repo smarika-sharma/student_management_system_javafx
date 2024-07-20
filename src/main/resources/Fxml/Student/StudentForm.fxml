@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="750.0" maxWidth="1200.0" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentFormController">
    <children>
-      <ImageView fitHeight="728.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="751.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/StudentFormLeft.png" />
          </image>
@@ -73,7 +73,7 @@
             </Line>
          </children>
       </VBox>
-      <VBox layoutX="301.0" layoutY="104.0" prefHeight="588.0" prefWidth="750.0" spacing="15.0">
+      <VBox layoutX="301.0" layoutY="119.0" prefHeight="588.0" prefWidth="750.0" spacing="15.0">
          <children>
             <HBox prefHeight="40.0" prefWidth="816.0" spacing="50.0">
                <children>
@@ -157,7 +157,7 @@
                   </TextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="766.0" spacing="50.0">
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="700.0" spacing="50.0">
                <children>
                   <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="138.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">
                      <font>

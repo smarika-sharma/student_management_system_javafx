@@ -42,7 +42,7 @@
                   <Insets left="10.0" top="100.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="204.0" styleClass="menu-button" text="Student Form">
+            <Button fx:id="studentForm" mnemonicParsing="false" onAction="#studentFormclicked" prefHeight="70.0" prefWidth="204.0" styleClass="menu-button" text="Student Form">
                <VBox.margin>
                   <Insets left="15.0" top="20.0" />
                </VBox.margin>
