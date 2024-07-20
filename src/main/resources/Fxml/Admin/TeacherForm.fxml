@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.TeacherFormController">
    <children>
       <ImageView fitHeight="751.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
@@ -25,7 +24,7 @@
          <children>
             <HBox prefHeight="40.0" prefWidth="815.0" spacing="50.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Teacher Name:" />
+                  <Label prefHeight="39.0" prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Teacher ID:" />
                   <TextField stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
