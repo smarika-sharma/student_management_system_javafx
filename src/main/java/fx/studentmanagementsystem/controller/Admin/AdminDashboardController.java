@@ -1,6 +1,6 @@
 package fx.studentmanagementsystem.controller.Admin;
 
-import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
+import fx.studentmanagementsystem.Utils.DialogsUtil;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
@@ -9,7 +9,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
-import static fx.studentmanagementsystem.Uses.changeSceneMouse;
 
 public class AdminDashboardController {
     public Label noofstudentlabel;

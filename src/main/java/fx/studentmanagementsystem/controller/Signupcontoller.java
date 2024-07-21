@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller;
 
+import fx.studentmanagementsystem.Utils.HashEncryption;
 import fx.studentmanagementsystem.controller.Student.StudentIDGenerator;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
@@ -17,6 +18,7 @@ import javafx.util.Duration;
 
 import java.io.*;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
@@ -72,7 +74,7 @@ public class Signupcontoller implements Initializable {
         return false; // Email does not exist
     }
     @FXML
-    public void signup_btn_clicked(ActionEvent event) {
+    public void signup_btn_clicked(ActionEvent event) throws NoSuchAlgorithmException {
         if (!isInputValid()) {
             return;
         }
@@ -85,14 +87,15 @@ public class Signupcontoller implements Initializable {
             Error_label.setText("Password and confirm password do not match");
         } else {
             Error_label.setText("Signup successful");
+            String hashedPassword = HashEncryption.hashPassword(student_pass_field.getText());
             //String Email = student_email_field.getText();
-            String Password = student_pass_field.getText();
+            //String Password = student_pass_field.getText();
             String Firstname = student_firstname.getText();
             String Lastname = student_lastname.getText();
             String Phonenumber = student_phonenumber.getText();
             String Faculty = chooseFaculty.getValue();
             String Gender = chooseGender.getValue();
-            writeCredentialsToCSV(Email, Password);
+            writeCredentialsToCSV(Email, hashedPassword);
             try {
                 writestudentinfoTotxt(Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
             }catch (FileNotFoundException e) {

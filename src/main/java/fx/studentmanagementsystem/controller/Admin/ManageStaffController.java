@@ -1,6 +1,6 @@
 package fx.studentmanagementsystem.controller.Admin;
 
-import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
+import fx.studentmanagementsystem.Utils.DialogsUtil;
 import fx.studentmanagementsystem.model.Staff;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

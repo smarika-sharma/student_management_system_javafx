@@ -1,6 +1,6 @@
 package fx.studentmanagementsystem.controller.Staff;
 
-import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
+import fx.studentmanagementsystem.Utils.DialogsUtil;
 import fx.studentmanagementsystem.model.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,7 +11,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

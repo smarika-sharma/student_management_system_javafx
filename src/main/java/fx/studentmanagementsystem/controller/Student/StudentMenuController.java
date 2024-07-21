@@ -1,7 +1,7 @@
 package fx.studentmanagementsystem.controller.Student;
 
 
-import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
+import fx.studentmanagementsystem.Utils.DialogsUtil;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import static fx.studentmanagementsystem.Uses.changeScene;

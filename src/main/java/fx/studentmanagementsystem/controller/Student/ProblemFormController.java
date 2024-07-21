@@ -1,6 +1,6 @@
 package fx.studentmanagementsystem.controller.Student;
 
-import fx.studentmanagementsystem.DialogsutilLogout.DialogsUtil;
+import fx.studentmanagementsystem.Utils.DialogsUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 

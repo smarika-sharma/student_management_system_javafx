@@ -1,4 +1,4 @@
-package fx.studentmanagementsystem.DialogsutilLogout;
+package fx.studentmanagementsystem.Utils;
 
 
 
