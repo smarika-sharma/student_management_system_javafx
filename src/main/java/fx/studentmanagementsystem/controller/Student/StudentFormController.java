@@ -108,6 +108,7 @@ public class StudentFormController implements Initializable {
         else {
             Error_label.setText("Successfully added a new student.");
             //String Email = student_email_field.getText();
+            String StudentID = studentID.getText();
             String Password = password.getText();
             String Firstname = firstName.getText();
             String Lastname = lastName.getText();
@@ -116,7 +117,7 @@ public class StudentFormController implements Initializable {
             String Gender = gender.getValue();
             writeCredentialsToCSV(Email, Password);
             try {
-                writestudentinfoTotxt(Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
+                writestudentinfoTotxt(StudentID, Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
             }catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -157,7 +158,7 @@ public class StudentFormController implements Initializable {
             e.printStackTrace();
         }
     }
-    private void writestudentinfoTotxt(String firstname,String lastname,String phonenumber,String email,String faculty,String gender) throws IOException {
+    private void writestudentinfoTotxt(String StudentID, String firstname,String lastname,String phonenumber,String email,String faculty,String gender) throws IOException {
         //make a student info directory
         File directory = new File("Student_info");
 
@@ -165,7 +166,7 @@ public class StudentFormController implements Initializable {
         File studentfile = new File(directory,filename);
 
         try(PrintWriter pw = new PrintWriter(studentfile)) {
-            pw.println("Student ID: " + studentID);
+            pw.println("Student ID: " + StudentID);
             pw.println("Username: " + firstname +" "+ lastname);
             //pw.println("Last Name: " + lastname);
             pw.println("Phone Number: " + phonenumber);
