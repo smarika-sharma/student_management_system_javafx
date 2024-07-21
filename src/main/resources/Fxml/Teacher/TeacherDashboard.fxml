@@ -42,7 +42,7 @@
                   <Insets top="100.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#quesitonreportsclicked" prefHeight="70.0" prefWidth="204.0" styleClass="on-page-button" stylesheets="@../../Style/TeacherDashboard.css" text="Question Reports">
+            <Button mnemonicParsing="false" onAction="#quesitonreportsclicked" prefHeight="70.0" prefWidth="204.0" styleClass="menu-button" stylesheets="@../../Style/TeacherDashboard.css" text="Question Reports">
                <font>
                   <Font size="15.0" />
                </font>

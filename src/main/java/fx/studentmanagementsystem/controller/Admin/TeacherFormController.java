@@ -15,8 +15,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static fx.studentmanagementsystem.Uses.changeScene;
-import static fx.studentmanagementsystem.Uses.changeSceneMouse;
+import static fx.studentmanagementsystem.Uses.*;
 
 public class TeacherFormController implements Initializable {
     @FXML
@@ -48,6 +47,7 @@ public class TeacherFormController implements Initializable {
     @FXML
     public TextField phoneNumber;
 
+
     @FXML
     public Button submitButton;
 
@@ -76,8 +76,9 @@ public class TeacherFormController implements Initializable {
         });
     }
 
-    public void saveTeacher() {
+    public void saveTeacher() throws IOException{
         String teacherID = id.getText();
+        String userName = username.getText();
         String teacherFirstname = teacherFirstName.getText();
         String teacherLastname = teacherLastName.getText();
         String teacherEmail = email.getText();
@@ -87,10 +88,9 @@ public class TeacherFormController implements Initializable {
         String Gender = gender.getValue();
 
         try {
-            fx.studentmanagementsystem.Uses.saveDataCSV("teacher_credentials.csv", teacherID, teacherFirstname, teacherLastname, teacherEmail, teacherPhoneNumber, Password, Faculty, Gender);
+            saveTeacherDataCSV("teacher_credentials.csv", teacherID, userName, teacherFirstname, teacherLastname, teacherEmail, teacherPhoneNumber, Password, Faculty, Gender);
         } catch (IOException e) {
             e.printStackTrace();
-            // Consider showing an error message to the user
         }
     }
 

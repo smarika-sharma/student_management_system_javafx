@@ -1,6 +1,11 @@
 package fx.studentmanagementsystem;
 
+import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import fx.studentmanagementsystem.model.Staff;
+import fx.studentmanagementsystem.model.Teacher;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -67,6 +72,7 @@ public class Uses {
         }
         return data;
     }
+
     public static void saveStaffDataCSV(String credentialsFile, String staffId, String username, String gender, String role, String email, String password) throws IOException {
         try (FileWriter fw = new FileWriter(credentialsFile, true);
              PrintWriter pw = new PrintWriter(fw)) {
@@ -74,7 +80,55 @@ public class Uses {
         }
     }
 
+    public static void saveTeacherDataCSV(String credentialsFile,String teacherID,String userName, String teacherFirstname, String teacherLastname,String teacherEmail,String teacherPhoneNumber,String Password,String Faculty,String Gender) throws IOException {
+        try (FileWriter fw = new FileWriter(credentialsFile, true);
+             PrintWriter pw = new PrintWriter(fw)) {
+            pw.println(teacherID + "," + userName + "," + teacherFirstname + "," + teacherLastname + "," + teacherEmail+ "," + teacherPhoneNumber+ "," + Password+ "," + Faculty+ "," + Gender );
+        }
+    }
 
+    public static ObservableList<Teacher> readTeacherFromCSV(String fileName) {
+        ObservableList<Teacher> teacherList = FXCollections.observableArrayList();
 
+            try (CSVReader reader = new CSVReader(new FileReader(fileName))) {
+                String[] nextLine;
+                while ((nextLine = reader.readNext()) != null) {
 
+                    if (nextLine.length >= 8) {
+                        teacherList.add(new Teacher(
+                                nextLine[0], // ID
+                                nextLine[1], // username
+                                nextLine[4], // email
+                                nextLine[8], // gender
+                                nextLine[7] // faculty
+
+                        ));
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        return teacherList;
+    }
+
+    public static void deleteTeacher(String fileName, String teacherId) throws IOException {
+        List<String[]> csvBody = new ArrayList<>();
+
+        try (CSVReader reader = new CSVReader(new FileReader(fileName))) {
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                if (!nextLine[0].equals(teacherId)) {
+                    csvBody.add(nextLine);
+                }
+            }
+        }
+        try (CSVWriter writer = new CSVWriter(new FileWriter(fileName))) {
+            writer.writeAll(csvBody);
+        }
+    }
 }
+
+
+
+

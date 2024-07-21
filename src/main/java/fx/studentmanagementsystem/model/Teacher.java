@@ -10,7 +10,9 @@ public class Teacher {
         private String gender;
         private Button deleteButton;
 
-        public Teacher(String TeacherId, String username, String email, String faculty, String gender, Button deleteButton) {
+
+
+        public Teacher(String TeacherId, String username, String email, String faculty, String gender) {
             this.TeacherId = TeacherId;
             this.username = username;
             this.email = email;
@@ -18,6 +20,7 @@ public class Teacher {
             this.gender = gender;
             this.deleteButton = new Button("Delete");
         }
+
 
         public String getId() {
             return TeacherId;
@@ -63,7 +66,4 @@ public class Teacher {
             this.gender = gender;
         }
 
-        public void setDeleteButton(Button deleteButton) {
-            this.deleteButton = deleteButton;
-        }
 }
