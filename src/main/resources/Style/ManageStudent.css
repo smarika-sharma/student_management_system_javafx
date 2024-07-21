@@ -10,7 +10,7 @@
     -fx-text-fill: #ffffff;
     -fx-background-radius: 10;
     -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
-    -fx-pref-height: 65;
+    -fx-pref-height: 55;
     -fx-pref-width: 234;
 }
 .menu-button{
@@ -19,7 +19,7 @@
     -fx-text-fill: #ffffff;
     -fx-background-radius: 10;
     -fx-background-color:none;
-    -fx-pref-height: 65;
+    -fx-pref-height: 55;
     -fx-pref-width: 234;
 }
 .menu-button:hover{

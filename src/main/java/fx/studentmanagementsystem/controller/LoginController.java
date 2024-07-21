@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import javafx.scene.input.MouseEvent;
@@ -28,11 +29,11 @@ import static fx.studentmanagementsystem.Uses.*;
 public class LoginController {
     @FXML
     public TextField adminusernamefield;
-    public TextField adminpasscode;
+    public PasswordField adminpasscode;
     @FXML
     private TextField studentlogin_email_field;
     @FXML
-    private TextField studentlogin_pass_field;
+    private PasswordField studentlogin_pass_field;
     @FXML
     private Label loginerror_label;
 
@@ -103,7 +104,7 @@ public class LoginController {
             List<String[]> teacherCredentials = readCSV("teacher_credentials.csv");
             boolean loginSuccessful = false;
             for (String[] credentials : teacherCredentials) {
-                if (credentials[0].equals(email) && credentials[1].equals(password)) {
+                if (credentials[4].equals(email) && credentials[6].equals(password)) {
                     loginSuccessful = true;
                     break;
                 }

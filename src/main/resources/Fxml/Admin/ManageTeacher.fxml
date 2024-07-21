@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../../Style/AdminDashboard.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.ManageTeacherController">
    <children>
-      <VBox layoutX="27.0" layoutY="28.0" prefHeight="690.0" prefWidth="245.0" styleClass="menu" stylesheets="@../../Style/AdminDashboard.css">
+      <VBox layoutX="27.0" layoutY="28.0" prefHeight="690.0" prefWidth="245.0" spacing="10.0" styleClass="menu" stylesheets="@../../Style/AdminDashboard.css">
          <children>
             <VBox alignment="CENTER" prefHeight="174.0" prefWidth="205.0" styleClass="logo-bg" stylesheets="@../../Style/AdminDashboard.css">
                <children>
@@ -40,15 +40,14 @@
       <Label layoutX="373.0" layoutY="57.0" styleClass="heading" stylesheets="@../../Style/ManageStudent.css" text="Manage Teacher" />
       <TableView fx:id="teacherTable" editable="true" layoutX="318.0" layoutY="146.0" prefHeight="348.0" prefWidth="834.0" styleClass="student-table" stylesheets="@../../Style/ManageStudent.css">
          <columns>
-            <TableColumn fx:id="TeacherId" minWidth="0.0" prefWidth="95.46664428710938" text="SID" />
-            <TableColumn fx:id="username" minWidth="0.0" prefWidth="182.93338012695312" text="Name" />
-            <TableColumn fx:id="email" prefWidth="207.7332763671875" text="Email" />
-            <TableColumn fx:id="gender" prefWidth="123.7333984375" text="Gender" />
-            <TableColumn fx:id="faculty" prefWidth="112.53314208984375" text="Faculty" />
-            <TableColumn fx:id="deleteButton" prefWidth="107.99997558593748" text="Action" />
+            <TableColumn fx:id="TeacherId" minWidth="0.0" prefWidth="78.933349609375" text="SID" />
+            <TableColumn fx:id="username" minWidth="0.0" prefWidth="165.5999755859375" text="Name" />
+            <TableColumn fx:id="email" prefWidth="189.5999755859375" text="Email" />
+            <TableColumn fx:id="gender" prefWidth="132.26666259765625" text="Gender" />
+            <TableColumn fx:id="faculty" prefWidth="122.93316650390625" text="Faculty" />
+            <TableColumn fx:id="deleteButton" prefWidth="141.59995117187498" text="Action" />
          </columns>
       </TableView>
       <Button layoutX="1040.0" layoutY="519.0" mnemonicParsing="false" onAction="#addTeacher" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Add Teacher" />
-      <Button layoutX="945.0" layoutY="519.0" mnemonicParsing="false" onAction="#deleteTeacherInfo" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
    </children>
 </AnchorPane>

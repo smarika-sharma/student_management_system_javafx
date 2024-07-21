@@ -59,7 +59,6 @@ public class StaffFormController implements Initializable {
             fx.studentmanagementsystem.Uses.saveStaffDataCSV(credentialsFile, staffId, username, gender, role, email, password);
         } catch (IOException e) {
             e.printStackTrace();
-            // Consider showing an error message to the user
         }
     }
 
