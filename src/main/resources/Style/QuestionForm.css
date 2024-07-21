@@ -20,9 +20,7 @@
     -fx-font-family: 'Inknut Antiqua', serif;
     -fx-font-weight: bold;
 }
-.calendar-container{
-    -fx-background-color: rgba(110, 115, 184, 0.45);
-}
+
 
 .logo-bg{
     -fx-background-color: rgba(255, 255, 255, 0.38);

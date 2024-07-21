@@ -68,6 +68,7 @@ public class QuestionFormController {
         try {
             saveDataCSV("Question_bank.csv",userEmail, Question1Label.getText(), answerQ1, Question2Label.getText(), answerQ2, Question3Label.getText(), answerQ3);
             submittedEmails.add(userEmail);
+            changeScene(event, "Fxml/Student/StudentReport.fxml","Report");
         }catch (IOException e){
             e.printStackTrace();
         }

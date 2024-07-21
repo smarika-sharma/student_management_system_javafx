@@ -85,9 +85,6 @@ public class ManageStaffController {
         changeScene(event, "/Fxml/Admin/StaffForm.fxml", "Add Staff");
     }
 
-    public void adminupdatestaff(ActionEvent event) {
-
-    }
 
     public class CSVReader {
         public List<Staff> readStaffFromCSV(String fileName) {

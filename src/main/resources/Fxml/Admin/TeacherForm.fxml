@@ -25,60 +25,60 @@
             <HBox prefHeight="40.0" prefWidth="815.0" spacing="50.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Teacher ID:" />
-                  <TextField stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="id" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Username:" />
-                  <TextField stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="username" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Password:" />
-                  <PasswordField stylesheets="@../../Style/StudentForm.css" />
+                  <PasswordField fx:id="password" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="First Name:" />
-                  <TextField stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="teacherFirstName" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Last Name:" />
-                  <TextField stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="teacherLastName" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Faculty:" />
-                  <ChoiceBox prefWidth="150.0" styleClass="text-field" stylesheets="@../../Style/StudentForm.css" />
+                  <ChoiceBox fx:id="faculty" prefWidth="150.0" styleClass="text-field" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Email Address:" />
-                  <TextField stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="email" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Gender: " />
-                  <ChoiceBox prefWidth="150.0" styleClass="text-field" stylesheets="@../../Style/StudentForm.css" />
+                  <ChoiceBox fx:id="gender" prefWidth="150.0" styleClass="text-field" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Phone Number: " />
-                  <TextField stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="phoneNumber" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="132.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit" />
+                  <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitClicked" prefHeight="43.0" prefWidth="132.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit" />
                </children>
             </HBox>
          </children>
@@ -86,7 +86,7 @@
             <Insets left="50.0" top="20.0" />
          </padding>
       </VBox>
-      <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="1098.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backButton" fitHeight="32.0" fitWidth="30.0" layoutX="1098.0" layoutY="668.0" onMouseClicked="#backToManageTeacher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/back.png" />
          </image>

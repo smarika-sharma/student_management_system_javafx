@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../../Style/AdminDashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.ManageStudentsController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../../Style/AdminDashboard.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.ManageStudentsController">
    <children>
       <VBox layoutX="27.0" layoutY="28.0" prefHeight="690.0" prefWidth="245.0" styleClass="menu" stylesheets="@../../Style/AdminDashboard.css">
          <children>
@@ -48,7 +48,6 @@
         </columns>
       </TableView>
       <Button layoutX="1049.0" layoutY="524.0" mnemonicParsing="false" onAction="#addstudentadmin" styleClass="other-button" stylesheets="@../../Style/ManageStudent.css" text="Add Student" />
-      <Button layoutX="954.0" layoutY="527.0" mnemonicParsing="false" onAction="#updatestudentinfo" styleClass="other-button" stylesheets="@../../Style/ManageStudent.css" text="Update" />
-      <Button layoutX="855.0" layoutY="527.0" mnemonicParsing="false" onAction="#deletestudent" styleClass="other-button" stylesheets="@../../Style/ManageStudent.css" text="Delete" />
+      <Button layoutX="958.0" layoutY="524.0" mnemonicParsing="false" onAction="#deletestudent" styleClass="other-button" stylesheets="@../../Style/ManageStudent.css" text="Delete" />
    </children>
 </AnchorPane>
