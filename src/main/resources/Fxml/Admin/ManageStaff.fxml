@@ -48,6 +48,6 @@
             </columns>
         </TableView>
         <Button layoutX="1040.0" layoutY="519.0" mnemonicParsing="false" onAction="#addstaffadmin" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Add Staff" />
-        <Button layoutX="957.0" layoutY="521.0" mnemonicParsing="false" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
+        <Button layoutX="957.0" layoutY="521.0" mnemonicParsing="false" onAction="#deletestaff" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
     </children>
 </AnchorPane>

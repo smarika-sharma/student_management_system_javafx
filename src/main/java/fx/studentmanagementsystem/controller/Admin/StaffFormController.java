@@ -3,6 +3,8 @@ package fx.studentmanagementsystem.controller.Admin;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -23,10 +25,13 @@ public class StaffFormController implements Initializable {
     public ChoiceBox<String> staffgender;
     private final String[] genders = {"male", "female", "others"};
     public ImageView backbtnstaffform;
+    public PasswordField staffpass;
+    public Label staffcreatedlabel;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         staffgender.getItems().addAll(genders);
         staffrole.getItems().addAll(role);
+        staffcreatedlabel.setText("");
         backbtnstaffform.setOnMouseClicked(event -> {
             try {
                 backbtnstaffform(event);
@@ -46,11 +51,12 @@ public class StaffFormController implements Initializable {
         String gender = staffgender.getValue();
         String role = staffrole.getValue();
         String email = staffemail.getText();
+        String password = staffpass.getText();
 
         String credentialsFile = role.equals("Librarian") ? "librarian_credentials.csv" : "admission_officer_credentials.csv";
 
         try {
-            fx.studentmanagementsystem.Uses.saveStaffDataCSV(credentialsFile, staffId, username, gender, role, email);
+            fx.studentmanagementsystem.Uses.saveStaffDataCSV(credentialsFile, staffId, username, gender, role, email, password);
         } catch (IOException e) {
             e.printStackTrace();
             // Consider showing an error message to the user
@@ -58,6 +64,7 @@ public class StaffFormController implements Initializable {
     }
 
     public void submitbutton(ActionEvent event) {
+        staffcreatedlabel.setText("Staff Created Successfully");
         saveStaffCredentials();
     }
 }

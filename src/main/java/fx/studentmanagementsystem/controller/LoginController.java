@@ -100,7 +100,7 @@ public class LoginController {
             List<String[]> teacherCredentials = readCSV("teacher_credentials.csv");
             boolean loginSuccessful = false;
             for (String[] credentials : teacherCredentials) {
-                if (credentials[0].equals(email) && credentials[1].equals(password)) {
+                if (credentials.length >=6 && credentials[0].equals(email) && credentials[1].equals(password)) {
                     loginSuccessful = true;
                     break;
                 }
@@ -121,7 +121,7 @@ public class LoginController {
             List<String[]> librarianCredentials = readCSV("librarian_credentials.csv");
             boolean loginSuccessful = false;
             for (String[] credentials : librarianCredentials) {
-                if (credentials[4].equals(email) && credentials[5].equals(password)) {
+                if (credentials.length >= 6 && credentials[4].equals(email) && credentials[5].equals(password)) {
                     loginSuccessful = true;
                     break;
                 }
@@ -141,7 +141,7 @@ public class LoginController {
             List<String[]> admissionOfficerCredentials = readCSV("admission_officer_credentials.csv");
             boolean loginSuccessful = false;
             for (String[] credentials : admissionOfficerCredentials) {
-                if (credentials[4].equals(email) && credentials[5].equals(password)) {
+                if (credentials.length >= 6 && credentials[4].equals(email) && credentials[5].equals(password)) {
                     loginSuccessful = true;
                     break;
                 }

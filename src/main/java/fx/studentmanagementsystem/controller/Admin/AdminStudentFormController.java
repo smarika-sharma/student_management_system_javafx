@@ -1,4 +1,4 @@
-package fx.studentmanagementsystem.controller.Student;
+package fx.studentmanagementsystem.controller.Admin;
 
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 import static fx.studentmanagementsystem.Uses.changeScene;
 import static fx.studentmanagementsystem.Uses.changeSceneMouse;
 
-public class StudentFormController implements Initializable {
+public class AdminStudentFormController implements Initializable {
 
     @FXML
     public TextField studentID;
@@ -57,9 +57,9 @@ public class StudentFormController implements Initializable {
     public Label Error_label;
 
     @FXML
-    public void backToAdmissionOfficerDashboard(javafx.scene.input.MouseEvent event) {
+    public void backToAdmissionOfficerDashboard(MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/Staff/AdmissionOfficerDashboard.fxml","AdmissionOfficer");
+            changeSceneMouse(event,"/Fxml/Admin/ManageStudents.fxml","AdmissionOfficer");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -79,7 +79,7 @@ public class StudentFormController implements Initializable {
     }
 
     private void backButton(MouseEvent event) throws IOException {
-        changeSceneMouse(event,"/Fxml/Staff/AdmissionOfficerDashboard.fxml","AcademiaFX");
+        changeSceneMouse(event,"/Fxml/Admin/ManageStudents.fxml","AcademiaFX");
     }
 
     private boolean emailExists(String email) {
@@ -127,7 +127,7 @@ public class StudentFormController implements Initializable {
         pause.setOnFinished(stop -> {
             // Load login page after successful signup
             try {
-                changeScene(event,"/Fxml/Staff/AdmissionOfficerDashboard.fxml","AcademiaFX");
+                changeScene(event,"/Fxml/Admin/ManageStudents.fxml","AcademiaFX");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

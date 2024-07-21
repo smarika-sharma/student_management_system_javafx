@@ -89,7 +89,7 @@ public class ManageStudentsController {
         Student selectedStudent = managestudenttable.getSelectionModel().getSelectedItem();
         if (selectedStudent != null) {
             managestudenttable.getItems().remove(selectedStudent);
-            File file = new File("Student_info/" + selectedStudent.getStudentID() + ".txt");
+            File file = new File("Student_info/" + selectedStudent.getEmail() + ".txt");
             file.delete();
         }
     }

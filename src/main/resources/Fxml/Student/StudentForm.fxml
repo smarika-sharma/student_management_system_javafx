@@ -73,7 +73,7 @@
             </Line>
          </children>
       </VBox>
-      <VBox layoutX="301.0" layoutY="119.0" prefHeight="588.0" prefWidth="750.0" spacing="15.0">
+      <VBox layoutX="301.0" layoutY="107.0" prefHeight="579.0" prefWidth="737.0" spacing="10.0">
          <children>
             <HBox prefHeight="40.0" prefWidth="816.0" spacing="50.0">
                <children>
@@ -157,7 +157,7 @@
                   </TextField>
                </children>
             </HBox>
-            <Label fx:id="Error_label" style="-fx-text-fill: red; visibility: false;" text="Error label" />
+            <Label fx:id="Error_label" style="-fx-text-fill: red; visibility: false;" text="Error label" textFill="#e40f0f" />
             <HBox alignment="CENTER" prefHeight="78.0" prefWidth="700.0" spacing="50.0">
                <children>
                   <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefHeight="44.0" prefWidth="138.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">
@@ -172,7 +172,7 @@
             <Insets left="50.0" top="20.0" />
          </padding>
       </VBox>
-      <ImageView fx:id="backButton" fitHeight="34.0" fitWidth="25.0" layoutX="1103.0" layoutY="681.0" onMouseClicked="#backToAdmissionOfficerDashboard" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backButton" fitHeight="34.0" fitWidth="25.0" layoutX="231.0" layoutY="107.0" onMouseClicked="#backToAdmissionOfficerDashboard" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/back.png" />
          </image>

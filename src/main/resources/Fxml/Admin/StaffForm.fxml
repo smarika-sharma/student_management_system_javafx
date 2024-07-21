@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.StaffFormController">
    <children>
@@ -20,7 +21,7 @@
          </image>
       </ImageView>
       <Label layoutX="292.0" layoutY="39.0" styleClass="heading" stylesheets="@../../Style/StudentForm.css" text="Staff Form" />
-      <VBox layoutX="272.0" layoutY="117.0" prefHeight="588.0" prefWidth="750.0" spacing="15.0">
+      <VBox layoutX="256.0" layoutY="112.0" prefHeight="533.0" prefWidth="687.0" spacing="15.0">
          <children>
             <HBox prefHeight="40.0" prefWidth="815.0" spacing="50.0">
                <children>
@@ -37,7 +38,7 @@
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Password:" />
-                  <PasswordField stylesheets="@../../Style/StudentForm.css" />
+                  <PasswordField fx:id="staffpass" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
@@ -76,17 +77,25 @@
                   <TextField stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="21.0" prefWidth="660.0">
                <children>
                   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitbutton" prefHeight="43.0" prefWidth="132.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit" />
+                  <Label fx:id="staffcreatedlabel" text="Label" textFill="#28e22c">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
                </children>
             </HBox>
          </children>
          <padding>
-            <Insets left="50.0" top="20.0" />
+            <Insets left="50.0" top="10.0" />
          </padding>
       </VBox>
-      <ImageView fx:id="backbtnstaffform" fitHeight="32.0" fitWidth="30.0" layoutX="1098.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backbtnstaffform" fitHeight="32.0" fitWidth="30.0" layoutX="226.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/back.png" />
          </image>

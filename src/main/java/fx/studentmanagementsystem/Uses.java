@@ -67,10 +67,10 @@ public class Uses {
         }
         return data;
     }
-    public static void saveStaffDataCSV(String credentialsFile, String staffId, String username, String gender, String role, String email) throws IOException {
+    public static void saveStaffDataCSV(String credentialsFile, String staffId, String username, String gender, String role, String email, String password) throws IOException {
         try (FileWriter fw = new FileWriter(credentialsFile, true);
              PrintWriter pw = new PrintWriter(fw)) {
-            pw.println(staffId + "," + username + "," + gender + "," + role + "," + email);
+            pw.println(staffId + "," + username + "," + gender + "," + role + "," + email+ "," + password);
         }
     }
 
