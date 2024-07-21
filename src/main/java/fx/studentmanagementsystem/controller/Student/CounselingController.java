@@ -83,7 +83,7 @@ public class CounselingController {
         String Time = time.getText();
 
         saveDataCSV("src/main/resources/csv/counselingproblem.csv", ProblemId, Scid, Counselingproblemtitle, Creatornamecounseling, Counselingproblemtxtfield,dateForCounselingString, Time);
-
+        changeScene(event,"/Fxml/Student/ProblemForm.fxml","Academiafx");
     }
 
 }
