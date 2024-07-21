@@ -87,7 +87,7 @@
                                 <Font size="19.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="infproblemtitle" prefHeight="26.0" prefWidth="194.0" />
+                        <TextField fx:id="othersproblemtitle" prefHeight="26.0" prefWidth="194.0" />
                     </children>
                     <VBox.margin>
                         <Insets top="15.0" />
@@ -116,7 +116,7 @@
                                 <Insets top="10.0" />
                             </padding>
                         </Label>
-                        <TextField fx:id="creatornameinf" prefHeight="26.0" prefWidth="194.0">
+                        <TextField fx:id="creatornameothersform" prefHeight="26.0" prefWidth="194.0">
                             <padding>
                                 <Insets top="10.0" />
                             </padding>
@@ -152,13 +152,13 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="infproblemtxtfield" prefHeight="171.0" prefWidth="770.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" text="Explain your problem here....">
+                <TextField fx:id="otheraproblemtxtfield" prefHeight="171.0" prefWidth="770.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" text="Explain your problem here....">
                     <VBox.margin>
                         <Insets right="50.0" top="15.0" />
                     </VBox.margin>
                 </TextField>
             </children>
         </VBox>
-        <Button layoutX="641.0" layoutY="583.0" mnemonicParsing="false" onAction="#infrastructureproblemsubmit" prefHeight="40.0" prefWidth="90.0" styleClass="submit-button" stylesheets="@../../Style/CounselingForm.css" text="Submit" />
+        <Button layoutX="641.0" layoutY="583.0" mnemonicParsing="false" onAction="#othersproblemsubmit" prefHeight="40.0" prefWidth="90.0" styleClass="submit-button" stylesheets="@../../Style/CounselingForm.css" text="Submit" />
     </children>
 </AnchorPane>
