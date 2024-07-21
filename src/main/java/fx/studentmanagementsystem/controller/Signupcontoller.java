@@ -59,6 +59,7 @@ public class Signupcontoller implements Initializable {
         Error_label.setText("");
 
     }
+
     private boolean emailExists(String email) {
         try (BufferedReader br = new BufferedReader(new FileReader("Student_credentials.csv"))) {
             String line;
@@ -73,6 +74,7 @@ public class Signupcontoller implements Initializable {
         }
         return false; // Email does not exist
     }
+
     @FXML
     public void signup_btn_clicked(ActionEvent event) throws NoSuchAlgorithmException {
         if (!isInputValid()) {
@@ -98,7 +100,7 @@ public class Signupcontoller implements Initializable {
             writeCredentialsToCSV(Email, hashedPassword);
             try {
                 writestudentinfoTotxt(Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
-            }catch (FileNotFoundException e) {
+            } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -109,7 +111,7 @@ public class Signupcontoller implements Initializable {
         pause.setOnFinished(stop -> {
             // Load login page after successful signup
             try {
-                changeScene(event,"/Fxml/login.fxml","AcademiaFX");
+                changeScene(event, "/Fxml/login.fxml", "AcademiaFX");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -148,28 +150,28 @@ public class Signupcontoller implements Initializable {
         }
     }
 
-    private void writestudentinfoTotxt(String firstname,String lastname,String phonenumber,String email,String faculty,String gender) throws IOException {
+    private void writestudentinfoTotxt(String firstname, String lastname, String phonenumber, String email, String faculty, String gender) throws IOException {
         //make a student info directory
         File directory = new File("Student_info");
-        if (!directory.exists()){
-            boolean isDirCreated=directory.mkdir();
-            if (!isDirCreated){
+        if (!directory.exists()) {
+            boolean isDirCreated = directory.mkdir();
+            if (!isDirCreated) {
                 throw new IOException("Failed to create directory");
-                }
+            }
         }
         String studentID = StudentIDGenerator.generateID();
         String filename = email + ".txt";
-        File studentfile = new File(directory,filename);
+        File studentfile = new File(directory, filename);
 
-        try(PrintWriter pw = new PrintWriter(studentfile)) {
+        try (PrintWriter pw = new PrintWriter(studentfile)) {
             pw.println("Student ID: " + studentID);
-            pw.println("Username: " + firstname +" "+ lastname);
+            pw.println("Username: " + firstname + " " + lastname);
             //pw.println("Last Name: " + lastname);
             pw.println("Phone Number: " + phonenumber);
             pw.println("Email: " + email);
             pw.println("Faculty: " + faculty);
             pw.println("Gender: " + gender);
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
@@ -179,15 +181,16 @@ public class Signupcontoller implements Initializable {
     @FXML
     public void backToChooseUser(javafx.scene.input.MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+            changeSceneMouse(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void signuppageloginbtn(ActionEvent event) {
         try {
-            changeScene(event,"/Fxml/login.fxml","AcademiaFX");
+            changeScene(event, "/Fxml/login.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }

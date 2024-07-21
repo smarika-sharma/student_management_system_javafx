@@ -3,7 +3,9 @@ package fx.studentmanagementsystem.controller;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+
 import static fx.studentmanagementsystem.Uses.changeSceneMouse;
+
 import java.io.IOException;
 
 
@@ -30,25 +32,28 @@ public class ChooseUserController {
 
     protected void student_signup(MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/Student/StudentForm-Signup.fxml","AcademiaFX");
+            changeSceneMouse(event, "/Fxml/Student/StudentForm-Signup.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     protected void teacherLogin(MouseEvent event) {
         try {
-            changeSceneMouse(event, "/Fxml/loginForOtherThanStudent.fxml","AcademiaFX");
+            changeSceneMouse(event, "/Fxml/loginForOtherThanStudent.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     protected void admissionofficerLogin(MouseEvent event) {
         try {
-            changeSceneMouse(event, "/Fxml/loginForOtherThanStudent.fxml","AcademiaFX");
+            changeSceneMouse(event, "/Fxml/loginForOtherThanStudent.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     protected void librarianLogin(MouseEvent event) {
         try {
             changeSceneMouse(event, "/Fxml/loginForOtherThanStudent.fxml", "AcademiaFX");
@@ -57,11 +62,4 @@ public class ChooseUserController {
         }
     }
 
-    public void backToChooseUser(MouseEvent event) {
-        try {
-            changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

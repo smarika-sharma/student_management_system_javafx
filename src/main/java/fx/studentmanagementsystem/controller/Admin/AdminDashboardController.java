@@ -39,7 +39,6 @@ public class AdminDashboardController {
     }
 
 
-
     public void adminmanagestudent(ActionEvent event) throws IOException {
         changeScene(event, "/Fxml/Admin/ManageStudents.fxml", "Manage Students");
     }
@@ -53,7 +52,7 @@ public class AdminDashboardController {
     }
 
     public void adminLogout(ActionEvent event) {
-        if(DialogsUtil.showLogoutConfirmation()) {
+        if (DialogsUtil.showLogoutConfirmation()) {
             try {
                 changeScene(event, "/Fxml/adminLogin.fxml", "AcademiaFX");
             } catch (IOException e) {

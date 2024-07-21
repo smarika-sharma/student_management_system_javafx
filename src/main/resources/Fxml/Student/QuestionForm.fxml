@@ -92,6 +92,14 @@
                   <Insets left="80.0" right="100.0" top="60.0" />
                </VBox.margin>
             </HBox>
+            <Label fx:id="ErrorSubmitting" text="Label">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="370.0" />
+               </VBox.margin>
+            </Label>
             <VBox prefHeight="457.0" prefWidth="674.0" spacing="2.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css">
                <VBox.margin>
                   <Insets bottom="30.0" left="80.0" right="100.0" top="45.0" />
@@ -117,10 +125,7 @@
                   </VBox>
                   <VBox prefHeight="127.0" prefWidth="705.0">
                      <children>
-                        <Label fx:id="Question1Label" text="Choose one extracurricular activity.">
-                           <font>
-                              <Font size="18.0" />
-                           </font></Label>
+                        <Label fx:id="Question1Label" text="Choose one extracurricular activity." />
                         <HBox prefHeight="71.0" prefWidth="705.0">
                            <children>
                               <RadioButton fx:id="Q1O1" mnemonicParsing="false" text="Sports" />
@@ -202,11 +207,6 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <Label fx:id="ErrorSubmitting" text="Label" textFill="#eb0c0c">
-                     <font>
-                        <Font name="System Italic" size="11.0" />
-                     </font>
-                  </Label>
                   <VBox prefHeight="36.0" prefWidth="657.0">
                      <VBox.margin>
                         <Insets top="20.0" />

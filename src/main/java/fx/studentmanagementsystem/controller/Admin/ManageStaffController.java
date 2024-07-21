@@ -54,7 +54,7 @@ public class ManageStaffController {
     }
 
     public void adminLogout(ActionEvent event) {
-        if(DialogsUtil.showLogoutConfirmation()) {
+        if (DialogsUtil.showLogoutConfirmation()) {
             try {
                 changeScene(event, "/Fxml/adminLogin.fxml", "AcademiaFX");
             } catch (IOException e) {
@@ -109,38 +109,34 @@ public class ManageStaffController {
         }
     }
 
-//    public void updatetable(ActionEvent event) {
-//        loadStaffData();
-//    }
-
     private void loadStaffData() {
-    managestafftable.getItems().clear(); // Clear existing data
-    CSVReader reader = new CSVReader();
-    List<Staff> librarians = reader.readStaffFromCSV("librarian_credentials.csv");
-    List<Staff> officers = reader.readStaffFromCSV("admission_officer_credentials.csv");
-    List<Staff> allStaff = new ArrayList<>(librarians);
-    allStaff.addAll(officers);
-    ObservableList<Staff> data = FXCollections.observableArrayList(allStaff);
-    managestafftable.setItems(data); // Reload data
-}
+        managestafftable.getItems().clear(); // Clear existing data
+        CSVReader reader = new CSVReader();
+        List<Staff> librarians = reader.readStaffFromCSV("librarian_credentials.csv");
+        List<Staff> officers = reader.readStaffFromCSV("admission_officer_credentials.csv");
+        List<Staff> allStaff = new ArrayList<>(librarians);
+        allStaff.addAll(officers);
+        ObservableList<Staff> data = FXCollections.observableArrayList(allStaff);
+        managestafftable.setItems(data); // Reload data
+    }
 
     public class CSVReader {
-    public List<Staff> readStaffFromCSV(String fileName) {
-        List<Staff> staffList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] fields = line.split(",");
-                if (fileName.contains("librarian") && fields.length == 6) {
-                    staffList.add(new Staff(fields[0], fields[1], fields[4], fields[2], fields[3]));
-                } else if (fileName.contains("admission_officer") && fields.length == 6) {
-                    staffList.add(new Staff(fields[0], fields[1], fields[4], fields[2], fields[3]));
+        public List<Staff> readStaffFromCSV(String fileName) {
+            List<Staff> staffList = new ArrayList<>();
+            try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    String[] fields = line.split(",");
+                    if (fileName.contains("librarian") && fields.length == 6) {
+                        staffList.add(new Staff(fields[0], fields[1], fields[4], fields[2], fields[3]));
+                    } else if (fileName.contains("admission_officer") && fields.length == 6) {
+                        staffList.add(new Staff(fields[0], fields[1], fields[4], fields[2], fields[3]));
+                    }
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+            return staffList;
         }
-        return staffList;
     }
-}
 }

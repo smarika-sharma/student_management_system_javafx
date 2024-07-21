@@ -59,7 +59,7 @@ public class AdminStudentFormController implements Initializable {
     @FXML
     public void backToAdmissionOfficerDashboard(MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/Admin/ManageStudents.fxml","AdmissionOfficer");
+            changeSceneMouse(event, "/Fxml/Admin/ManageStudents.fxml", "AdmissionOfficer");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -79,7 +79,7 @@ public class AdminStudentFormController implements Initializable {
     }
 
     private void backButton(MouseEvent event) throws IOException {
-        changeSceneMouse(event,"/Fxml/Admin/ManageStudents.fxml","AcademiaFX");
+        changeSceneMouse(event, "/Fxml/Admin/ManageStudents.fxml", "AcademiaFX");
     }
 
     private boolean emailExists(String email) {
@@ -96,6 +96,7 @@ public class AdminStudentFormController implements Initializable {
         }
         return false; // Email does not exist
     }
+
     public void onSubmitButtonClicked(ActionEvent event) {
         if (!isInputValid()) {
             return;
@@ -104,8 +105,7 @@ public class AdminStudentFormController implements Initializable {
         if (emailExists(Email)) {
             Error_label.setText("Email already exists. Please use another email.");
             return;
-        }
-        else {
+        } else {
             Error_label.setText("Successfully added a new student.");
             //String Email = student_email_field.getText();
             String Password = password.getText();
@@ -117,7 +117,7 @@ public class AdminStudentFormController implements Initializable {
             writeCredentialsToCSV(Email, Password);
             try {
                 writestudentinfoTotxt(Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
-            }catch (FileNotFoundException e) {
+            } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -127,13 +127,14 @@ public class AdminStudentFormController implements Initializable {
         pause.setOnFinished(stop -> {
             // Load login page after successful signup
             try {
-                changeScene(event,"/Fxml/Admin/ManageStudents.fxml","AcademiaFX");
+                changeScene(event, "/Fxml/Admin/ManageStudents.fxml", "AcademiaFX");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
         });
         pause.play();
     }
+
     private boolean isInputValid() {
         if (isFieldEmpty(firstName.getText(), "First name cannot be empty")) return false;
         if (isFieldEmpty(lastName.getText(), "Last name cannot be empty")) return false;
@@ -157,22 +158,23 @@ public class AdminStudentFormController implements Initializable {
             e.printStackTrace();
         }
     }
-    private void writestudentinfoTotxt(String firstname,String lastname,String phonenumber,String email,String faculty,String gender) throws IOException {
+
+    private void writestudentinfoTotxt(String firstname, String lastname, String phonenumber, String email, String faculty, String gender) throws IOException {
         //make a student info directory
         File directory = new File("Student_info");
 
         String filename = email + ".txt";
-        File studentfile = new File(directory,filename);
+        File studentfile = new File(directory, filename);
 
-        try(PrintWriter pw = new PrintWriter(studentfile)) {
+        try (PrintWriter pw = new PrintWriter(studentfile)) {
             pw.println("Student ID: " + studentID);
-            pw.println("Username: " + firstname +" "+ lastname);
+            pw.println("Username: " + firstname + " " + lastname);
             //pw.println("Last Name: " + lastname);
             pw.println("Phone Number: " + phonenumber);
             pw.println("Email: " + email);
             pw.println("Faculty: " + faculty);
             pw.println("Gender: " + gender);
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

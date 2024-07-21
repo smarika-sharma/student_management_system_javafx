@@ -1,6 +1,5 @@
 package fx.studentmanagementsystem.controller;
 
-
 import fx.studentmanagementsystem.controller.Student.SessionManager;
 import fx.studentmanagementsystem.controller.Student.StudentMenuController;
 import javafx.event.ActionEvent;
@@ -16,9 +15,12 @@ import javafx.stage.Stage;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.io.IOException;
+
 import java.util.List;
+
 
 import static fx.studentmanagementsystem.Uses.*;
 
@@ -37,9 +39,10 @@ public class LoginController {
 
     @FXML
     protected void loginpagesignupbtn(@NotNull ActionEvent event) throws IOException {
-        changeScene(event,"/Fxml/Student/StudentForm-Signup.fxml","AcademiaFX");
+        changeScene(event, "/Fxml/Student/StudentForm-Signup.fxml", "AcademiaFX");
 
     }
+
     @FXML
     public void initialize() {
         loginerror_label.setText("");
@@ -51,12 +54,12 @@ public class LoginController {
         String Email = studentlogin_email_field.getText();
         String Pass = studentlogin_pass_field.getText();
 
-        boolean loginSuccessful =false;
+        boolean loginSuccessful = false;
         try (BufferedReader br = new BufferedReader(new FileReader("Student_credentials.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] credentials = line.split(",");
-                if(credentials[0].equals(Email) && credentials[1].equals(Pass)) {
+                if (credentials[0].equals(Email) && credentials[1].equals(Pass)) {
                     loginSuccessful = true;
                     break;
                 }
@@ -69,13 +72,13 @@ public class LoginController {
             SessionManager.setStudentEmail(Email);
             loginerror_label.setText(" login successful");
             try {
-                FXMLLoader fxmlLoader= changeScene(event,"/Fxml/Student/StudentDashboard.fxml","AcademiaFX");
+                FXMLLoader fxmlLoader = changeScene(event, "/Fxml/Student/StudentDashboard.fxml", "AcademiaFX");
                 StudentMenuController controller = fxmlLoader.getController();
                 controller.setStudentEmail(Email);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // Get current stage
-                if (stage!=null){
+                if (stage != null) {
                     stage.setMaximized(true);
-                }else {
+                } else {
                     //System.err.println("Stage is null");
                 }
 
@@ -84,7 +87,7 @@ public class LoginController {
                 //System.out.println("Error logging in" + e.getMessage());
                 e.printStackTrace();
             }
-        }else {
+        } else {
             loginerror_label.setText("Invalid credentials");
         }
 
@@ -100,7 +103,7 @@ public class LoginController {
             List<String[]> teacherCredentials = readCSV("teacher_credentials.csv");
             boolean loginSuccessful = false;
             for (String[] credentials : teacherCredentials) {
-                if (credentials.length >=6 && credentials[0].equals(email) && credentials[1].equals(password)) {
+                if (credentials[0].equals(email) && credentials[1].equals(password)) {
                     loginSuccessful = true;
                     break;
                 }
@@ -160,12 +163,12 @@ public class LoginController {
     }
 
     public void chooseuserButton(ActionEvent event) throws IOException {
-        changeScene(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+        changeScene(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
     }
 
     public void backToChooseUser(MouseEvent event) {
         try {
-            changeSceneMouse(event,"/Fxml/chooseUser-Signup.fxml","AcademiaFX");
+            changeSceneMouse(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
         } catch (IOException e) {
             e.printStackTrace();
         }
