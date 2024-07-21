@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../../Style/AdminDashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.ManageStaffController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../../Style/AdminDashboard.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.ManageStaffController">
     <children>
         <VBox layoutX="27.0" layoutY="28.0" prefHeight="690.0" prefWidth="245.0" styleClass="menu" stylesheets="@../../Style/AdminDashboard.css">
             <children>
@@ -38,17 +38,17 @@
             </children>
         </VBox>
         <Label layoutX="373.0" layoutY="57.0" styleClass="heading" stylesheets="@../../Style/ManageStudent.css" text="Manage Staff" />
-        <TableView fx:id="managestudenttable" editable="true" layoutX="318.0" layoutY="146.0" prefHeight="348.0" prefWidth="834.0" styleClass="student-table" stylesheets="@../../Style/ManageStudent.css">
+        <TableView fx:id="managestafftable" editable="true" layoutX="318.0" layoutY="146.0" prefHeight="348.0" prefWidth="834.0" styleClass="student-table" stylesheets="@../../Style/ManageStudent.css">
             <columns>
-                <TableColumn fx:id="studentID" minWidth="0.0" prefWidth="95.46664428710938" text="SID" />
-                <TableColumn fx:id="username" minWidth="0.0" prefWidth="202.933349609375" text="Name" />
-                <TableColumn fx:id="email" prefWidth="245.066650390625" text="Email" />
-                <TableColumn fx:id="gender" prefWidth="116.2667236328125" text="Gender" />
-                <TableColumn fx:id="faculty" prefWidth="169.5999755859375" text="Faculty" />
+                <TableColumn fx:id="staffID" minWidth="0.0" prefWidth="95.46664428710938" text="SID" />
+                <TableColumn fx:id="staffusername" minWidth="0.0" prefWidth="202.933349609375" text="Name" />
+                <TableColumn fx:id="staffemail" prefWidth="245.066650390625" text="Email" />
+                <TableColumn fx:id="staffgender" prefWidth="116.2667236328125" text="Gender" />
+                <TableColumn fx:id="stafffaculty" prefWidth="169.5999755859375" text="Role" />
             </columns>
         </TableView>
-        <Button layoutX="1040.0" layoutY="519.0" mnemonicParsing="false" onAction="#addstudentadmin" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Add Student" />
-        <Button layoutX="945.0" layoutY="522.0" mnemonicParsing="false" onAction="#updatestudentinfo" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Update" />
-        <Button layoutX="846.0" layoutY="522.0" mnemonicParsing="false" onAction="#deletestudent" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
+        <Button layoutX="1040.0" layoutY="519.0" mnemonicParsing="false" onAction="#addstaffadmin" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Add Student" />
+        <Button layoutX="945.0" layoutY="522.0" mnemonicParsing="false" onAction="#adminupdatestaff" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Update" />
+        <Button layoutX="846.0" layoutY="522.0" mnemonicParsing="false"  styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
     </children>
 </AnchorPane>

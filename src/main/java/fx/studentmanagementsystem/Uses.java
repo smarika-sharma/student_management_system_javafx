@@ -9,13 +9,10 @@ import javafx.scene.Scene;
 
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import java.io.FileWriter;
 
 
 public class Uses {
@@ -69,6 +66,12 @@ public class Uses {
             }
         }
         return data;
+    }
+    public static void saveStaffDataCSV(String credentialsFile, String staffId, String username, String gender, String role, String email) throws IOException {
+        try (FileWriter fw = new FileWriter(credentialsFile, true);
+             PrintWriter pw = new PrintWriter(fw)) {
+            pw.println(staffId + "," + username + "," + gender + "," + role + "," + email);
+        }
     }
 
 

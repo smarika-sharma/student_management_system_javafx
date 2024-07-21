@@ -105,10 +105,12 @@ public class ManageStudentsController {
         changeScene(event, "/Fxml/Admin/ManageStudents.fxml", "Manage Students");
     }
 
-    public void adminmanagestaff(ActionEvent event) {
+    public void adminmanagestaff(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Admin/ManageStaff.fxml", "Manage Staff");
     }
 
-    public void adminmanageteacher(ActionEvent event) {
+    public void adminmanageteacher(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Admin/ManageTeacher.fxml", "Manage Teacher");
     }
 
     public void adminLogout(ActionEvent event) {
