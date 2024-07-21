@@ -57,7 +57,7 @@ public class OthersFormController {
         String Othersformproblemtxtfield = otheraproblemtxtfield.getText();
 
         saveDataCSV("src/main/resources/csv/othersproblem.csv", ProblemId, Scid, Othersproblemtitle, Creatornameothersform, Othersformproblemtxtfield);
-
+        changeScene(event,"/Fxml/Student/ProblemForm.fxml","Academiafx");
     }
 
 
