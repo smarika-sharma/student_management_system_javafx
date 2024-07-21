@@ -54,8 +54,6 @@ public class InfrastructureFormController {
 
         saveDataCSV("src/main/resources/csv/infrastructureproblem.csv", ProblemId, Scid, Infproblemtitle, Creatornameinf, Infproblemtxtfield);
 
-
-
     }
 
     public void StudentDashboardClicked(ActionEvent event) throws IOException {
