@@ -8,8 +8,10 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -97,9 +99,39 @@ public class QuestionFormController {
     @FXML
     protected void handleSubmitAction(ActionEvent event) {
         int score = 0;
-        if (((RadioButton) Q1Group.getSelectedToggle()).getText().equals(correctAnswers[0])) score++;
-        if (((RadioButton) Q2Group.getSelectedToggle()).getText().equals(correctAnswers[1])) score++;
-        if (((RadioButton) Q3Group.getSelectedToggle()).getText().equals(correctAnswers[2])) score++;
+        StringBuilder csvContent = new StringBuilder();
+        String userEmail = SessionManager.getStudentEmail(); // Dynamically obtain the user's email
+        csvContent.append(userEmail); // Append user email at the beginning
+
+        // Assuming Q1O1, Q1O2, Q1O3, Q1O4 are for Question 1 and so on for Q2 and Q3
+        List<RadioButton> selectedOptions = Arrays.asList(
+                (RadioButton) Q1Group.getSelectedToggle(),
+                (RadioButton) Q2Group.getSelectedToggle(),
+                (RadioButton) Q3Group.getSelectedToggle()
+        );
+
+        // Loop through each question
+        for (int i = 0; i < selectedOptions.size(); i++) {
+            RadioButton selectedOption = selectedOptions.get(i);
+            if (selectedOption != null) {
+                // Check if the selected option is the correct answer
+                if (selectedOption.getText().equals(correctAnswers[i])) {
+                    score++;
+                }
+                // Append question and selected answer to csvContent
+                csvContent.append(",").append(questions.get(i)[0]).append(":").append(selectedOption.getText());
+            }
+        }
+        csvContent.append(",Score:").append(score);
+
+        // Write to CSV in one line
+        try (FileWriter csvWriter = new FileWriter("QuestionFormAnswer.csv", true)) {
+            csvWriter.append(csvContent.toString());
+            csvWriter.append("\n"); // Move to a new line for the next entry
+        } catch (IOException e) {
+            e.printStackTrace();
+            ErrorSubmitting.setText("Error submitting your answers. Please try again.");
+        }
 
         ErrorSubmitting.setText("Your score is: " + score + "/3");
     }

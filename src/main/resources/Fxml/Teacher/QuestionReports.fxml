@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Teacher.TeacherDashboardController">
+<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Teacher.QuestionReportsController">
    <children>
       <VBox layoutX="44.0" layoutY="14.0" prefHeight="716.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/TeacherDashboard.css">
          <children>
@@ -74,11 +74,11 @@
             <Image url="@../../images/brain.png" />
          </image>
       </ImageView>
-      <TableView fx:id="studentTableView" layoutX="355.0" layoutY="292.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
+      <TableView fx:id="questionreportstable" layoutX="355.0" layoutY="292.0" prefHeight="342.0" prefWidth="742.0" styleClass="student-table" stylesheets="@../../Style/TeacherDashboard.css">
         <columns>
-          <TableColumn fx:id="studentNameColumn" prefWidth="254.39999389648438" text="Student Name " />
-          <TableColumn fx:id="facultyColumn" prefWidth="196.800048828125" text="Faculty " />
-            <TableColumn fx:id="emailColumn" prefWidth="291.99993896484375" text="Email" />
+          <TableColumn fx:id="studentemailcolumn" prefWidth="153.33334350585938" text="Student Email" />
+          <TableColumn fx:id="questionsanswer" prefWidth="486.66668701171875" text="Questions" />
+            <TableColumn fx:id="score" prefWidth="104.66668701171875" text="Score" />
         </columns>
       </TableView>
    </children>

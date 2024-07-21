@@ -75,4 +75,11 @@ public class TeacherDashboardController {
     }
 
 
+    public void studentdetailsteacherdash(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Teacher/TeacherDashboard.fxml", "Student Details");
+    }
+
+    public void quesitonreportsclicked(ActionEvent event) throws IOException {
+        changeScene(event, "/Fxml/Teacher/QuestionReports.fxml", "Question Reports");
+    }
 }
