@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.QuestionFormController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="698.0" prefWidth="289.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" minWidth="200.0" prefHeight="655.0" prefWidth="248.0" styleClass="menu" stylesheets="@../../Style/QuestionForm.css">
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="138.0" prefWidth="180.0" styleClass="logo-bg">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Button fx:id="StudentDashboard" mnemonicParsing="false" onAction="#StudentDashboardClicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Dashboard">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="QuestionForm" mnemonicParsing="false" onAction="#questionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="on-page-button" stylesheets="@../../Style/QuestionForm.css" text="Question Form">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ProblemForm" mnemonicParsing="false" onAction="#problemformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Problem form">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SugessionForm" mnemonicParsing="false" onAction="#sugessionformclicked" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" text="Suggestion form">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#studentLogout" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/QuestionForm.css" text="Logout">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="730.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css">
+               <children>
+                  <Label graphicTextGap="0.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css" text="Report">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="80.0" right="100.0" top="60.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="910.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="107.0" prefWidth="201.0" styleClass="heading" text="You've Scored:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="60.0" prefWidth="86.0" styleClass="heading" text="Score">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="457.0" prefWidth="674.0" spacing="2.0" styleClass="heading" stylesheets="@../../Style/QuestionForm.css">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="80.0" right="100.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="15.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="66.0" prefWidth="654.0">
+                     <children>
+                        <Label styleClass="questions" text="Question ID: ">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="127.0" prefWidth="705.0">
+                     <children>
+                        <Label fx:id="Question1Label" text="Choose one extracurricular activity.">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="71.0" prefWidth="705.0">
+                           <children>
+                              <RadioButton fx:id="Q1O1" mnemonicParsing="false" text="Sports" />
+                              <RadioButton fx:id="Q1O2" mnemonicParsing="false" text="Dance">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="Q1O3" mnemonicParsing="false" text="Music">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="Q1O4" mnemonicParsing="false" text="Social Service">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="25.0" layoutY="89.0" prefHeight="127.0" prefWidth="705.0">
+                     <children>
+                        <Label fx:id="Question2Label" text="Choose a club." />
+                        <HBox prefHeight="71.0" prefWidth="705.0">
+                           <children>
+                              <RadioButton fx:id="Q2O1" mnemonicParsing="false" text="Readers Club" />
+                              <RadioButton fx:id="Q2O2" mnemonicParsing="false" text="Sport Club">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="Q2O3" mnemonicParsing="false" text="Media Club">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="Q2O4" mnemonicParsing="false" text="Dance Club">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="25.0" layoutY="219.0" prefHeight="127.0" prefWidth="705.0">
+                     <children>
+                        <Label fx:id="Question3Label" text="When do you prefer to engage in extracurricular activity?" />
+                        <HBox prefHeight="71.0" prefWidth="705.0">
+                           <children>
+                              <RadioButton fx:id="Q3O1" mnemonicParsing="false" text="Before School" />
+                              <RadioButton fx:id="Q3O2" mnemonicParsing="false" text="During Breaks">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="Q3O3" mnemonicParsing="false" text="After School">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="Q3O4" mnemonicParsing="false" text="Weekends">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="36.0" prefWidth="657.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
