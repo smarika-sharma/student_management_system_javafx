@@ -55,5 +55,10 @@
     -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 3, 5);
 }
 .submit-button:pressed{
-    -fx-background-color: #868bd4;
+    /*-fx-background-color: #868bd4;*/
+}
+
+.textOfTextfield{
+    -fx-text-fill: rgba(51, 48, 48, 0.88);
+    -fx-font-size: 15;
 }

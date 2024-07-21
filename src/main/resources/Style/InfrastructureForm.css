@@ -1,5 +1,6 @@
 .textOfTextfield{
     -fx-text-fill: rgba(51, 48, 48, 0.88);
+    -fx-font-size: 15;
 }
 .submit-button{
     -fx-font-size: 15px;

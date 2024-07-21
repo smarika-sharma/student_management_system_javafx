@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="688.0" prefWidth="1200.0" stylesheets="@../../Style/ProblemForm.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.ProblemFormController">
+<AnchorPane prefHeight="688.0" prefWidth="1200.0" stylesheets="@../../Style/ProblemForm.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.ProblemFormController">
 <children>
     <VBox layoutX="30.0" layoutY="16.0" prefHeight="663.0" prefWidth="231.0" styleClass="menu" stylesheets="@../../Style/SuggestionForm.css">
         <children>
@@ -56,9 +56,9 @@
             <Button mnemonicParsing="false" onAction="#studentLogout" prefHeight="65.0" prefWidth="234.0" styleClass="menu-button" stylesheets="@../../Style/SuggestionForm.css" text="Logout" />
         </children>
     </VBox>
-    <VBox layoutX="293.0" layoutY="41.0" prefHeight="119.0" prefWidth="817.0">
+    <VBox layoutX="293.0" layoutY="41.0" prefHeight="100.0" prefWidth="818.0">
         <children>
-            <Label alignment="CENTER" prefHeight="58.0" prefWidth="743.0" style="-fx-text-fill: #4D5194;" styleClass="heading" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
+            <Label alignment="CENTER" prefHeight="129.0" prefWidth="743.0" style="-fx-text-fill: #4D5194;" styleClass="heading" stylesheets="@../../Style/SuggestionForm.css" text="Problem Form">
                 <font>
                     <Font name="Times New Roman" size="40.0" />
                 </font>
@@ -85,14 +85,14 @@
          <children>
             <VBox prefHeight="106.0" prefWidth="685.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Circle fill="#f6f7f8" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+                        <Circle fill="#f6f7f8" radius="6.0" stroke="WHITE" strokeType="INSIDE" styleClass="circle">
                            <HBox.margin>
                               <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
-                        <Button mnemonicParsing="false" onAction="#infrastructureproblemClicked" text="Infrastructure ">
+                        <Button mnemonicParsing="false" onAction="#infrastructureproblemClicked" text="Infrastructure " underline="true">
                            <HBox.margin>
                               <Insets top="5.0" />
                            </HBox.margin>
@@ -105,9 +105,9 @@
                         <Insets />
                      </opaqueInsets>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="102.0" prefWidth="686.0">
                      <children>
-                        <Label prefHeight="54.0" prefWidth="605.0" text="Any issues related to improper functioning of Internet, AC, computers and other infrastructures.   ">
+                        <Label alignment="TOP_LEFT" prefHeight="54.0" prefWidth="605.0" text="Any issues related to improper functioning of Internet, AC, computers and other infrastructures.   ">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -130,14 +130,14 @@
          <children>
             <VBox prefHeight="106.0" prefWidth="682.0">
                <children>
-                  <HBox prefHeight="106.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="200.0">
                      <children>
-                        <Circle fill="#fcfcfd" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                        <Circle fill="#fcfcfd" radius="6.0" stroke="WHITE" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
-                        <Button mnemonicParsing="false" onAction="#counselingclicked" onMouseClicked="#counselingclicked" text="Issues Related to Counseling">
+                        <Button mnemonicParsing="false" onAction="#counselingclicked" onMouseClicked="#counselingclicked" text="Issues Related to Counseling" underline="true">
                            <HBox.margin>
                               <Insets top="5.0" />
                            </HBox.margin>
@@ -183,14 +183,14 @@
          <children>
             <VBox onMouseClicked="#otherproblemclicked" prefHeight="106.0" prefWidth="683.0">
                <children>
-                  <HBox onMouseClicked="#otherproblemclicked" prefHeight="106.0" prefWidth="676.0">
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#otherproblemclicked" prefHeight="106.0" prefWidth="676.0">
                      <children>
-                        <Circle fill="#f7f8f8" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                        <Circle fill="#f7f8f8" radius="6.0" stroke="WHITE" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets left="50.0" right="20.0" top="20.0" />
                            </HBox.margin>
                         </Circle>
-                        <Button mnemonicParsing="false" onAction="#otherproblemclicked" text="Other Problems">
+                        <Button mnemonicParsing="false" onAction="#otherproblemclicked" text="Other Problems" underline="true">
                            <HBox.margin>
                               <Insets top="5.0" />
                            </HBox.margin>

@@ -75,10 +75,10 @@
                                 <Font size="19.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="probelmId" prefHeight="26.0" prefWidth="194.0" />
+                        <TextField fx:id="probelmId" prefHeight="26.0" prefWidth="194.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
                     </children>
                     <VBox.margin>
-                        <Insets top="50.0" />
+                        <Insets top="30.0" />
                     </VBox.margin>
                 </HBox>
                 <HBox prefHeight="100.0" prefWidth="200.0">
@@ -88,7 +88,7 @@
                                 <Font size="19.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="counselingproblemtitle" prefHeight="26.0" prefWidth="194.0" />
+                        <TextField fx:id="counselingproblemtitle" prefHeight="26.0" prefWidth="194.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
                     </children>
                     <VBox.margin>
                         <Insets top="15.0" />
@@ -101,7 +101,7 @@
                                 <Font size="19.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="scid" prefHeight="26.0" prefWidth="195.0" />
+                        <TextField fx:id="scid" prefHeight="26.0" prefWidth="195.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
                     </children>
                     <VBox.margin>
                         <Insets top="15.0" />
@@ -113,15 +113,8 @@
                             <font>
                                 <Font size="19.0" />
                             </font>
-                            <padding>
-                                <Insets top="10.0" />
-                            </padding>
                         </Label>
-                        <TextField fx:id="creatornamecounseling" prefHeight="26.0" prefWidth="194.0">
-                            <padding>
-                                <Insets top="10.0" />
-                            </padding>
-                        </TextField>
+                        <TextField fx:id="creatornamecounseling" prefHeight="26.0" prefWidth="194.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
                     </children>
                     <padding>
                         <Insets top="15.0" />
@@ -146,17 +139,17 @@
                 <Insets />
             </opaqueInsets>
         </HBox>
-        <VBox layoutX="291.0" layoutY="358.0" prefHeight="141.0" prefWidth="820.0" AnchorPane.topAnchor="340.0">
+        <VBox layoutX="291.0" layoutY="347.6" prefHeight="141.0" prefWidth="820.0" AnchorPane.topAnchor="347.6">
             <children>
                 <Label prefHeight="0.0" prefWidth="820.0" text="Help us understand you better">
                     <font>
                         <Font size="18.0" />
                     </font>
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="10.0" />
                </VBox.margin>
                 </Label>
-                <TextField fx:id="counselingproblemtxtfield" prefHeight="90.0" prefWidth="770.0" promptText="Explain your problem here...." styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css">
+                <TextField fx:id="counselingproblemtxtfield" alignment="TOP_LEFT" prefHeight="90.0" prefWidth="770.0" promptText="Explain your problem here...." styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css">
                     <VBox.margin>
                         <Insets right="50.0" top="10.0" />
                     </VBox.margin>
@@ -170,6 +163,6 @@
          </font>
       </Label>
       <DatePicker fx:id="dateforcounseling" layoutX="294.0" layoutY="548.0" prefHeight="30.0" prefWidth="208.0" />
-      <TextField fx:id="time" alignment="CENTER" layoutX="543.0" layoutY="549.0" prefHeight="26.0" prefWidth="68.0" promptText="Time" />
+      <TextField fx:id="time" alignment="CENTER" layoutX="543.0" layoutY="549.0" prefHeight="26.0" prefWidth="68.0" promptText="Time" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
     </children>
 </AnchorPane>

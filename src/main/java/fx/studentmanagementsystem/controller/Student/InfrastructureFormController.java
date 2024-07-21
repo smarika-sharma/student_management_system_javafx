@@ -44,7 +44,6 @@ public class InfrastructureFormController {
     }
 
 
-
     public void infrastructureproblemsubmit(ActionEvent event) throws IOException {
         String ProblemId = probelmId.getText();
         String Scid = scid.getText();
@@ -53,7 +52,7 @@ public class InfrastructureFormController {
         String Infproblemtxtfield = infproblemtxtfield.getText();
 
         saveDataCSV("src/main/resources/csv/infrastructureproblem.csv", ProblemId, Scid, Infproblemtitle, Creatornameinf, Infproblemtxtfield);
-
+        changeScene(event,"/Fxml/Student/ProblemForm.fxml","Academiafx");
     }
 
     public void StudentDashboardClicked(ActionEvent event) throws IOException {
