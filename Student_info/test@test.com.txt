@@ -1,0 +1,6 @@
+Student ID: 123456
+Username: test test
+Phone Number: 12345678
+Email: test@test.com
+Faculty: BCS
+Gender: Female
