@@ -49,6 +49,6 @@
         </TableView>
         <Button layoutX="1040.0" layoutY="519.0" mnemonicParsing="false" onAction="#addstaffadmin" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Add Student" />
         <Button layoutX="945.0" layoutY="522.0" mnemonicParsing="false" onAction="#adminupdatestaff" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Update" />
-        <Button layoutX="846.0" layoutY="522.0" mnemonicParsing="false"  styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
+        <Button layoutX="846.0" layoutY="522.0" mnemonicParsing="false" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Delete" />
     </children>
 </AnchorPane>

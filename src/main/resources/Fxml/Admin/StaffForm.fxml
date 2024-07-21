@@ -86,7 +86,7 @@
             <Insets left="50.0" top="20.0" />
          </padding>
       </VBox>
-      <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="1098.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backbtnstaffform" fitHeight="32.0" fitWidth="30.0" layoutX="1098.0" layoutY="668.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/back.png" />
          </image>

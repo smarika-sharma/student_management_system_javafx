@@ -4,9 +4,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static fx.studentmanagementsystem.Uses.changeSceneMouse;
 
 public class StaffFormController implements Initializable {
 
@@ -17,10 +22,22 @@ public class StaffFormController implements Initializable {
     public TextField staffemail;
     public ChoiceBox<String> staffgender;
     private final String[] genders = {"male", "female", "others"};
+    public ImageView backbtnstaffform;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         staffgender.getItems().addAll(genders);
         staffrole.getItems().addAll(role);
+        backbtnstaffform.setOnMouseClicked(event -> {
+            try {
+                backbtnstaffform(event);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    private void backbtnstaffform(MouseEvent event) throws IOException {
+        changeSceneMouse(event, "/Fxml/Admin/ManageStaff.fxml", "Admin Dashboard");
     }
 
     public void saveStaffCredentials() {
