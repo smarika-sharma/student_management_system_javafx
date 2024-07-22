@@ -75,7 +75,7 @@
                                 <Font size="19.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="probelmId" prefHeight="26.0" prefWidth="194.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
+                        <TextField fx:id="probelmId" editable="false" prefHeight="26.0" prefWidth="194.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
                     </children>
                     <VBox.margin>
                         <Insets top="30.0" />
@@ -101,7 +101,7 @@
                                 <Font size="19.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="scid" prefHeight="26.0" prefWidth="195.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
+                        <TextField fx:id="scid" editable="false" prefHeight="26.0" prefWidth="195.0" styleClass="textOfTextfield" stylesheets="@../../Style/CounselingForm.css" />
                     </children>
                     <VBox.margin>
                         <Insets top="15.0" />

@@ -76,6 +76,7 @@
                   <TextField fx:id="phoneNumber" stylesheets="@../../Style/StudentForm.css" />
                </children>
             </HBox>
+            <Label fx:id="Error_Label" text="Label" textFill="#e90f0f" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitClicked" prefHeight="43.0" prefWidth="132.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit" />
@@ -86,7 +87,7 @@
             <Insets left="50.0" top="20.0" />
          </padding>
       </VBox>
-      <ImageView fx:id="backButton" fitHeight="32.0" fitWidth="30.0" layoutX="1098.0" layoutY="668.0" onMouseClicked="#backToManageTeacher" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backButton" fitHeight="32.0" fitWidth="30.0" layoutX="226.0" layoutY="97.0" onMouseClicked="#backToManageTeacher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/back.png" />
          </image>

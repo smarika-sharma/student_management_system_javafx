@@ -157,7 +157,7 @@
                   </TextField>
                </children>
             </HBox>
-            <Label fx:id="Error_label" style="-fx-text-fill: red; visibility: false;" text="Error label" />
+            <Label fx:id="Error_label" text="Label" textFill="#dd0505" />
             <HBox alignment="CENTER" prefHeight="78.0" prefWidth="700.0" spacing="50.0">
                <children>
                   <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefHeight="44.0" prefWidth="138.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">

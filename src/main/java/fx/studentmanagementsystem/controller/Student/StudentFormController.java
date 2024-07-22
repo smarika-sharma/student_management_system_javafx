@@ -136,6 +136,7 @@ public class StudentFormController implements Initializable {
         pause.play();
     }
     private boolean isInputValid() {
+        if (isFieldEmpty(studentID.getText(), "Student ID cannot be empty")) return false;
         if (isFieldEmpty(firstName.getText(), "First name cannot be empty")) return false;
         if (isFieldEmpty(lastName.getText(), "Last name cannot be empty")) return false;
         if (isFieldEmpty(phoneNumber.getText(), "Phone number cannot be empty")) return false;
