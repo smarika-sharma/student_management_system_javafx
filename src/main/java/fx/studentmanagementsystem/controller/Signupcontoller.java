@@ -25,9 +25,12 @@ import java.util.ResourceBundle;
 import static fx.studentmanagementsystem.Uses.changeScene;
 import static fx.studentmanagementsystem.Uses.changeSceneMouse;
 import static java.lang.StringTemplate.STR;
-
+/**
+ * Controller for handling the signup process of students.
+ * Allows new students to register by providing personal information and credentials.
+ */
 public class Signupcontoller implements Initializable {
-
+    // ChoiceBoxes for selecting gender and faculty
     @FXML
     private ChoiceBox<String> chooseGender;
     private final String[] genders = {"Male", "Female", "Others"};
@@ -36,6 +39,7 @@ public class Signupcontoller implements Initializable {
     @FXML
     private ChoiceBox<String> chooseFaculty;
     private final String[] faculties = {"BIHM", "BBA", "BCS"};
+    // TextFields for student information input
     @FXML
     public TextField student_firstname;
     @FXML
@@ -52,7 +56,10 @@ public class Signupcontoller implements Initializable {
     public Label Error_label;
     @FXML
     public ImageView backto_chooseuser;
-
+    /**
+     * Initializes the controller class.
+     * Populates the gender and faculty choice boxes with predefined options.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         chooseGender.getItems().addAll(genders);
@@ -60,7 +67,11 @@ public class Signupcontoller implements Initializable {
         Error_label.setText("");
 
     }
-
+    /**
+     * Checks if the provided email already exists in the system.
+     * @param email The email to check.
+     * @return true if the email exists, false otherwise.
+     */
     private boolean emailExists(String email) {
         try (BufferedReader br = new BufferedReader(new FileReader("Student_credentials.csv"))) {
             String line;
@@ -75,7 +86,12 @@ public class Signupcontoller implements Initializable {
         }
         return false; // Email does not exist
     }
-
+    /**
+     * Handles the signup button click event.
+     * Validates the input fields and writes the student credentials to a CSV file.
+     * @param event The event that triggered this method.
+     * @throws NoSuchAlgorithmException If the hashing algorithm is not found.
+     */
     @FXML
     public void signup_btn_clicked(ActionEvent event) throws NoSuchAlgorithmException {
         if (!isInputValid()) {
@@ -124,6 +140,8 @@ public class Signupcontoller implements Initializable {
         if (isFieldEmpty(student_firstname.getText(), "First name cannot be empty")) return false;
         if (isFieldEmpty(student_lastname.getText(), "Last name cannot be empty")) return false;
         if (isFieldEmpty(student_phonenumber.getText(), "Phone number cannot be empty")) return false;
+        if (isFieldEmpty(student_pass_field.getText(), "Password cannot be empty")) return false;
+        if (isFieldEmpty(student_confirmpass_field.getText(), "Confirm password cannot be empty")) return false;
         return !isFieldEmpty(student_email_field.getText(), "Email cannot be empty");
     }
 
@@ -142,6 +160,7 @@ public class Signupcontoller implements Initializable {
     }
 
 
+
     private void writeCredentialsToCSV(String Email, String Password) {
         try (FileWriter fw = new FileWriter("Student_credentials.csv", true);
              PrintWriter pw = new PrintWriter(fw)) {
@@ -150,7 +169,15 @@ public class Signupcontoller implements Initializable {
             e.printStackTrace();
         }
     }
-
+    /**
+     * Writes the new student's information to a text file.
+     * @param firstname The student's first name.
+     * @param lastname The student's last name.
+     * @param phonenumber The student's phone number.
+     * @param email The student's email.
+     * @param faculty The student's faculty.
+     * @param gender The student's gender.
+     */
     private void writestudentinfoTotxt(String firstname, String lastname, String phonenumber, String email, String faculty, String gender) throws IOException {
         //make a student info directory
         File directory = new File("Student_info");
@@ -178,7 +205,9 @@ public class Signupcontoller implements Initializable {
 
 
     }
-
+    /**
+     * Handles the back button click event to navigate back to the choose user signup page.
+     */
     @FXML
     public void backToChooseUser(javafx.scene.input.MouseEvent event) {
         try {
@@ -187,7 +216,9 @@ public class Signupcontoller implements Initializable {
             e.printStackTrace();
         }
     }
-
+    /**
+     * Navigates to the login page.
+     */
     @FXML
     public void signuppageloginbtn(ActionEvent event) {
         try {

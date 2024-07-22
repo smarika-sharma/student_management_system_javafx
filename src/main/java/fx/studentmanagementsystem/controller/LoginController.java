@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller;
 
+import fx.studentmanagementsystem.Utils.HashEncryption;
 import fx.studentmanagementsystem.controller.Student.SessionManager;
 import fx.studentmanagementsystem.controller.Student.StudentMenuController;
 import javafx.event.ActionEvent;
@@ -20,6 +21,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 
@@ -51,9 +53,10 @@ public class LoginController {
 
 
     @FXML
-    public void login_button_clicked(ActionEvent event) {
+    public void login_button_clicked(ActionEvent event) throws NoSuchAlgorithmException {
         String Email = studentlogin_email_field.getText();
-        String Pass = studentlogin_pass_field.getText();
+        //String Pass = studentlogin_pass_field.getText();
+        String Pass = HashEncryption.hashPassword(studentlogin_pass_field.getText());
 
         boolean loginSuccessful = false;
         try (BufferedReader br = new BufferedReader(new FileReader("Student_credentials.csv"))) {
