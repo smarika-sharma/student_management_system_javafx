@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
@@ -44,9 +45,9 @@ public class Signupcontoller implements Initializable {
     @FXML
     public TextField student_email_field;
     @FXML
-    public TextField student_pass_field;
+    public PasswordField student_pass_field;
     @FXML
-    public TextField student_confirmpass_field;
+    public PasswordField student_confirmpass_field;
     @FXML
     public Label Error_label;
     @FXML
@@ -90,7 +91,7 @@ public class Signupcontoller implements Initializable {
         } else {
             Error_label.setText("Signup successful");
             String hashedPassword = HashEncryption.hashPassword(student_pass_field.getText());
-            //String Email = student_email_field.getText();
+            // String Email = student_email_field.getText();
             //String Password = student_pass_field.getText();
             String Firstname = student_firstname.getText();
             String Lastname = student_lastname.getText();
