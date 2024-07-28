@@ -8,6 +8,7 @@ public class Teacher {
         private String email;
         private String faculty;
         private String gender;
+        //private String phoneNumber;
         private Button deleteButton;
 
 
@@ -18,6 +19,7 @@ public class Teacher {
             this.email = email;
             this.faculty = faculty;
             this.gender = gender;
+
             this.deleteButton = new Button("Delete");
         }
 
@@ -65,5 +67,6 @@ public class Teacher {
         public void setGender(String gender) {
             this.gender = gender;
         }
+
 
 }

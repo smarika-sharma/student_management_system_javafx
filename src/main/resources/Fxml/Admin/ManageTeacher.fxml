@@ -49,5 +49,6 @@
          </columns>
       </TableView>
       <Button layoutX="1040.0" layoutY="519.0" mnemonicParsing="false" onAction="#addTeacher" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Add Teacher" />
+      <Button layoutX="937.0" layoutY="519.0" mnemonicParsing="false" onAction="#updateteacher" styleClass="other-button" stylesheets="@../../Style/ManageStaff.css" text="Update" />
    </children>
 </AnchorPane>

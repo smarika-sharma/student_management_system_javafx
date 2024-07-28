@@ -127,6 +127,31 @@ public class Uses {
             writer.writeAll(csvBody);
         }
     }
+    public static void updateTeacherInCSV(String teacherId, String newUsername, String newEmail, String newFaculty, String newGender, String newPhoneNumber) {
+        List<String[]> csvBody = new ArrayList<>();
+        try (CSVReader reader = new CSVReader(new FileReader("teacher_credentials.csv"))) {
+            String[] nextLine;
+            while ((nextLine = reader.readNext()) != null) {
+                if (nextLine[0].equals(teacherId)) {
+                    nextLine[1] = newUsername;
+                    nextLine[4] = newEmail;
+                    nextLine[7] = newFaculty;
+                    nextLine[8] = newGender;
+                    nextLine[5] = newPhoneNumber;
+                    // Add other fields as necessary
+                }
+                csvBody.add(nextLine);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try (CSVWriter writer = new CSVWriter(new FileWriter("teacher_credentials.csv"))) {
+            writer.writeAll(csvBody);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

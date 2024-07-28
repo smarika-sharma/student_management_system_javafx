@@ -7,11 +7,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
@@ -97,6 +101,29 @@ public class ManageTeacherController implements Initializable {
         teacherTable.setItems(readTeacherFromCSV("teacher_credentials.csv"));
     }
 
+
+    public void updateteacher(ActionEvent event) throws IOException {
+        handleRowSelect(event);
+        //changeScene(event, "/Fxml/Admin/UpadteTeacherForm.fxml","update teacher");
+    }
+    private void handleRowSelect(ActionEvent event) {
+        Teacher selectedTeacher = teacherTable.getSelectionModel().getSelectedItem();
+        if (selectedTeacher != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/UpdateTeacherForm.fxml"));
+                Parent root = loader.load();
+
+                UpdateTeacherController controller = loader.getController();
+                controller.loadSelectedTeacherData(selectedTeacher);
+
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
 
 
