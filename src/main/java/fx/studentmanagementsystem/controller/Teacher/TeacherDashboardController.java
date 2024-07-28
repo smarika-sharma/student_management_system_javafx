@@ -18,17 +18,18 @@ import java.util.List;
 import java.util.Scanner;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.loadStudentsFromDirectory;
 
 public class TeacherDashboardController {
 
     @FXML
-    private TableView<Student> studentTableView;
+    private TableView<Student> studentTableView; //student detail tableview
     @FXML
-    private TableColumn<Student, String> studentNameColumn;
+    private TableColumn<Student, String> studentNameColumn; //student name column
     @FXML
-    private TableColumn<Student, String> facultyColumn;
+    private TableColumn<Student, String> facultyColumn; //student faculty column
     @FXML
-    private TableColumn<Student, String> emailColumn;
+    private TableColumn<Student, String> emailColumn; // student email column
 
     @FXML
     public void initialize() {
@@ -36,37 +37,16 @@ public class TeacherDashboardController {
         facultyColumn.setCellValueFactory(new PropertyValueFactory<>("faculty"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
 
+        //loading student details from the Student_info directory
         ObservableList<Student> studentList = FXCollections.observableArrayList(loadStudentsFromDirectory());
-        studentTableView.setItems(studentList);
-    }
-
-    public List<Student> loadStudentsFromDirectory() {
-        List<Student> students = new ArrayList<>();
-        File directory = new File("Student_info");
-        File[] files = directory.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                try (Scanner scanner = new Scanner(file)) {
-                    String studentID = scanner.nextLine().split(": ")[1];
-                    String username = scanner.nextLine().split(": ")[1];
-                    String phoneNumber = scanner.nextLine().split(": ")[1];
-                    String email = scanner.nextLine().split(": ")[1];
-                    String faculty = scanner.nextLine().split(": ")[1];
-                    String gender = scanner.nextLine().split(": ")[1];
-                    students.add(new Student(studentID, username, phoneNumber, email, faculty, gender));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return students;
+        studentTableView.setItems(studentList); //setting student details to the table
     }
 
     // for logout
     public void teacherLogout(ActionEvent event) {
         if(DialogsUtil.showLogoutConfirmation()) {
             try {
-                changeScene(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX");
+                changeScene(event, "/Fxml/chooseUser-Signup.fxml", "AcademiaFX"); //directing back to choose user interface when logges out
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -74,11 +54,12 @@ public class TeacherDashboardController {
 
     }
 
-
+    //directing to dashboard on clicking student details in teacher menu
     public void studentdetailsteacherdash(ActionEvent event) throws IOException {
         changeScene(event, "/Fxml/Teacher/TeacherDashboard.fxml", "Student Details");
     }
 
+    //directing to student report on clicking question report in teacher menu
     public void quesitonreportsclicked(ActionEvent event) throws IOException {
         changeScene(event, "/Fxml/Teacher/QuestionReports.fxml", "Question Reports");
     }

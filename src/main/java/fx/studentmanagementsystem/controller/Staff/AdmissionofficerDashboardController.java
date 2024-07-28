@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.loadStudentsFromDirectory;
 
 public class AdmissionofficerDashboardController {
 
@@ -49,28 +50,6 @@ public class AdmissionofficerDashboardController {
 
         ObservableList<Student> studentList = FXCollections.observableArrayList(loadStudentsFromDirectory());
         studentTableView.setItems(studentList);
-    }
-
-    public java.util.List<Student> loadStudentsFromDirectory() {
-        List<Student> students = new ArrayList<>();
-        File directory = new File("Student_info");
-        File[] files = directory.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                try (Scanner scanner = new Scanner(file)) {
-                    String studentID = scanner.nextLine().split(": ")[1];
-                    String username = scanner.nextLine().split(": ")[1];
-                    String phoneNumber = scanner.nextLine().split(": ")[1];
-                    String email = scanner.nextLine().split(": ")[1];
-                    String faculty = scanner.nextLine().split(": ")[1];
-                    String gender = scanner.nextLine().split(": ")[1];
-                    students.add(new Student(studentID, username, phoneNumber, email, faculty, gender));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return students;
     }
 
     // for logout

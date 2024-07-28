@@ -2,7 +2,7 @@ package fx.studentmanagementsystem;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-
+import fx.studentmanagementsystem.model.Staff;
 import fx.studentmanagementsystem.model.Teacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -100,8 +100,7 @@ public class Uses {
                                 nextLine[1], // username
                                 nextLine[4], // email
                                 nextLine[8], // gender
-                                nextLine[7],
-                                nextLine[5]// faculty
+                                nextLine[7] // faculty
 
                         ));
                     }
@@ -139,7 +138,6 @@ public class Uses {
                     nextLine[7] = newFaculty;
                     nextLine[8] = newGender;
                     nextLine[5] = newPhoneNumber;
-
                     // Add other fields as necessary
                 }
                 csvBody.add(nextLine);
