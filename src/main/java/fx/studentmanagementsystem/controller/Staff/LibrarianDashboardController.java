@@ -16,6 +16,5 @@ public class LibrarianDashboardController {
         if(DialogsUtil.showLogoutConfirmation()){
             changeScene(event, "/Fxml/chooseUser-Signup.fxml","AcademiaFX");
         }
-        //changeScene(event, "/Fxml/loginForOtherThanStudent.fxml","Academiafx");
     }
 }
