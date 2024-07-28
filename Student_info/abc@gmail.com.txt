@@ -1,6 +1,0 @@
-Student ID: 123
-Username: abc def
-Phone Number: 123
-Email: abc@gmail.com
-Faculty: BBA
-Gender: Female

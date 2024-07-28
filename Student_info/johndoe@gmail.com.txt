@@ -1,6 +1,0 @@
-Student ID: 03620013
-Username: john doe
-Phone Number: 1234567890
-Email: johndoe@gmail.com
-Faculty: BIHM
-Gender: Male

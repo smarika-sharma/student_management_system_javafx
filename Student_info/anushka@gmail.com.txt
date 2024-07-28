@@ -1,6 +1,0 @@
-Student ID: 03620108
-Username: Anushka khadgi
-Phone Number: 1234567890
-Email: anushka@gmail.com
-Faculty: BCS
-Gender: Female

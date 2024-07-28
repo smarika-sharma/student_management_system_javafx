@@ -1,6 +1,0 @@
-Student ID: 03620110
-Username: Sijan maharjan
-Phone Number: 1234567890
-Email: sijan@gmail.com
-Faculty: BIHM
-Gender: Male
