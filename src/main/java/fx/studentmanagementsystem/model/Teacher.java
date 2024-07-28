@@ -13,7 +13,7 @@ public class Teacher {
 
 
 
-        public Teacher(String TeacherId, String username, String email, String faculty, String gender, String phoneNumber) {
+        public Teacher(String TeacherId, String username, String email, String faculty, String gender) {
             this.TeacherId = TeacherId;
             this.username = username;
             this.email = email;
