@@ -43,8 +43,8 @@
             <TableColumn fx:id="TeacherId" minWidth="0.0" prefWidth="78.933349609375" text="SID" />
             <TableColumn fx:id="username" minWidth="0.0" prefWidth="165.5999755859375" text="Name" />
             <TableColumn fx:id="email" prefWidth="189.5999755859375" text="Email" />
-            <TableColumn fx:id="gender" prefWidth="132.26666259765625" text="Gender" />
-            <TableColumn fx:id="faculty" prefWidth="122.93316650390625" text="Faculty" />
+            <TableColumn fx:id="gender" prefWidth="132.26666259765625" text="Faculty" />
+            <TableColumn fx:id="faculty" prefWidth="122.93316650390625" text="Gender" />
             <TableColumn fx:id="deleteButton" prefWidth="141.59995117187498" text="Action" />
          </columns>
       </TableView>

@@ -1,59 +1,48 @@
 package fx.studentmanagementsystem.controller.Admin;
 
 import fx.studentmanagementsystem.model.Teacher;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-
-import java.io.IOException;
-
-import static fx.studentmanagementsystem.Uses.changeSceneMouse;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 import static fx.studentmanagementsystem.Uses.updateTeacherInCSV;
-
 
 public class UpdateTeacherController {
     @FXML
-    public TextField id;
-    @FXML
-    public TextField username;
-    @FXML
-    public PasswordField password;
-    @FXML
+    public Label Error_Label;
     public TextField teacherFirstName;
-    @FXML
+    public PasswordField password;
     public TextField teacherLastName;
     @FXML
-    public ChoiceBox<String> faculty;
+    private TextField id;
     @FXML
-    public TextField email;
+    private TextField username;
     @FXML
-    public ChoiceBox<String> gender;
+    private TextField email;
     @FXML
-    public TextField phoneNumber;
+    private ChoiceBox<String> faculty;
     @FXML
-    public Label Error_Label;
+    private ChoiceBox<String> gender;
     @FXML
-    public Button submitButton;
+    private TextField phoneNumber;
     @FXML
-    public ImageView backButton;
-
+    private Button submitButton;
     private Teacher selectedTeacher;
 
-    public void backToManageTeacher(MouseEvent event) throws IOException {
-        changeSceneMouse(event, "/Fxml/Admin/ManageTeacher.fxml", "Manage Teacher");
+    public void initialize() {
+        Error_Label.setText("");
+        faculty.getItems().addAll("BCS", "BBA", "BIHM");
+        gender.getItems().addAll("Male", "Female", "Others");
     }
 
-    public void loadSelectedTeacherData(Teacher selectedTeacher) {
-        this.selectedTeacher = selectedTeacher;
-        id.setText(selectedTeacher.getId());
-        username.setText(selectedTeacher.getUsername());
-        email.setText(selectedTeacher.getEmail());
-        faculty.setValue(selectedTeacher.getFaculty());
-        gender.setValue(selectedTeacher.getGender());
-        //phoneNumber.setText(selectedTeacher.getPhoneNumber());
-        // Add other fields as necessary
+    public void loadSelectedTeacherData(Teacher teacher) {
+        this.selectedTeacher = teacher;
+        id.setText(teacher.getId());
+        username.setText(teacher.getUsername());
+        email.setText(teacher.getEmail());
+        faculty.setValue(teacher.getFaculty());
+        gender.setValue(teacher.getGender());
+        phoneNumber.setText(teacher.getPhoneNumber());
     }
 
     @FXML
@@ -70,15 +59,16 @@ public class UpdateTeacherController {
         updateTeacherInCSV(teacherId, newUsername, newEmail, newFaculty, newGender, newPhoneNumber);
 
         // Update TableView
-        //selectedTeacher.setUsername(newUsername);
+        selectedTeacher.setUsername(newUsername);
         selectedTeacher.setEmail(newEmail);
         selectedTeacher.setFaculty(newFaculty);
         selectedTeacher.setGender(newGender);
-        //selectedTeacher.setPhoneNumber(newPhoneNumber);
+        selectedTeacher.setPhoneNumber(newPhoneNumber);
         // Add other fields as necessary
 
         // Close the update form
-
-        //((Stage) submitButton.getScene().getWindow()).close();
+        Stage stage = (Stage) submitButton.getScene().getWindow();
+        stage.close();
     }
+
 }

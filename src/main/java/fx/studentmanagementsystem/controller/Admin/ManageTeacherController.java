@@ -1,10 +1,7 @@
 package fx.studentmanagementsystem.controller.Admin;
 
 import fx.studentmanagementsystem.Utils.DialogsUtil;
-import fx.studentmanagementsystem.model.Staff;
 import fx.studentmanagementsystem.model.Teacher;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,13 +13,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
-
 import static fx.studentmanagementsystem.Uses.*;
 
 
@@ -101,12 +94,8 @@ public class ManageTeacherController implements Initializable {
         teacherTable.setItems(readTeacherFromCSV("teacher_credentials.csv"));
     }
 
-
+    @FXML
     public void updateteacher(ActionEvent event) throws IOException {
-        handleRowSelect(event);
-        //changeScene(event, "/Fxml/Admin/UpadteTeacherForm.fxml","update teacher");
-    }
-    private void handleRowSelect(ActionEvent event) {
         Teacher selectedTeacher = teacherTable.getSelectionModel().getSelectedItem();
         if (selectedTeacher != null) {
             try {
@@ -123,7 +112,9 @@ public class ManageTeacherController implements Initializable {
                 e.printStackTrace();
             }
         }
+
     }
+
 }
 
 

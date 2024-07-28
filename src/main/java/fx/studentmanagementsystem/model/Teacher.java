@@ -8,17 +8,18 @@ public class Teacher {
         private String email;
         private String faculty;
         private String gender;
-        //private String phoneNumber;
+        private String phoneNumber;
         private Button deleteButton;
 
 
 
-        public Teacher(String TeacherId, String username, String email, String faculty, String gender) {
+        public Teacher(String TeacherId, String username, String email, String faculty, String gender, String phoneNumber) {
             this.TeacherId = TeacherId;
             this.username = username;
             this.email = email;
             this.faculty = faculty;
             this.gender = gender;
+            this.phoneNumber = phoneNumber;
 
             this.deleteButton = new Button("Delete");
         }
@@ -69,4 +70,14 @@ public class Teacher {
         }
 
 
+    public String getPhoneNumber() {
+            return phoneNumber;
+    }
+
+    public void setUsername(String newUsername) {
+    }
+
+    public void setPhoneNumber(String PhoneNumber) {
+            this.phoneNumber = phoneNumber;
+    }
 }
