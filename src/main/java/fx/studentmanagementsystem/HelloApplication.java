@@ -13,14 +13,14 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/Fxml/adminLogin.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 750);
 
         Image icon = new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/icon.png")));
         stage.getIcons().add(icon);
 
         stage.setTitle("AcademiaFX");
         stage.setScene(scene);
-        stage.setMinHeight(750);
+        stage.setHeight(750);
         stage.setMinWidth(1200);
         stage.setResizable(false);
         stage.centerOnScreen();

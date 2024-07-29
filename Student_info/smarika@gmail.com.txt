@@ -1,0 +1,6 @@
+Student ID: 03620017
+Username: smarika sharma
+Phone Number: 9800000000
+Email: smarika@gmail.com
+Faculty: BCS
+Gender: Female

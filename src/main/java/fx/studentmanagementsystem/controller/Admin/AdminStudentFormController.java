@@ -13,8 +13,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static fx.studentmanagementsystem.Uses.changeScene;
-import static fx.studentmanagementsystem.Uses.changeSceneMouse;
+import static fx.studentmanagementsystem.Uses.*;
 
 public class AdminStudentFormController implements Initializable {
 
@@ -83,26 +82,13 @@ public class AdminStudentFormController implements Initializable {
         changeSceneMouse(event,"/Fxml/Admin/ManageStudents.fxml","AcademiaFX");
     }
 
-    private boolean emailExists(String email) {
-        try (BufferedReader br = new BufferedReader(new FileReader("Student_credentials.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] credentials = line.split(",");
-                if (credentials[0].equals(email)) {
-                    return true; // Email exists
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false; // Email does not exist
-    }
+
     public void onSubmitButtonClicked(ActionEvent event) {
         if (!isInputValid()) {
             return;
         }
         String Email = email.getText();
-        if (emailExists(Email)) {
+        if (emailExists(new File("Student_credentials.csv"),Email)) {
             Error_label.setText("Email already exists. Please use another email.");
             return;
         }

@@ -21,22 +21,14 @@ import java.io.*;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
-import static fx.studentmanagementsystem.Uses.changeScene;
-import static fx.studentmanagementsystem.Uses.changeSceneMouse;
+import static fx.studentmanagementsystem.Uses.*;
 import static java.lang.StringTemplate.STR;
 
 // controller for handling student signup
 public class Signupcontoller implements Initializable {
-    // ChoiceBoxes for selecting gender and faculty
-    @FXML
-    private ChoiceBox<String> chooseGender;
-    private final String[] genders = {"Male", "Female", "Others"};
 
-
-    @FXML
-    private ChoiceBox<String> chooseFaculty;
-    private final String[] faculties = {"BIHM", "BBA", "BCS"};
     // TextFields for student information input
     @FXML
     public TextField student_firstname;
@@ -50,8 +42,35 @@ public class Signupcontoller implements Initializable {
     public PasswordField student_pass_field;
     @FXML
     public PasswordField student_confirmpass_field;
+
+    // ChoiceBox for selecting gender
+    @FXML
+    private ChoiceBox<String> chooseGender;
+    private final String[] genders = {"Male", "Female", "Others"};
+
+    // ChoiceBox for selecting faculty
+    @FXML
+    private ChoiceBox<String> chooseFaculty;
+    private final String[] faculties = {"BIHM", "BBA", "BCS"};
+
+
+    //Labels for errors
     @FXML
     public Label Error_label;
+    @FXML
+    public Label firstNameError;
+    @FXML
+    public Label lastNameError;
+    @FXML
+    public Label genderError;
+    @FXML
+    public Label facultyError;
+    @FXML
+    public Label emailError;
+    @FXML
+    public Label phoneNumberError;
+    @FXML
+    public Label passwordFieldError;
     @FXML
     public ImageView backto_chooseuser;
 
@@ -62,46 +81,43 @@ public class Signupcontoller implements Initializable {
         Error_label.setText("");
 
     }
-    private boolean emailExists(String email) {
-        try (BufferedReader br = new BufferedReader(new FileReader("Student_credentials.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] credentials = line.split(",");
-                if (credentials[0].equals(email)) {
-                    return true; // Email exists
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false; // Email does not exist
-    }
+
 
     @FXML
     public void signup_btn_clicked(ActionEvent event) throws NoSuchAlgorithmException {
+
+        String firstName = student_firstname.getText();
+        String lastName = student_lastname.getText();
+        String phoneNumber = student_phonenumber.getText();
+        String email = student_email_field.getText();
+        String faculty = chooseFaculty.getValue();
+        String gender = chooseGender.getValue();
+        String password = student_pass_field.getText();
+        String confirmPassword = student_confirmpass_field.getText();
+
+
+
         if (!isInputValid()) {
             return;
         }
-        String Email = student_email_field.getText();
-        if (emailExists(Email)) {
+        String Email = email;
+        if (emailExists(new File("Student_credentials.csv"), Email)) {
             Error_label.setText("Email already exists. Please use another email.");
             return;
         }
+
         if (!isPasswordMatching()) {
             Error_label.setText("Password and confirm password do not match");
+            return;
         } else {
             Error_label.setText("Signup successful");
-            String hashedPassword = HashEncryption.hashPassword(student_pass_field.getText());
+            String hashedPassword = HashEncryption.hashPassword(password);
             // String Email = student_email_field.getText();
             //String Password = student_pass_field.getText();
-            String Firstname = student_firstname.getText();
-            String Lastname = student_lastname.getText();
-            String Phonenumber = student_phonenumber.getText();
-            String Faculty = chooseFaculty.getValue();
-            String Gender = chooseGender.getValue();
+
             writeCredentialsToCSV(Email, hashedPassword);
             try {
-                writestudentinfoTotxt(Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
+                writestudentinfoTotxt(firstName, lastName, phoneNumber, Email, faculty, gender);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -120,31 +136,87 @@ public class Signupcontoller implements Initializable {
         });
         pause.play();
     }
-
     private boolean isInputValid() {
-        if (isFieldEmpty(student_firstname.getText(), "First name cannot be empty")) return false;
-        if (isFieldEmpty(student_lastname.getText(), "Last name cannot be empty")) return false;
-        if (isFieldEmpty(student_phonenumber.getText(), "Phone number cannot be empty")) return false;
-        if (isFieldEmpty(student_pass_field.getText(), "Password cannot be empty")) return false;
-        if (isFieldEmpty(student_confirmpass_field.getText(), "Confirm password cannot be empty")) return false;
-        return !isFieldEmpty(student_email_field.getText(), "Email cannot be empty");
+        boolean valid = true;
+
+        // Clear all previous error messages
+        clearAllErrors();
+
+        // Validate first name
+        if (student_firstname.getText().trim().isEmpty()) {
+            error(firstNameError, "Required.", true);
+            valid = false;
+        }
+
+        // Validate last name
+        if (student_lastname.getText().trim().isEmpty()) {
+            error(lastNameError, "Required.", true);
+            valid = false;
+        }
+
+        // Validate phone number
+        if (student_phonenumber.getText().trim().isEmpty()) {
+            error(phoneNumberError, "Phone number is required.", true);
+            valid = false;
+        } else if (!Pattern.matches("^98\\d{8}$", student_phonenumber.getText().trim())) {
+            error(phoneNumberError, "Must be 10 digits starting with 98.", true);
+            valid = false;
+        }
+
+        // Validate email
+        if (student_email_field.getText().trim().isEmpty()) {
+            error(emailError, "Email is required.", true);
+            valid = false;
+        } else if (!(Pattern.matches("^[a-zA-Z0-9_+&*-]+(?:\\." +
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$", student_email_field.getText().trim()))){
+            error(emailError, "Invalid email format.", true);
+            valid = false;
+        }
+
+        // Validate gender
+        if (chooseGender.getValue() == null) {
+            error(genderError, "Invalid", true);
+            valid = false;
+        }
+
+        // Validate faculty
+        if (chooseFaculty.getValue() == null) {
+            error(facultyError, "Invalid", true);
+            valid = false;
+        }
+
+        // Validate password
+        if (student_pass_field.getText().trim().isEmpty()) {
+            error(passwordFieldError, "Password is required.", true);
+            valid = false;
+        }
+
+        // Validate confirm password
+        if (student_confirmpass_field.getText().trim().isEmpty()) {
+            error(Error_label, "Please confirm your password.", true);
+            valid = false;
+        }
+        return valid;
     }
 
-    private boolean isFieldEmpty(String fieldText, String errorMessage) {
-        if (fieldText.isEmpty()) {
-            Error_label.setText(errorMessage);
-            return true;
-        }
-        return false;
+    private void clearAllErrors() {
+        error(firstNameError, "", false);
+        error(lastNameError, "", false);
+        error(genderError, "", false);
+        error(facultyError, "", false);
+        error(emailError, "", false);
+        error(phoneNumberError, "", false);
+        error(passwordFieldError, "", false);
     }
+
 
     private boolean isPasswordMatching() {
         String pass = student_pass_field.getText();
         String confirmPass = student_confirmpass_field.getText();
         return pass.equals(confirmPass);
     }
-
-
 
     private void writeCredentialsToCSV(String Email, String Password) {
         try (FileWriter fw = new FileWriter("Student_credentials.csv", true);
@@ -202,6 +274,7 @@ public class Signupcontoller implements Initializable {
             e.printStackTrace();
         }
     }
+
 
 }
 

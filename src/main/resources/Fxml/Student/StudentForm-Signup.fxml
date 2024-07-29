@@ -26,12 +26,12 @@
                         <Insets bottom="55.0" left="160.0" top="55.0" />
                     </HBox.margin>
                     <children>
-                        <Label id="loginTitle" styleClass="loginSignupTitle" stylesheets="@../../Style/loginAndSignup.css" text="SIGN UP">
+                        <Label id="loginTitle" prefHeight="85.0" prefWidth="150.0" styleClass="loginSignupTitle" stylesheets="@../../Style/loginAndSignup.css" text="SIGN UP">
                             <font>
                                 <Font size="30.0" />
                             </font>
                             <VBox.margin>
-                                <Insets top="50.0" />
+                                <Insets top="40.0" />
                             </VBox.margin></Label>
                         <Label id="welcomeText" styleClass="welcomeText" stylesheets="@../../Style/loginAndSignup.css" text="Please sign up to continue.">
                      <VBox.margin>
@@ -42,27 +42,29 @@
                         <Insets top="30.0" />
                      </VBox.margin>
                      <children>
-                        <Label prefHeight="15.0" prefWidth="160.0" text="First name" textAlignment="RIGHT">
+                        <Label prefHeight="15.0" prefWidth="127.0" text="First name" textAlignment="RIGHT">
                            <HBox.margin>
                               <Insets left="70.0" />
                            </HBox.margin>
                            <font>
                               <Font size="19.0" />
                            </font></Label>
-                        <TextField fx:id="student_firstname" prefHeight="24.0" prefWidth="187.0">
+                        <Label fx:id="firstNameError" prefHeight="15.0" prefWidth="99.0" style="-fx-text-fill: red; visibility: false;" text="Label" />
+                        <TextField fx:id="student_firstname" prefHeight="24.0" prefWidth="126.0">
                            <HBox.margin>
-                              <Insets left="50.0" />
+                              <Insets left="10.0" />
                            </HBox.margin></TextField>
-                        <Label prefHeight="28.0" prefWidth="168.0" text="Last Name">
+                        <Label prefHeight="24.0" prefWidth="120.0" text="Last Name">
                            <HBox.margin>
-                              <Insets left="70.0" />
+                              <Insets left="20.0" />
                            </HBox.margin>
                            <font>
                               <Font size="19.0" />
                            </font></Label>
-                        <TextField fx:id="student_lastname" prefHeight="24.0" prefWidth="191.0">
+                        <Label fx:id="lastNameError" prefHeight="15.0" prefWidth="113.0" style="-fx-text-fill: red; visibility: false;" text="Label" />
+                        <TextField fx:id="student_lastname" prefHeight="24.0" prefWidth="139.0">
                            <HBox.margin>
-                              <Insets left="50.0" right="10.0" />
+                              <Insets left="10.0" right="20.0" />
                            </HBox.margin></TextField>
                      </children>
                      <padding>
@@ -71,27 +73,29 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="gender" prefHeight="28.0" prefWidth="118.0" stylesheets="@../../Style/loginAndSignup.css" text="Gender">
+                        <Label fx:id="gender" prefHeight="28.0" prefWidth="70.0" stylesheets="@../../Style/loginAndSignup.css" text="Gender">
                            <HBox.margin>
                               <Insets left="70.0" />
                            </HBox.margin>
                            <font>
                               <Font size="19.0" />
                            </font></Label>
-                        <ChoiceBox fx:id="chooseGender" prefHeight="24.0" prefWidth="108.0" styleClass="dropdown" stylesheets="@../../Style/loginAndSignup.css">
+                        <Label fx:id="genderError" style="-fx-text-fill: red; visibility: false;" text="Label" />
+                        <ChoiceBox fx:id="chooseGender" prefHeight="24.0" prefWidth="139.0" styleClass="dropdown" stylesheets="@../../Style/loginAndSignup.css">
                            <HBox.margin>
-                              <Insets left="50.0" />
+                              <Insets left="10.0" />
                            </HBox.margin></ChoiceBox>
                         <Label fx:id="faculty" prefHeight="15.0" prefWidth="90.0" text="Faculty" textAlignment="CENTER">
                            <HBox.margin>
-                              <Insets left="70.0" />
+                              <Insets left="50.0" />
                            </HBox.margin>
                            <font>
                               <Font size="19.0" />
                            </font></Label>
+                        <Label fx:id="facultyError" style="-fx-text-fill: red; visibility: false;" text="Label" />
                         <ChoiceBox fx:id="chooseFaculty" prefHeight="24.0" prefWidth="133.0" styleClass="dropdown" stylesheets="@../../Style/loginAndSignup.css">
                            <HBox.margin>
-                              <Insets left="70.0" right="10.0" />
+                              <Insets left="10.0" right="10.0" />
                            </HBox.margin></ChoiceBox>
                      </children>
                      <VBox.margin>
@@ -117,6 +121,7 @@
                            <HBox.margin>
                               <Insets left="70.0" />
                            </HBox.margin></TextField>
+                        <Label fx:id="emailError" style="-fx-text-fill: red; visibility: false;" text="Label" />
                      </children>
                      <padding>
                         <Insets top="15.0" />
@@ -138,6 +143,7 @@
                            <HBox.margin>
                               <Insets left="70.0" />
                            </HBox.margin></TextField>
+                        <Label fx:id="phoneNumberError" style="-fx-text-fill: red; visibility: false;" text="Label" />
                      </children>
                      <padding>
                         <Insets top="15.0" />
@@ -160,6 +166,11 @@
                               <Insets left="70.0" />
                            </HBox.margin>
                         </PasswordField>
+                        <HBox prefHeight="46.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="passwordFieldError" alignment="CENTER" style="visibility: false;" text="Error" />
+                           </children>
+                        </HBox>
                      </children>
                      <padding>
                         <Insets top="15.0" />
@@ -170,7 +181,7 @@
                         <Insets top="8.0" />
                      </VBox.margin>
                      <children>
-                        <Label prefWidth="160.0" text="Confirm Password">
+                        <Label prefHeight="50.0" prefWidth="160.0" text="Confirm Password">
                            <HBox.margin>
                               <Insets left="70.0" />
                            </HBox.margin>

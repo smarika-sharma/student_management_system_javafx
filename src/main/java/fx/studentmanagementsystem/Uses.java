@@ -12,7 +12,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -22,12 +24,15 @@ import java.util.Scanner;
 
 
 public class Uses {
+
+    //current stage
     public static Stage getCurrentStage(ActionEvent event) {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         return stage;
     }
 
+    //changing scene
     public static FXMLLoader changeScene(ActionEvent event, String sceneName, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(sceneName));
         Scene scene = new Scene(fxmlLoader.load());
@@ -47,6 +52,8 @@ public class Uses {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    //saving data into scv file
     public static void saveDataCSV(String... args) throws IOException {
         if (args.length < 2) {
             throw new IllegalArgumentException("saveDataCSV requires at least two arguments: filename and one data item.");
@@ -62,6 +69,8 @@ public class Uses {
         }
 
     }
+
+    //reading data from csv
     public static List<String[]> readCSV(String filename) throws IOException {
         List<String[]> data = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -73,6 +82,7 @@ public class Uses {
         }
         return data;
     }
+
 
     public static void saveStaffDataCSV(String credentialsFile, String staffId, String username, String gender, String role, String email, String password) throws IOException {
         try (FileWriter fw = new FileWriter(credentialsFile, true);
@@ -139,7 +149,6 @@ public class Uses {
                     nextLine[7] = newFaculty;
                     nextLine[8] = newGender;
                     nextLine[5] = newPhoneNumber;
-                    // Add other fields as necessary
                 }
                 csvBody.add(nextLine);
             }
@@ -173,6 +182,27 @@ public class Uses {
             }
         }
         return students;
+    }
+
+    //method to check if the email entered already exists
+    public static boolean emailExists(File filename, String email) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] credentials = line.split(",");
+                if (credentials[0].equals(email)) {
+                    return true; // Email exists
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false; // Email does not exist
+    }
+    public static void error(Label error, String errorName, boolean visibility){
+        error.setText(errorName);
+        error.setVisible(visibility);
+        error.setTextFill(Color.RED);
     }
 }
 
