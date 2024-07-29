@@ -19,8 +19,6 @@ public class Teacher {
             this.email = email;
             this.faculty = faculty;
             this.gender = gender;
-            this.phoneNumber = phoneNumber;
-
             this.deleteButton = new Button("Delete");
         }
 
@@ -70,14 +68,14 @@ public class Teacher {
         }
 
 
-    public String getPhoneNumber() {
-            return phoneNumber;
-    }
+        public String getPhoneNumber() {
+                return phoneNumber;
+        }
 
-    public void setUsername(String newUsername) {
-    }
+        public void setUsername(String newUsername) {
+        }
 
-    public void setPhoneNumber(String PhoneNumber) {
+        public void setPhoneNumber(String PhoneNumber) {
             this.phoneNumber = phoneNumber;
     }
 }

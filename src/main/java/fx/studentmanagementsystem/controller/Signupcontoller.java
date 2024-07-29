@@ -146,6 +146,9 @@ public class Signupcontoller implements Initializable {
         if (student_firstname.getText().trim().isEmpty()) {
             error(firstNameError, "Required.", true);
             valid = false;
+        } else if (student_firstname.getText().trim().length()<3) {
+            error(firstNameError,"Too short", true);
+            valid = false;
         }
 
         // Validate last name

@@ -204,6 +204,7 @@ public class Uses {
         error.setVisible(visibility);
         error.setTextFill(Color.RED);
     }
+
 }
 
 

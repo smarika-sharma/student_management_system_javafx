@@ -31,6 +31,7 @@ import static fx.studentmanagementsystem.Uses.*;
 public class LoginController {
     @FXML
     public TextField adminusernamefield;
+    @FXML
     public PasswordField adminpasscode;
     @FXML
     private TextField studentlogin_email_field;
@@ -182,7 +183,7 @@ public class LoginController {
         String username = adminusernamefield.getText();
         String passcode = adminpasscode.getText();
 
-        if (username.equals("admin") && passcode.equals("admin")) {
+        if (username.equals("admin") && passcode.equals("1234")) {
             try {
                 changeScene(event, "/Fxml/Admin/adminDashboard.fxml", "AcademiaFX");
             } catch (IOException e) {
