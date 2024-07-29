@@ -17,9 +17,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="750.0" maxWidth="1200.0" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentFormController">
+<AnchorPane maxHeight="750.0" maxWidth="1200.0" prefHeight="725.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Student.StudentFormController">
    <children>
-      <ImageView fitHeight="751.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="725.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/StudentFormLeft.png" />
          </image>
@@ -73,9 +73,9 @@
             </Line>
          </children>
       </VBox>
-      <VBox layoutX="301.0" layoutY="107.0" prefHeight="579.0" prefWidth="737.0" spacing="10.0">
+      <VBox layoutX="301.0" layoutY="119.0" prefHeight="582.0" prefWidth="864.0" spacing="15.0">
          <children>
-            <HBox prefHeight="40.0" prefWidth="816.0" spacing="50.0">
+            <HBox prefHeight="42.0" prefWidth="735.0" spacing="20.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Student ID: " />
                   <TextField fx:id="studentID" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -83,9 +83,14 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="studentIdError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Username:" />
                   <TextField fx:id="username" prefHeight="39.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -93,9 +98,14 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="usernameError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Password:" />
                   <PasswordField fx:id="password" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -103,9 +113,14 @@
                         <Font size="18.0" />
                      </font>
                   </PasswordField>
+                  <Label fx:id="passwordError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="First Name:" />
                   <TextField fx:id="firstName" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -113,9 +128,14 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="firstNameError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Last Name:" />
                   <TextField fx:id="lastName" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -123,15 +143,25 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="lastNameError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Faculty:" />
                   <ChoiceBox fx:id="faculty" prefHeight="40.0" prefWidth="400.0" styleClass="dropdown" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="facultyError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Email Address" />
                   <TextField fx:id="email" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -139,15 +169,25 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="emailError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Gender: " />
                   <ChoiceBox fx:id="gender" prefHeight="40.0" prefWidth="400.0" styleClass="dropdown" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="genderError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Phone Number: " />
                   <TextField fx:id="phoneNumber" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
@@ -155,24 +195,32 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Label fx:id="phoneNumberError" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <Label fx:id="Error_label" style="visibility: false;" text="Label" />
-            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="700.0" spacing="50.0">
+            <Label fx:id="Error_label" style="visibility: false;" text="Label" textFill="#dd0505" />
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="871.0" spacing="50.0">
                <children>
-                  <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefHeight="44.0" prefWidth="138.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">
+                  <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefHeight="43.0" prefWidth="164.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
                </children>
+               <padding>
+                  <Insets right="70.0" />
+               </padding>
             </HBox>
          </children>
          <padding>
-            <Insets left="50.0" top="20.0" />
+            <Insets left="50.0" />
          </padding>
       </VBox>
-      <ImageView fx:id="backButton" fitHeight="34.0" fitWidth="25.0" layoutX="231.0" layoutY="107.0" onMouseClicked="#backToAdmissionOfficerDashboard" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backButton" fitHeight="34.0" fitWidth="25.0" layoutX="232.0" layoutY="52.0" onMouseClicked="#backToAdmissionOfficerDashboard" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/back.png" />
          </image>

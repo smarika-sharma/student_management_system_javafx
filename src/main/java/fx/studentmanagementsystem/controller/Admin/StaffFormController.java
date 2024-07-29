@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller.Admin;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,14 +10,16 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-import static fx.studentmanagementsystem.Uses.changeSceneMouse;
-import static fx.studentmanagementsystem.Uses.error;
+import static fx.studentmanagementsystem.Uses.*;
 
 public class StaffFormController implements Initializable {
 
@@ -105,12 +108,30 @@ public class StaffFormController implements Initializable {
         }
     }
 
-    public void submitbutton(ActionEvent event) {
+    public void submitbutton(ActionEvent event) throws IOException {
         if(!isInputValid()){
             return;
         }
-        staffcreatedlabel.setText("Staff Created Successfully");
-        saveStaffCredentials();
+        String Email = staffemail.getText();
+        if (emailExists(new File("librarian_credentials.csv"),Email) || emailExists(new File("admission_officer_credentials.csv"),Email)) {
+            emailError.setText("Email already exists. Please use another email.");
+        }
+        else {
+            staffcreatedlabel.setTextFill(Color.GREEN);
+            staffcreatedlabel.setText("Successfully added a new staff.");
+            saveStaffCredentials();
+
+            //pausing after submit button clicked
+            PauseTransition pauseTransition = new PauseTransition(Duration.seconds(1));
+            pauseTransition.setOnFinished(e -> {
+                try {
+                    changeScene(event, "/Fxml/Admin/ManageStaff.fxml", "Manage Teacher");
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            });
+            pauseTransition.play();
+        }
     }
 
     //method to validate the inputs
@@ -185,7 +206,6 @@ public class StaffFormController implements Initializable {
             error(passwordError, "Password is required.", true);
             valid = false;
         }
-
         return valid;
     }
 
