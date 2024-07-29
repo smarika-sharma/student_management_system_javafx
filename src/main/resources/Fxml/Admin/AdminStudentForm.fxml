@@ -202,7 +202,7 @@
                   </Label>
                </children>
             </HBox>
-            <Label fx:id="Error_label" style="visibility: false;" text="Label" textFill="#dd0505" />
+            <Label fx:id="Error_label" text="Label" textFill="#dd0505" />
             <HBox alignment="CENTER" prefHeight="43.0" prefWidth="871.0" spacing="50.0">
                <children>
                   <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitButtonClicked" prefHeight="43.0" prefWidth="164.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">

@@ -123,7 +123,8 @@ public class Uses {
         return teacherList;
     }
 
-    public static void deleteTeacher(String fileName, String teacherId) throws IOException {
+    //deleting user in admin controls
+    public static void deleteUser(String fileName, String teacherId) throws IOException {
         List<String[]> csvBody = new ArrayList<>();
 
         try (CSVReader reader = new CSVReader(new FileReader(fileName))) {

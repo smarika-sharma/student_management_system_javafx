@@ -1,5 +1,6 @@
 package fx.studentmanagementsystem.controller.Student;
 
+import fx.studentmanagementsystem.Utils.HashEncryption;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import javafx.util.Duration;
 
 import java.io.*;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
@@ -101,7 +103,7 @@ public class StudentFormController implements Initializable {
         changeSceneMouse(event,"/Fxml/Staff/AdmissionOfficerDashboard.fxml","AcademiaFX");
     }
 
-    public void onSubmitButtonClicked(ActionEvent event) {
+    public void onSubmitButtonClicked(ActionEvent event) throws NoSuchAlgorithmException {
         if (!isInputValid()) {
             return;
         }
@@ -113,15 +115,16 @@ public class StudentFormController implements Initializable {
         else {
             Error_label.setTextFill(Color.GREEN);
             Error_label.setText("Successfully added a new student.");
+            String Password = password.getText();
+            String hashedPassword = HashEncryption.hashPassword(Password);
             //String Email = student_email_field.getText();
             String StudentID = studentID.getText();
-            String Password = password.getText();
             String Firstname = firstName.getText();
             String Lastname = lastName.getText();
             String Phonenumber = phoneNumber.getText();
             String Faculty = faculty.getValue();
             String Gender = gender.getValue();
-            writeCredentialsToCSV(Email, Password);
+            writeCredentialsToCSV(Email, hashedPassword);
             try {
                 writestudentinfoTotxt(StudentID, Firstname, Lastname, Phonenumber, Email, Faculty, Gender);
             }catch (FileNotFoundException e) {

@@ -49,7 +49,7 @@ public class ManageTeacherController implements Initializable {
         for (Teacher teacher : teacherTable.getItems()) {
             teacher.getDeleteButton().setOnAction(event -> {
                 try {
-                    deleteTeacher("teacher_credentials.csv", teacher.getId());
+                    deleteUser("teacher_credentials.csv", teacher.getId());
                     teacherTable.setItems(readTeacherFromCSV("teacher_credentials.csv"));
                 } catch (IOException e) {
                     e.printStackTrace();

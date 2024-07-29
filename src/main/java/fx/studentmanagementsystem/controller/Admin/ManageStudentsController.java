@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static fx.studentmanagementsystem.Uses.changeScene;
+import static fx.studentmanagementsystem.Uses.deleteUser;
 
 public class ManageStudentsController {
     @FXML
@@ -81,12 +82,14 @@ public class ManageStudentsController {
         return students;
     }
 
-    public void deletestudent(ActionEvent event) {
+    public void deletestudent(ActionEvent event) throws IOException {
         Student selectedStudent = managestudenttable.getSelectionModel().getSelectedItem();
+        String studentToDelete =selectedStudent.getEmail() ;
         if (selectedStudent != null) {
             managestudenttable.getItems().remove(selectedStudent);
             File file = new File("Student_info/" + selectedStudent.getEmail() + ".txt");
             file.delete();
+            deleteUser("Student_credentials.csv", studentToDelete);
         }
     }
 
