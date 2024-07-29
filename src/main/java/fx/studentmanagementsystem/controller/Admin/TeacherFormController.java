@@ -6,11 +6,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 import static fx.studentmanagementsystem.Uses.*;
 
@@ -19,9 +21,9 @@ import static fx.studentmanagementsystem.Uses.*;
  * Handles the creation and validation of teacher entries.
  */
 public class TeacherFormController implements Initializable {
-    // FXML injected fields for form inputs and controls
+    // Fields for form inputs and controls
     @FXML
-    public TextField id;
+    public TextField teacherId;
 
     @FXML
     public TextField username;
@@ -49,14 +51,35 @@ public class TeacherFormController implements Initializable {
     @FXML
     public TextField phoneNumber;
 
-
     @FXML
     public Button submitButton;
 
     @FXML
     public ImageView backButton;
+
+    //Error labels for all fields
+    @FXML
     public Label Error_Label;
-    //Handles the back button click to navigate to the Manage Teacher view.
+    @FXML
+    public Label teacherIdError;
+    @FXML
+    public Label usernameError;
+    @FXML
+    public Label passwordError;
+    @FXML
+    public Label firstNameError;
+    @FXML
+    public Label lastNameError;
+    @FXML
+    public Label facultyError;
+    @FXML
+    public Label emailError;
+    @FXML
+    public Label genderError;
+    @FXML
+    public Label phoneNumberError;
+
+    //navigate to the Manage Teacher view when back button is clicked.
     @FXML
     public void backToManageTeacher(javafx.scene.input.MouseEvent event) throws IOException {
         try {
@@ -65,10 +88,7 @@ public class TeacherFormController implements Initializable {
             e.printStackTrace();
         }
     }
-    /**
-     * Initializes the controller class.
-     * Sets up the choice boxes and the back button action.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         gender.getItems().addAll(genders);
@@ -82,40 +102,97 @@ public class TeacherFormController implements Initializable {
             }
         });
     }
-    /**
-     * Validates the input fields to ensure they are not empty.
-     * @return true if all fields are valid, false otherwise.
-     */
+
+    //method to validate the inputs
     private boolean isInputValid() {
-        if (isFieldEmpty(id.getText(), "ID cannot be empty") ||
-                isFieldEmpty(username.getText(), "Username cannot be empty") ||
-                isFieldEmpty(password.getText(), "Password cannot be empty") ||
-                isFieldEmpty(teacherFirstName.getText(), "First name cannot be empty") ||
-                isFieldEmpty(teacherLastName.getText(), "Last name cannot be empty") ||
-                isFieldEmpty(email.getText(), "Email cannot be empty") ||
-                isFieldEmpty(phoneNumber.getText(), "Phone number cannot be empty")) {
-            return false;
+        boolean valid = true;
+
+        // Clear all previous error messages
+        clearAllErrors();
+
+        //Validate teacher ID
+        if(teacherId.getText().trim().isEmpty()){
+            error(teacherIdError, "Required", true);
+            valid = false;
+        }else if(!Pattern.matches("^\\d+$", teacherId.getText().trim())){
+            error(teacherIdError, "Invalid", true);
+            valid = false;
         }
-        return true;
-    }
-    /**
-     * Checks if a given field is empty and sets an error message if so.
-     * @param fieldText The text of the field to check.
-     * @param errorMessage The error message to display if the field is empty.
-     * @return true if the field is empty, false otherwise.
-     */
-    private boolean isFieldEmpty(String fieldText, String errorMessage) {
-        if (fieldText.isEmpty()) {
-            Error_Label.setText(errorMessage);
-            return true;
+
+        // Validate username
+        if (username.getText().trim().isEmpty()) {
+            error(usernameError, "Required.", true);
+            valid = false;
         }
-        return false;
+
+        // Validate first name
+        if (teacherFirstName.getText().trim().isEmpty()) {
+            error(firstNameError, "Required.", true);
+            valid = false;
+        }
+
+        // Validate last name
+        if (teacherLastName.getText().trim().isEmpty()) {
+            error(lastNameError, "Required.", true);
+            valid = false;
+        }
+
+        // Validate phone number
+        if (phoneNumber.getText().trim().isEmpty()) {
+            error(phoneNumberError, "Required.", true);
+            valid = false;
+        } else if (!Pattern.matches("^98\\d{8}$", phoneNumber.getText().trim())) {
+            error(phoneNumberError, "Invalid", true);
+            valid = false;
+        }
+
+        // Validate email
+        if (email.getText().trim().isEmpty()) {
+            error(emailError, "Email is required.", true);
+            valid = false;
+        } else if (!(Pattern.matches("^[a-zA-Z0-9_+&*-]+(?:\\." +
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$", email.getText().trim()))){
+            error(emailError, "Invalid email format.", true);
+            valid = false;
+        }
+
+        // Validate gender
+        if (gender.getValue() == null) {
+            error(genderError, "Invalid", true);
+            valid = false;
+        }
+
+        // Validate faculty
+        if (faculty.getValue() == null) {
+            error(facultyError, "Invalid", true);
+            valid = false;
+        }
+
+        // Validate password
+        if (password.getText().trim().isEmpty()) {
+            error(passwordError, "Password is required.", true);
+            valid = false;
+        }
+
+        return valid;
     }
-    /**
-     * Checks if the provided email already exists in the system.
-     * @param email The email to check.
-     * @return true if the email exists, false otherwise.
-     */
+
+    //method to clear all the errors before checking again.
+    private void clearAllErrors() {
+        error(teacherIdError,"",false);
+        error(usernameError,"",false);
+        error(firstNameError, "", false);
+        error(lastNameError, "", false);
+        error(genderError, "", false);
+        error(facultyError, "", false);
+        error(emailError, "", false);
+        error(phoneNumberError, "", false);
+        error(passwordError, "", false);
+    }
+
+    //checking if email already exists
     private boolean emailExists(String email) {
         try (BufferedReader br = new BufferedReader(new FileReader("teacher_credentials.csv"))) {
             String line;
@@ -141,7 +218,7 @@ public class TeacherFormController implements Initializable {
             return;
         }
 
-        String teacherID = id.getText();
+        String teacherID = teacherId.getText();
         String userName = username.getText();
         String teacherFirstname = teacherFirstName.getText();
         String teacherLastname = teacherLastName.getText();
@@ -169,6 +246,7 @@ public class TeacherFormController implements Initializable {
             return;
         }
         else {
+            Error_Label.setTextFill(Color.GREEN);
             Error_Label.setText("Successfully added a new teacher.");
             saveTeacher();
             PauseTransition pauseTransition = new PauseTransition(Duration.seconds(2));

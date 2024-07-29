@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.TeacherFormController">
    <children>
@@ -20,66 +21,114 @@
          </image>
       </ImageView>
       <Label layoutX="292.0" layoutY="39.0" styleClass="heading" stylesheets="@../../Style/StudentForm.css" text="Teacher Form" />
-      <VBox layoutX="272.0" layoutY="117.0" prefHeight="588.0" prefWidth="750.0" spacing="15.0">
+      <VBox layoutX="272.0" layoutY="117.0" prefHeight="588.0" prefWidth="900.0" spacing="15.0">
          <children>
-            <HBox prefHeight="40.0" prefWidth="815.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="815.0" spacing="20.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Teacher ID:" />
-                  <TextField fx:id="id" stylesheets="@../../Style/StudentForm.css" />
+                  <TextField fx:id="teacherId" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="teacherIdError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Username:" />
                   <TextField fx:id="username" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="usernameError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Password:" />
                   <PasswordField fx:id="password" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="passwordError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="First Name:" />
                   <TextField fx:id="teacherFirstName" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="firstNameError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Last Name:" />
                   <TextField fx:id="teacherLastName" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="lastNameError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Faculty:" />
                   <ChoiceBox fx:id="faculty" prefWidth="150.0" styleClass="text-field" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="facultyError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Email Address:" />
                   <TextField fx:id="email" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="emailError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Gender: " />
                   <ChoiceBox fx:id="gender" prefWidth="150.0" styleClass="text-field" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="genderError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
-            <HBox prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" spacing="20.0">
                <children>
                   <Label prefWidth="195.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Phone Number: " />
                   <TextField fx:id="phoneNumber" stylesheets="@../../Style/StudentForm.css" />
+                  <Label fx:id="phoneNumberError" alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: red; visibility: false;" text="Label">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
             <Label fx:id="Error_Label" text="Label" textFill="#e90f0f" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitClicked" prefHeight="43.0" prefWidth="132.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit" />
+                  <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSubmitClicked" prefHeight="43.0" prefWidth="132.0" styleClass="submit-button" stylesheets="@../../Style/StudentForm.css" text="Submit">
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin></Button>
                </children>
             </HBox>
          </children>
