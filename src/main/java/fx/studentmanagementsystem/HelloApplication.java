@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
 
         stage.setTitle("AcademiaFX");
         stage.setScene(scene);
-        stage.setHeight(750);
+        stage.setMinHeight(750);
         stage.setMinWidth(1200);
         stage.setResizable(false);
         stage.centerOnScreen();

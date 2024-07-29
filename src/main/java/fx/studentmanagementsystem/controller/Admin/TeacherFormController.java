@@ -122,14 +122,7 @@ public class TeacherFormController implements Initializable {
 
     //SAVES the teacher data to a CSV file if input is valid
     public void saveTeacher() throws IOException{
-        if (!isInputValid()) {
-            return;
-        }
-        String Email = email.getText();
-        if (emailExists(Email)) {
-            Error_Label.setText("Email already exists. Please use another email.");
-            return;
-        }
+
 
         String teacherID = teacherId.getText();
         String userName = username.getText();
@@ -156,7 +149,6 @@ public class TeacherFormController implements Initializable {
         String Email = email.getText();
         if (emailExists(Email)) {
             Error_Label.setText("Email already exists. Please use another email.");
-            return;
         }
         else {
             Error_Label.setTextFill(Color.GREEN);

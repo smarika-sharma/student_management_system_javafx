@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" stylesheets="@../../Style/AdminDashboard.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.ManageStaffController">
     <children>
-        <VBox layoutX="27.0" layoutY="28.0" prefHeight="660.0" prefWidth="246.0" spacing="10.0" styleClass="menu" stylesheets="@../../Style/AdminDashboard.css">
+        <VBox layoutX="27.0" layoutY="28.0" prefHeight="700.0" prefWidth="246.0" spacing="10.0" styleClass="menu" stylesheets="@../../Style/AdminDashboard.css">
             <children>
                 <VBox alignment="CENTER" prefHeight="174.0" prefWidth="205.0" styleClass="logo-bg" stylesheets="@../../Style/AdminDashboard.css">
                     <children>
