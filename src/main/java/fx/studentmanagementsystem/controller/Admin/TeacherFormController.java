@@ -103,6 +103,82 @@ public class TeacherFormController implements Initializable {
         });
     }
 
+
+    //checking if email already exists
+    private boolean emailExists(String email) {
+        try (BufferedReader br = new BufferedReader(new FileReader("teacher_credentials.csv"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] credentials = line.split(",");
+                if (credentials[0].equals(email)) {
+                    return true; // Email exists
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false; // Email does not exist
+    }
+
+    //SAVES the teacher data to a CSV file if input is valid
+    public void saveTeacher() throws IOException{
+        if (!isInputValid()) {
+            return;
+        }
+        String Email = email.getText();
+        if (emailExists(Email)) {
+            Error_Label.setText("Email already exists. Please use another email.");
+            return;
+        }
+
+        String teacherID = teacherId.getText();
+        String userName = username.getText();
+        String teacherFirstname = teacherFirstName.getText();
+        String teacherLastname = teacherLastName.getText();
+        String teacherEmail = email.getText();
+        String teacherPhoneNumber = phoneNumber.getText();
+        String Password = password.getText();
+        String Faculty = faculty.getValue();
+        String Gender = gender.getValue();
+
+        try {
+            saveTeacherDataCSV("teacher_credentials.csv", teacherID, userName, teacherFirstname, teacherLastname, teacherEmail, teacherPhoneNumber, Password, Faculty, Gender);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Saving data when submit button is clicked.
+    public void onSubmitClicked(ActionEvent event) throws IOException {
+        if(!isInputValid()){
+            return;
+        }
+        String Email = email.getText();
+        if (emailExists(Email)) {
+            Error_Label.setText("Email already exists. Please use another email.");
+            return;
+        }
+        else {
+            Error_Label.setTextFill(Color.GREEN);
+            Error_Label.setText("Successfully added a new teacher.");
+            saveTeacher();
+
+            //pausing after submit button clicked
+            PauseTransition pauseTransition = new PauseTransition(Duration.seconds(1));
+            pauseTransition.setOnFinished(e -> {
+                try {
+                    changeScene(event, "/Fxml/Admin/ManageTeacher.fxml", "Manage Teacher");
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+            });
+            pauseTransition.play();
+        }
+//        saveTeacher();
+//        changeScene(event, "/Fxml/Admin/ManageTeacher.fxml", "Manage Teacher");
+
+    }
+
     //method to validate the inputs
     private boolean isInputValid() {
         boolean valid = true;
@@ -192,74 +268,4 @@ public class TeacherFormController implements Initializable {
         error(passwordError, "", false);
     }
 
-    //checking if email already exists
-    private boolean emailExists(String email) {
-        try (BufferedReader br = new BufferedReader(new FileReader("teacher_credentials.csv"))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] credentials = line.split(",");
-                if (credentials[0].equals(email)) {
-                    return true; // Email exists
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false; // Email does not exist
-    }
-    //SAVES the teacher data to a CSV file if input is valid
-    public void saveTeacher() throws IOException{
-        if (!isInputValid()) {
-            return;
-        }
-        String Email = email.getText();
-        if (emailExists(Email)) {
-            Error_Label.setText("Email already exists. Please use another email.");
-            return;
-        }
-
-        String teacherID = teacherId.getText();
-        String userName = username.getText();
-        String teacherFirstname = teacherFirstName.getText();
-        String teacherLastname = teacherLastName.getText();
-        String teacherEmail = email.getText();
-        String teacherPhoneNumber = phoneNumber.getText();
-        String Password = password.getText();
-        String Faculty = faculty.getValue();
-        String Gender = gender.getValue();
-
-        try {
-            saveTeacherDataCSV("teacher_credentials.csv", teacherID, userName, teacherFirstname, teacherLastname, teacherEmail, teacherPhoneNumber, Password, Faculty, Gender);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void onSubmitClicked(ActionEvent event) throws IOException {
-        if(!isInputValid()){
-            return;
-        }
-        String Email = email.getText();
-        if (emailExists(Email)) {
-            Error_Label.setText("Email already exists. Please use another email.");
-            return;
-        }
-        else {
-            Error_Label.setTextFill(Color.GREEN);
-            Error_Label.setText("Successfully added a new teacher.");
-            saveTeacher();
-            PauseTransition pauseTransition = new PauseTransition(Duration.seconds(2));
-            pauseTransition.setOnFinished(e -> {
-                try {
-                    changeScene(event, "/Fxml/Admin/ManageTeacher.fxml", "Manage Teacher");
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
-            });
-            pauseTransition.play();
-        }
-//        saveTeacher();
-//        changeScene(event, "/Fxml/Admin/ManageTeacher.fxml", "Manage Teacher");
-    }
 }
