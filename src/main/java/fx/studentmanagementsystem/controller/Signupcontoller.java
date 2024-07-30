@@ -80,7 +80,21 @@ public class Signupcontoller implements Initializable {
         chooseFaculty.getItems().addAll(faculties);
         Error_label.setText("");
 
+        addInputListeners();
+
     }
+
+    private void addInputListeners() {
+        student_firstname.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        student_lastname.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        student_phonenumber.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        student_email_field.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        student_pass_field.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        student_confirmpass_field.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        chooseGender.valueProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        chooseFaculty.valueProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+    }
+
 
 
     @FXML
@@ -212,6 +226,7 @@ public class Signupcontoller implements Initializable {
         error(emailError, "", false);
         error(phoneNumberError, "", false);
         error(passwordFieldError, "", false);
+        error(Error_label, "", false);
     }
 
 

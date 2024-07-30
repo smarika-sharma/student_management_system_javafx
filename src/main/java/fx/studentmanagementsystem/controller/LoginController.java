@@ -50,6 +50,15 @@ public class LoginController {
     @FXML
     public void initialize() {
         loginerror_label.setText("");
+        //input listeners to clear error labels if user starts typing again
+        addInputListeners();
+    }
+    private void addInputListeners() {
+        studentlogin_email_field.textProperty().addListener((observable, oldValue, newValue) -> clearErrorLabels());
+        studentlogin_pass_field.textProperty().addListener((observable, oldValue, newValue) -> clearErrorLabels());
+    }
+    private void clearErrorLabels() {
+        loginerror_label.setText("");
     }
 
 
@@ -179,18 +188,4 @@ public class LoginController {
         }
     }
 
-    public void adminloginButton(ActionEvent event) {
-        String username = adminusernamefield.getText();
-        String passcode = adminpasscode.getText();
-
-        if (username.equals("admin") && passcode.equals("1234")) {
-            try {
-                changeScene(event, "/Fxml/Admin/adminDashboard.fxml", "AcademiaFX");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            loginerror_label.setText("Invalid credentials");
-        }
-    }
 }

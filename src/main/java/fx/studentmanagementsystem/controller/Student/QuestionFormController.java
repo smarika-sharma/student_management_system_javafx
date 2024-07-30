@@ -66,7 +66,7 @@ public class QuestionFormController {
     }
 
     private void displayQuestions() {
-        // Display first three questions
+        // Display  three questions randomly from the list of question.
         for (int i = 0; i < 3; i++) {
             String[] question = questions.get(i);
             correctAnswers[i] = question[2]; // Assuming the correct answer is the second option

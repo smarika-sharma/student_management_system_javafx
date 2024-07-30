@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.LoginController">
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" styleClass="borderPane" stylesheets="@../Style/loginAndSignup.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.studentmanagementsystem.controller.Admin.AdminLoginController">
         <left>
             <HBox prefHeight="100.0" prefWidth="258.0" BorderPane.alignment="CENTER" />
         </left>
