@@ -85,14 +85,14 @@ public class Signupcontoller implements Initializable {
     }
 
     private void addInputListeners() {
-        student_firstname.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        student_lastname.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        student_phonenumber.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        student_email_field.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        student_pass_field.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        student_confirmpass_field.textProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        chooseGender.valueProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
-        chooseFaculty.valueProperty().addListener((observable, oldValue, newValue) -> clearAllErrors());
+        student_firstname.textProperty().addListener((_) -> clearAllErrors());
+        student_lastname.textProperty().addListener((_) -> clearAllErrors());
+        student_phonenumber.textProperty().addListener((_) -> clearAllErrors());
+        student_email_field.textProperty().addListener((_) -> clearAllErrors());
+        student_pass_field.textProperty().addListener((_) -> clearAllErrors());
+        student_confirmpass_field.textProperty().addListener((_) -> clearAllErrors());
+        chooseGender.valueProperty().addListener((_) -> clearAllErrors());
+        chooseFaculty.valueProperty().addListener((_) -> clearAllErrors());
     }
 
 

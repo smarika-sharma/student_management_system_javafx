@@ -25,8 +25,8 @@ public class AdminLoginController implements Initializable {
 
     }
     private void addInputListeners() {
-        adminusernamefield.textProperty().addListener((observable, oldValue, newValue) -> clearErrorLabels());
-        adminpasscode.textProperty().addListener((observable, oldValue, newValue) -> clearErrorLabels());
+        adminusernamefield.textProperty().addListener((_) -> clearErrorLabels());
+        adminpasscode.textProperty().addListener((_) -> clearErrorLabels());
     }
     private void clearErrorLabels() {
         loginerror_label.setText("");

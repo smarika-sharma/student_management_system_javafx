@@ -54,8 +54,8 @@ public class LoginController {
         addInputListeners();
     }
     private void addInputListeners() {
-        studentlogin_email_field.textProperty().addListener((observable, oldValue, newValue) -> clearErrorLabels());
-        studentlogin_pass_field.textProperty().addListener((observable, oldValue, newValue) -> clearErrorLabels());
+        studentlogin_email_field.textProperty().addListener((_) -> clearErrorLabels());
+        studentlogin_pass_field.textProperty().addListener((_) -> clearErrorLabels());
     }
     private void clearErrorLabels() {
         loginerror_label.setText("");
