@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
 import static fx.studentmanagementsystem.Uses.*;
+import static fx.studentmanagementsystem.controller.Student.StudentIDGenerator.generateID;
 
 public class StudentFormController implements Initializable {
 
@@ -90,6 +91,11 @@ public class StudentFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         gender.getItems().addAll(genders);
         faculty.getItems().addAll(faculties);
+        try {
+            studentID.setText(generateID()); //auto generating student id based on previous id
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         backButton.setOnMouseClicked(event -> {
             try {
                 backButton(event);

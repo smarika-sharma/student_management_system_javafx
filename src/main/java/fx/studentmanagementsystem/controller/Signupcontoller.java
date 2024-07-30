@@ -266,9 +266,7 @@ public class Signupcontoller implements Initializable {
             e.printStackTrace();
         }
     }
-    /**
-     * Navigates to the login page.
-     */
+
     @FXML
     public void signuppageloginbtn(ActionEvent event) {
         try {

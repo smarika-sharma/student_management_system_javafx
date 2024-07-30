@@ -78,7 +78,7 @@
             <HBox prefHeight="42.0" prefWidth="735.0" spacing="20.0">
                <children>
                   <Label prefHeight="39.0" prefWidth="200.0" styleClass="student-info" stylesheets="@../../Style/StudentForm.css" text="Student ID: " />
-                  <TextField fx:id="studentID" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
+                  <TextField fx:id="studentID" editable="false" prefHeight="40.0" prefWidth="400.0" stylesheets="@../../Style/StudentForm.css">
                      <font>
                         <Font size="18.0" />
                      </font>

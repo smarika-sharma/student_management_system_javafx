@@ -112,7 +112,6 @@ public class Uses {
                                 nextLine[4], // email
                                 nextLine[8], // gender
                                 nextLine[7] // faculty
-
                         ));
                     }
                 }

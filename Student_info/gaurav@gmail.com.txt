@@ -1,6 +1,0 @@
-Student ID: 0323456
-Username: Gaurav Karki
-Phone Number: 9812345678
-Email: gaurav@gmail.com
-Faculty: BCS
-Gender: Male
