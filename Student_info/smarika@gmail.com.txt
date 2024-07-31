@@ -1,6 +1,0 @@
-Student ID: 03234567
-Username: Smarika Sharma
-Phone Number: 9812345678
-Email: smarika@gmail.com
-Faculty: BCS
-Gender: Female

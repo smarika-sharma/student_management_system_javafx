@@ -1,6 +1,0 @@
-Student ID: 0362094
-Username: Neha Aryal
-Phone Number: 9812345678
-Email: nehaaryal@student.com
-Faculty: BCS
-Gender: Female

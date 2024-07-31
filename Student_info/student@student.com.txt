@@ -1,6 +1,0 @@
-Student ID: 0362094
-Username: Student Last
-Phone Number: 9898765432
-Email: student@student.com
-Faculty: BBA
-Gender: Male
