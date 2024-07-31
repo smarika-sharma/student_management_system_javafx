@@ -1,0 +1,6 @@
+Student ID: 03620032
+Username: Sijan Maharjan
+Phone Number: 9834567890
+Email: sijan@gmail.com
+Faculty: BBA
+Gender: Male

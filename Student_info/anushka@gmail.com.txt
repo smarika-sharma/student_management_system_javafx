@@ -1,0 +1,6 @@
+Student ID: 03620030
+Username: Anushka Khadgi
+Phone Number: 9898765432
+Email: anushka@gmail.com
+Faculty: BIHM
+Gender: Female

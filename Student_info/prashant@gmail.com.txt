@@ -1,0 +1,6 @@
+Student ID: 03620031
+Username: Prashant Adhikari
+Phone Number: 9823456789
+Email: prashant@gmail.com
+Faculty: BBA
+Gender: Male
